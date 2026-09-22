@@ -318,7 +318,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
 .fu-age-red{background:var(--red-l);color:var(--red)}
 
 /* ─ KPI ROW 2 ─ */
-.kpi-row-2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1300px;margin:14px auto 0;padding:0 28px;position:relative;z-index:10}
+.kpi-row-2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:14px auto 0;padding:0 28px;position:relative;z-index:10}
 @media(max-width:900px){.kpi-row-2{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.kpi-row-2{grid-template-columns:1fr}}
 
@@ -502,16 +502,6 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
     <div class="kpi-sub" id="k2-today-sub">clients to contact today</div>
   </div>
   <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
-    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--green),#0891b2)"></div>
-    <div class="kpi-header">
-      <div class="kpi-icon" style="background:var(--green-l)">🟢</div>
-      <span class="kpi-trend trend-up" id="k2-healthy-badge">healthy</span>
-    </div>
-    <div class="kpi-val" id="k2-healthy">—</div>
-    <div class="kpi-label">Healthy Clients</div>
-    <div class="kpi-sub" id="k2-healthy-sub">Green health status</div>
-  </div>
-  <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
     <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--orange),var(--red))"></div>
     <div class="kpi-header">
       <div class="kpi-icon" style="background:var(--orange-l)">⏰</div>
@@ -519,7 +509,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
     </div>
     <div class="kpi-val" id="k2-fu">—</div>
     <div class="kpi-label">Follow-up Queue</div>
-    <div class="kpi-sub">No contact in 3+ days</div>
+    <div class="kpi-sub">Follow up / call later statuses</div>
   </div>
 </div>
 
@@ -655,7 +645,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
       </div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Email</th><th>Status</th><th>Rep</th><th>ShipMaxx?</th></tr></thead>
+          <thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Email</th><th>Status</th><th>Rep</th><th>Remarks</th><th>ShipMaxx?</th></tr></thead>
           <tbody id="out-tbody"><tr><td colspan="7" class="tbl-empty">Loading…</td></tr></tbody>
         </table>
       </div>
@@ -884,6 +874,8 @@ const OID  = '10NOima0tcnyRwl4iusBacNomQzmmVvimjyjBiUWykGg';
 const OBID = '1IYLwgQnj722wSv37KbXzyes9VRaNZ1YYEmnjTtZnd-E';
 const COLORS = ['#4f6ef7','#16a34a','#e53e3e','#d97706','#7c3aed','#0891b2','#f43f5e','#059669'];
 const OUTREACH_STATUSES = ['Interested','Follow Up','Not Interested','Busy / Call Later','In Progress','Not Called'];
+const REMARK_OPTS = ['—','Follow Up','Busy / Call Later','Not Picking','Interested','Wrong Number','Not Interested','In Progress','Self-Onboarding'];
+const FOLLOWUP_KEYWORDS = ['follow','later','connect','busy'];
 const HEALTH_LEVELS = ['Green','Orange','Red'];
 const USAGE_TYPES   = ['Self','Guided','Manual','—'];
 const PLAN_TYPES    = ['Basic','Growth','Pro','Enterprise','—'];
@@ -945,6 +937,7 @@ function hasEdits(key){
 
 // Called from onclick with registered index
 function _saveEditByIdx(ki, field, val){ saveEdit(_getKey(ki), field, val); }
+function _saveRemarkByIdx(ki, val){ const k=_getKey(ki).replace("|rmk",""); saveEdit(k, "remarks", val); }
 function _cycleHealthByIdx(ki){
   const key = _getKey(ki);
   const base = STATE.onbData.find(r => ('onb|' + r.name) === key);
@@ -1227,7 +1220,7 @@ function processOutreach(rows,repName){
     const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
     if(status){contacted++;statuses[status]=(statuses[status]||0)+1;}
     if(isSm){sm++;smRows.push({name,phone,email,status,rep:repName,remarks});}
-    allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm});
+    allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm,remarks});
   });
   return{total:rows.length,contacted,statuses,shipmaxx:sm,smRows,allR};
 }
@@ -1246,7 +1239,7 @@ function processLive(svR,pvR,dvR,obR){
     const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
     if(status){dContacted++;dSt[status]=(dSt[status]||0)+1;}
     if(isSm){dSm++;dSmRows.push({name,phone,email,status,rep:'Direct',remarks});}
-    dAllR.push({name,phone,email,status:status||'—',rep:'Direct',sm:isSm});
+    dAllR.push({name,phone,email,status:status||'—',rep:'Direct',sm:isSm,remarks});
   });
   const dv={total:dvR.length,contacted:dContacted,statuses:dSt,shipmaxx:dSm};
 
@@ -1394,7 +1387,7 @@ function renderOutreachTable(){
   STATE.filteredRows=rows;
   const tbody=document.getElementById('out-tbody');
   if(!tbody)return;
-  if(!rows.length){tbody.innerHTML='<tr><td colspan="7" class="tbl-empty">No records match your filter</td></tr>';document.getElementById('out-count').textContent='0 rows';return;}
+  if(!rows.length){tbody.innerHTML='<tr><td colspan="8" class="tbl-empty">No records match your filter</td></tr>';document.getElementById('out-count').textContent='0 rows';return;}
   const repPill={Shivansh:'p-blue',Priya:'p-purple',Direct:'p-green'};
 
   tbody.innerHTML=rows.slice(0,500).map((r,i)=>{
@@ -1415,6 +1408,18 @@ function renderOutreachTable(){
       statusCell = pillSt(effStatus);
     }
 
+    // Remarks cell: dropdown in edit mode for Direct Leads, plain text otherwise
+    const effRemarks = getEdit(eKey, 'remarks', r.remarks||'—');
+    let remarksCell;
+    if(STATE.editMode && r.rep==='Direct'){
+      const ki2 = _regKey(eKey+'|rmk');
+      remarksCell = `<select class="edit-select" onchange="_saveRemarkByIdx(${ki2},this.value)">${
+        REMARK_OPTS.map(s=>`<option${s===effRemarks?' selected':''}>${s}</option>`).join('')
+      }</select>`;
+    } else {
+      remarksCell = `<span style="font-size:11px;color:var(--text2)">${effRemarks}</span>`;
+    }
+
     return `<tr class="${edited?'row-edited':''}">
       <td style="color:var(--text3);font-variant-numeric:tabular-nums">${i+1}${edited?'<span class="edited-dot" title="Locally edited"></span>':''}</td>
       <td class="td-name">${r.name||'—'}</td>
@@ -1422,6 +1427,7 @@ function renderOutreachTable(){
       <td style="font-size:12px;color:var(--text2)">${r.email||'—'}</td>
       <td>${statusCell}</td>
       <td><span class="pill ${repPill[r.rep]||'p-grey'}">${r.rep}</span></td>
+      <td>${remarksCell}</td>
       <td>${r.sm?'<span class="pill p-red">⚠ Yes</span>':'<span style="color:var(--text3)">—</span>'}</td>
     </tr>`;
   }).join('');
@@ -1883,19 +1889,10 @@ function renderOnbInsights(data){
   }
   if(el_k2tbdg) el_k2tbdg.textContent = outToday > 0 ? outToday+' due' : 'Today';
 
-  const cGreen2 = data.filter(r=>getEdit('onb|'+r.name,'health',r.health||'grey')==='green').length;
-  const cAtRisk = data.filter(r=>{ const h=getEdit('onb|'+r.name,'health',r.health||'grey'); return h==='orange'||h==='red'; }).length;
-  const el_k2h    = document.getElementById('k2-healthy');
-  const el_k2hsub = document.getElementById('k2-healthy-sub');
-  const el_k2hbdg = document.getElementById('k2-healthy-badge');
-  if(el_k2h)    el_k2h.textContent    = cGreen2;
-  if(el_k2hsub) el_k2hsub.textContent = cAtRisk > 0 ? `${cAtRisk} at risk` : 'All healthy 🎉';
-  if(el_k2hbdg) el_k2hbdg.textContent = cGreen2 + ' green';
-
   const el_k2fu   = document.getElementById('k2-fu');
   const el_k2fbdg = document.getElementById('k2-fu-badge');
-  if(el_k2fu)   el_k2fu.textContent   = followUp.length;
-  if(el_k2fbdg) el_k2fbdg.textContent = followUp.length > 0 ? followUp.length+' urgent' : 'watchlist';
+  if(el_k2fu)   el_k2fu.textContent   = outreachFU.length;
+  if(el_k2fbdg) el_k2fbdg.textContent = outreachFU.length > 0 ? outreachFU.length+' in queue' : 'none yet';
 }
 
 // ── BOOT ──
