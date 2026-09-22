@@ -1143,7 +1143,8 @@ function toObjs(rows){if(!rows.length)return[];
   const h=rows[0].map(x=>x.toLowerCase().trim());
   return rows.slice(1).map(r=>{const o={};h.forEach((k,i)=>o[k]=(r[i]||'').trim());return o;});
 }
-function findCol(o,kws){const ks=Object.keys(o);for(const kw of kws){const k=ks.find(k=>k.includes(kw));if(k)return o[k]||'';}return '';}
+function findCol(o,kws){const ks=Object.keys(o);for(const kw of kws){const k=ks.find(k=>k.toLowerCase().includes(kw.toLowerCase()));if(k)return o[k]||'';}return '';}
+function normalizeKeys(rows){return rows.map(r=>{const n={};Object.keys(r).forEach(k=>{n[k.toLowerCase().trim()]=typeof r[k]==="string"?r[k]:r[k];});return n;});}
 
 // ── FETCH ──
 async function fetchSheet(id,sheet){
@@ -1172,7 +1173,8 @@ async function fetchCached(){
     fetch('data/direct.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
     fetch('data/onboarding.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
   ]);
-  return [sv,pv,dv,ob];
+  // Normalize all keys to lowercase so findCol() and parseLiveOnb() work consistently
+  return [normalizeKeys(sv),normalizeKeys(pv),normalizeKeys(dv),normalizeKeys(ob)];
 }
 
 async function refreshData(){
