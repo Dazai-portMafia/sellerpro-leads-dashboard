@@ -1,0 +1,22 @@
+{
+  "fetched_at": "22 Sep 2026, 4:57 PM IST",
+  "fetched_utc": "2026-09-22T11:27:52.272015+00:00",
+  "tabs": {
+    "shivansh": {
+      "rows": 2300,
+      "status": "ok"
+    },
+    "priya": {
+      "rows": 1557,
+      "status": "ok"
+    },
+    "direct": {
+      "rows": 493,
+      "status": "ok"
+    },
+    "onboarding": {
+      "rows": 13,
+      "status": "ok"
+    }
+  }
+}
