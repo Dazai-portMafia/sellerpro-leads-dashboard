@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Celebro Pipeline v7</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:#f0f4ff; --surface:#fff; --surface2:#f5f7ff; --border:#e4e9f8;
+  --text:#0d1630; --text2:#4a5680; --text3:#9ba8c8;
+  --blue:#4f6ef7; --blue-d:#3b56e0; --blue-l:#eef0fe;
+  --green:#16a34a; --green-l:#dcfce7;
+  --red:#e53e3e; --red-l:#fff0f0;
+  --orange:#d97706; --orange-l:#fff7ed;
+  --purple:#7c3aed; --purple-l:#f3f0ff;
+  --teal:#0891b2; --teal-l:#ecfeff;
+  --shadow:0 1px 4px rgba(79,110,247,.08),0 2px 8px rgba(15,23,42,.06);
+  --shadow-md:0 4px 16px rgba(79,110,247,.12),0 2px 8px rgba(15,23,42,.08);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.18),0 2px 8px rgba(0,0,0,.1);
+  --r:14px; --rs:9px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#080c18; --surface:#0e1425; --surface2:#141c30; --border:#1e2a45;
+  --text:#e4ebff; --text2:#6e7ea8; --text3:#3a4870;
+  --blue-l:#111d45; --green-l:#0a2010; --red-l:#250808; --orange-l:#1f1000; --purple-l:#160c35; --teal-l:#021820;
+  --shadow:0 1px 4px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.3);
+}}
+:root[data-theme=dark]{
+  --bg:#080c18; --surface:#0e1425; --surface2:#141c30; --border:#1e2a45;
+  --text:#e4ebff; --text2:#6e7ea8; --text3:#3a4870;
+  --blue-l:#111d45; --green-l:#0a2010; --red-l:#250808; --orange-l:#1f1000; --purple-l:#160c35; --teal-l:#021820;
+  --shadow:0 1px 4px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.5}
+
+/* ─ TOPBAR ─ */
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-icon{width:34px;height:34px;border-radius:9px;flex-shrink:0;background:linear-gradient(135deg,var(--blue) 0%,var(--purple) 100%);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:13px;letter-spacing:-.5px}
+.brand-name{font-weight:700;font-size:15px;letter-spacing:-.4px}
+.brand-sub{font-size:11px;color:var(--text3);margin-top:-1px}
+.topbar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.sync-info{font-size:11px;color:var(--text3);white-space:nowrap}
+.sync-info strong{color:var(--text2);font-weight:600}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:4px 11px;font-size:11px;font-weight:600;letter-spacing:.2px}
+.chip-live{background:var(--green-l);color:var(--green)}
+.chip-cached{background:var(--orange-l);color:var(--orange)}
+.tb-btn{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 13px;font-size:12px;font-weight:500;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .15s;font-family:inherit}
+.tb-btn:hover{background:var(--blue-l);color:var(--blue);border-color:var(--blue)}
+.tb-btn.edit-active{background:var(--blue);color:#fff;border-color:var(--blue-d);font-weight:600}
+.tb-btn.edit-active:hover{background:var(--blue-d)}
+
+/* ─ EDIT MODE ─ */
+.edit-select{background:var(--surface);border:1px solid var(--blue);border-radius:6px;padding:4px 8px;font-size:12px;color:var(--text);font-family:inherit;outline:none;cursor:pointer;min-width:120px;transition:box-shadow .15s}
+.edit-select:focus{box-shadow:0 0 0 2px rgba(79,110,247,.2)}
+.edit-textarea{background:var(--surface);border:1px solid var(--blue);border-radius:6px;padding:5px 8px;font-size:12px;color:var(--text);font-family:inherit;outline:none;resize:vertical;width:100%;min-height:44px;transition:box-shadow .15s;line-height:1.4}
+.edit-textarea:focus{box-shadow:0 0 0 2px rgba(79,110,247,.2)}
+.edited-dot{display:inline-block;width:6px;height:6px;background:var(--blue);border-radius:50%;margin-left:3px;vertical-align:middle;flex-shrink:0;cursor:help}
+.hdot-btn{background:none;border:none;cursor:pointer;padding:3px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transition:transform .15s,background .15s;position:relative}
+.hdot-btn:hover{transform:scale(1.4);background:var(--border)}
+.hdot-btn::after{content:'cycle';position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--text);color:var(--surface);font-size:9px;padding:2px 5px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s}
+.hdot-btn:hover::after{opacity:1}
+.clear-edits-btn{background:var(--red-l);border:1px solid rgba(229,62,62,.4);border-radius:8px;padding:6px 13px;font-size:12px;font-weight:600;color:var(--red);cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .15s;font-family:inherit}
+.clear-edits-btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.edit-mode-banner{background:var(--blue-l);border-bottom:1px solid rgba(79,110,247,.2);padding:8px 28px;font-size:12px;color:var(--blue);display:flex;align-items:center;gap:8px}
+
+/* ─ LIVE BANNER ─ */
+.live-banner{background:var(--orange-l);border-bottom:1px solid #fcd34d;padding:9px 28px;font-size:12px;color:var(--orange);display:flex;align-items:center;gap:8px}
+
+/* ─ HERO ─ */
+.hero{background:linear-gradient(135deg,#1e2d70 0%,#0d1a4a 60%,#080c18 100%);padding:28px 28px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 20%,rgba(79,110,247,.25) 0%,transparent 70%)}
+.hero-inner{position:relative;z-index:1;max-width:1300px;margin:0 auto}
+.hero-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.hero-title{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.8px;margin-bottom:4px}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.5)}
+
+/* ─ KPI ROW ─ */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1300px;margin:0 auto;margin-top:-52px;padding:0 28px 0;position:relative;z-index:10}
+@media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kpi-row{grid-template-columns:1fr}}
+.kpi{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow-md);border:1px solid var(--border);padding:18px 20px;position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.kpi.clickable{cursor:pointer}
+.kpi.clickable:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.kpi-accent-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r) var(--r) 0 0}
+.kpi-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.kpi-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.kpi-trend{font-size:11px;font-weight:600;border-radius:5px;padding:2px 7px}
+.trend-up{background:var(--green-l);color:var(--green)}
+.trend-warn{background:var(--orange-l);color:var(--orange)}
+.kpi-val{font-size:30px;font-weight:800;letter-spacing:-1.5px;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:4px}
+.kpi-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3)}
+.kpi-sub{font-size:12px;color:var(--text2);margin-top:6px}
+.kpi-progress{height:4px;background:var(--border);border-radius:4px;margin-top:10px;overflow:hidden}
+.kpi-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.kpi-click-hint{font-size:10px;color:var(--text3);margin-top:8px;display:flex;align-items:center;gap:3px}
+
+/* ─ MAIN ─ */
+.main{max-width:1300px;margin:28px auto 60px;padding:0 28px}
+
+/* ─ TABS ─ */
+.tab-nav{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:24px;overflow-x:auto}
+.tab-btn{background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:10px 18px;font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;white-space:nowrap;transition:color .15s;font-family:inherit;border-radius:6px 6px 0 0}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}
+.tab-btn.tab-warn.active{color:var(--red);border-bottom-color:var(--red)}
+.t-badge{display:inline-flex;align-items:center;justify-content:center;background:var(--red-l);color:var(--red);font-size:10px;font-weight:700;border-radius:10px;padding:1px 6px;margin-left:5px;font-variant-numeric:tabular-nums}
+
+/* ─ SECTION HEAD ─ */
+.sec-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.sec-title{font-size:16px;font-weight:700;letter-spacing:-.3px}
+.sec-desc{font-size:12px;color:var(--text3);margin-top:2px}
+
+/* ─ CARDS ─ */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.card-pad{padding:20px 22px}
+
+/* ─ INSIGHT STRIP ─ */
+.insight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:700px){.insight-strip{grid-template-columns:1fr}}
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:14px 16px;display:flex;gap:12px;align-items:flex-start;box-shadow:var(--shadow)}
+.ins-dot{width:36px;height:36px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ins-title{font-size:13px;font-weight:600;margin-bottom:2px}
+.ins-body{font-size:12px;color:var(--text2);line-height:1.5}
+
+/* ─ REP COMPARISON ─ */
+.rep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+@media(max-width:800px){.rep-grid{grid-template-columns:1fr}}
+.rep-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.rep-header{padding:14px 18px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.rep-name{font-size:14px;font-weight:700}
+.rep-tag{font-size:11px;color:var(--text3);margin-top:1px}
+.rep-stats{display:flex;gap:0;border-bottom:1px solid var(--border)}
+.rep-stat{flex:1;padding:14px 0;text-align:center;border-right:1px solid var(--border)}
+.rep-stat:last-child{border-right:none}
+.rs-val{font-size:20px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.rs-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-top:2px}
+.rep-chart-area{padding:16px 18px 14px;display:flex;align-items:center;gap:16px}
+.rep-chart-area canvas{width:90px!important;height:90px!important;flex-shrink:0}
+.status-legend{flex:1;display:flex;flex-direction:column;gap:5px}
+.sl-row{display:flex;align-items:center;gap:6px;font-size:11px}
+.sl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sl-label{color:var(--text2);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sl-val{font-weight:600;font-size:11px;font-variant-numeric:tabular-nums}
+.rep-rate-wrap{padding:0 18px 16px}
+.rate-row{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-bottom:5px}
+.rate-bar{height:6px;background:var(--border);border-radius:6px;overflow:hidden}
+.rate-fill{height:100%;border-radius:6px;transition:width 1.2s ease}
+
+/* ─ OUTREACH TAB ─ */
+.filter-bar{
+  display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);
+  padding:10px 14px;
+}
+.filter-bar label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);white-space:nowrap}
+.filter-bar input,.filter-bar select{
+  background:var(--surface2);border:1px solid var(--border);border-radius:7px;
+  padding:7px 11px;font-size:12px;color:var(--text);font-family:inherit;outline:none;
+  transition:border-color .15s;
+}
+.filter-bar input:focus,.filter-bar select:focus{border-color:var(--blue)}
+.filter-bar input{min-width:200px;flex:1}
+.filter-sep{width:1px;height:24px;background:var(--border);flex-shrink:0}
+.filter-chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.fc{
+  border:1px solid var(--border);background:var(--surface2);border-radius:20px;
+  padding:4px 12px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);
+  transition:all .15s;font-family:inherit;white-space:nowrap;
+}
+.fc:hover{border-color:var(--blue);color:var(--blue)}
+.fc.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.fc.sm-on{background:var(--red);border-color:var(--red);color:#fff}
+.dl-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .15s;font-family:inherit;white-space:nowrap}
+.dl-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.dl-btn-g:hover{background:var(--green);border-color:var(--green)}
+
+/* ─ STATUS BREAKDOWN (static mode) ─ */
+.static-filter-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.static-filter-bar span{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.4px}
+.status-breakdown-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:20px}
+.sb-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:14px 16px;box-shadow:var(--shadow)}
+.sb-rep{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:10px}
+.sb-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.sb-row:last-child{margin-bottom:0}
+.sb-bar-wrap{flex:1;height:6px;background:var(--border);border-radius:6px;overflow:hidden}
+.sb-bar-fill{height:100%;border-radius:6px;transition:width 1s ease}
+.sb-status{font-size:12px;color:var(--text2);min-width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sb-count{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;min-width:20px;text-align:right}
+
+/* ─ TABLE ─ */
+.table-wrap{overflow-x:auto;border-radius:var(--rs);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead tr{background:var(--surface2)}
+th{padding:10px 14px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text3);border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--surface2)}
+.td-name{font-weight:600;font-size:13px}
+.td-phone{font-family:monospace;font-size:12px;color:var(--text2)}
+.td-muted{font-size:12px;color:var(--text3);font-style:italic}
+tr.row-edited{background:rgba(79,110,247,.03)}
+tr.row-edited:hover{background:rgba(79,110,247,.06)}
+
+/* ─ PILLS ─ */
+.pill{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.p-green{background:var(--green-l);color:var(--green)}
+.p-red{background:var(--red-l);color:var(--red)}
+.p-blue{background:var(--blue-l);color:var(--blue)}
+.p-orange{background:var(--orange-l);color:var(--orange)}
+.p-purple{background:var(--purple-l);color:var(--purple)}
+.p-teal{background:var(--teal-l);color:var(--teal)}
+.p-grey{background:var(--surface2);color:var(--text3)}
+
+/* ─ ONBOARDING ─ */
+.pipeline-pills{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.pp{flex:1;min-width:110px;background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:14px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
+.pp-num{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.pp-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3)}
+.hdot{display:inline-block;width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.hg{background:var(--green)}.hr{background:var(--red)}.ho{background:var(--orange)}.hgrey{background:var(--text3)}
+
+/* ─ SHIPMAXX ─ */
+.alert-bar{background:linear-gradient(135deg,#7f1d1d 0%,#450a0a 100%);border:1px solid #b91c1c;border-radius:var(--r);padding:20px 24px;margin-bottom:20px;display:flex;align-items:flex-start;gap:16px}
+.alert-bar .ai{font-size:28px;flex-shrink:0}
+.alert-bar h3{color:#fca5a5;font-size:16px;font-weight:700;margin-bottom:4px}
+.alert-bar p{color:#fecaca;font-size:13px;line-height:1.5}
+.sm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:600px){.sm-grid{grid-template-columns:1fr}}
+.sm-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:18px;text-align:center;box-shadow:var(--shadow)}
+.sm-val{font-size:40px;font-weight:800;color:var(--red);letter-spacing:-2px}
+.sm-lbl{font-size:12px;font-weight:600;color:var(--text2);margin-top:4px}
+.sm-rep{font-size:11px;color:var(--text3);margin-top:2px}
+.sm-pct{font-size:11px;color:var(--text3);margin-top:6px;font-weight:500}
+
+/* ─ NOTE ─ */
+.note{background:var(--blue-l);border:1px solid rgba(79,110,247,.3);border-radius:var(--rs);padding:12px 16px;font-size:12px;color:var(--blue);line-height:1.5;margin-top:14px}
+.note-warn{background:var(--orange-l);border-color:rgba(217,119,6,.3);color:var(--orange)}
+
+/* ─ MODAL ─ */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(8,12,24,.6);backdrop-filter:blur(4px);
+  z-index:200;display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-drawer{
+  background:var(--surface);border-radius:20px 20px 0 0;
+  width:100%;max-width:860px;max-height:88vh;display:flex;flex-direction:column;
+  transform:translateY(40px);transition:transform .25s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 -8px 40px rgba(0,0,0,.2);
+}
+.modal-overlay.open .modal-drawer{transform:translateY(0)}
+.modal-handle{width:40px;height:4px;background:var(--border);border-radius:4px;margin:12px auto 0}
+.modal-head{
+  padding:16px 24px 14px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0;
+}
+.modal-title{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.modal-title-badge{background:var(--red-l);color:var(--red);font-size:12px;font-weight:700;border-radius:8px;padding:2px 9px}
+.modal-close{
+  background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:16px;color:var(--text2);transition:all .15s;font-family:inherit;
+}
+.modal-close:hover{background:var(--red-l);color:var(--red);border-color:var(--red)}
+.modal-filter{padding:12px 24px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.modal-filter input,.modal-filter select{
+  background:var(--surface2);border:1px solid var(--border);border-radius:7px;
+  padding:7px 11px;font-size:12px;color:var(--text);font-family:inherit;outline:none;
+}
+.modal-filter input:focus,.modal-filter select:focus{border-color:var(--blue)}
+.modal-filter input{min-width:160px;flex:1}
+.modal-body{overflow-y:auto;flex:1;padding:0}
+.modal-foot{padding:12px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:12px;flex-wrap:wrap}
+.modal-count{font-size:12px;color:var(--text3)}
+
+/* ─ LOADING ─ */
+#loading{position:fixed;inset:0;background:rgba(8,12,24,.75);backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:100}
+.spinner{width:40px;height:40px;border:3px solid rgba(79,110,247,.3);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load-text{color:#fff;font-size:14px;font-weight:500}
+[hidden]{display:none!important}
+.tbl-empty{text-align:center;padding:36px;color:var(--text3);font-size:13px}
+.row-count{margin-top:8px;font-size:11px;color:var(--text3)}
+
+/* ─ ONBOARDING INSIGHT TILES ─ */
+.onb-insights{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+@media(max-width:900px){.onb-insights{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.onb-insights{grid-template-columns:1fr}}
+.oi-tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:border-color .2s,background .2s}
+.oi-tile.oi-hot{border-color:var(--blue);background:var(--blue-l)}
+.oi-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.oi-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:4px}
+.oi-val{font-size:28px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums;line-height:1}
+.oi-slbl{font-size:10px;font-weight:600;margin-top:3px}
+.oi-sub{font-size:11px;color:var(--text2);margin-top:2px;line-height:1.4}
+.oi-split{display:flex;gap:0;align-items:stretch}
+.oi-stat{flex:1;display:flex;flex-direction:column}
+.oi-divider{width:1px;background:var(--border);margin:0 12px;flex-shrink:0}
+.oi-plan-chip{display:inline-flex;align-items:center;gap:4px;background:var(--blue-l);border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700;color:var(--blue);margin:2px 2px 0 0}
+.oi-plan-chip.chip-growth{background:var(--purple-l);color:var(--purple)}
+.oi-plan-chip.chip-pro{background:var(--teal-l);color:var(--teal)}
+.oi-plan-chip.chip-enterprise{background:var(--orange-l);color:var(--orange)}
+
+/* ─ FOLLOW-UP WATCHLIST ─ */
+.fu-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
+.fu-row:last-child{border-bottom:none}
+.fu-name{font-weight:600;font-size:13px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fu-cat{font-size:11px;color:var(--text3);white-space:nowrap}
+.fu-age{font-size:10px;font-weight:700;border-radius:12px;padding:2px 8px;white-space:nowrap}
+.fu-age-warn{background:var(--orange-l);color:var(--orange)}
+.fu-age-red{background:var(--red-l);color:var(--red)}
+
+/* ─ KPI ROW 2 ─ */
+.kpi-row-2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1300px;margin:14px auto 0;padding:0 28px;position:relative;z-index:10}
+@media(max-width:900px){.kpi-row-2{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kpi-row-2{grid-template-columns:1fr}}
+
+/* ─ ONBOARDING FILTER BAR ─ */
+.onb-fb{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:14px 16px;margin-bottom:16px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.onb-fb-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.onb-fb-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);white-space:nowrap}
+.onb-fc{border:1px solid var(--border);background:var(--surface2);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);transition:all .15s;font-family:inherit;white-space:nowrap}
+.onb-fc:hover{border-color:var(--blue);color:var(--blue)}
+.onb-fc.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.onb-fc.on-g{background:var(--green);border-color:var(--green);color:#fff}
+.onb-fc.on-o{background:var(--orange);border-color:var(--orange);color:#fff}
+.onb-fc.on-r{background:var(--red);border-color:var(--red);color:#fff}
+.onb-fb-sep{width:1px;height:22px;background:var(--border);flex-shrink:0}
+.onb-fb select{background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:5px 9px;font-size:11px;color:var(--text);font-family:inherit;outline:none;cursor:pointer;transition:border-color .15s}
+.onb-fb select:focus{border-color:var(--blue)}
+.onb-fb input[type=text]{background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-size:12px;color:var(--text);font-family:inherit;outline:none;flex:1;min-width:180px;transition:border-color .15s}
+.onb-fb input[type=text]:focus{border-color:var(--blue)}
+.onb-clear-btn{background:var(--red-l);border:1px solid rgba(229,62,62,.3);border-radius:7px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--red);cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:4px}
+.onb-clear-btn:hover{background:var(--red);color:#fff}
+.onb-result-meta{font-size:11px;color:var(--text3);padding:1px 4px;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <div class="load-text">Fetching live data from Google Sheets…</div>
+</div>
+
+<!-- ── SHIPMAXX MODAL ── -->
+<div class="modal-overlay" id="sm-modal" onclick="closeSmModal(event)">
+  <div class="modal-drawer">
+    <div class="modal-handle"></div>
+    <div class="modal-head">
+      <div class="modal-title">
+        🚨 ShipMaxx Flagged Sellers
+        <span class="modal-title-badge" id="sm-modal-count">9</span>
+      </div>
+      <button class="modal-close" onclick="closeSmModal(null)">✕</button>
+    </div>
+    <div class="modal-filter">
+      <input id="sm-search" type="text" placeholder="🔍  Search name or phone…" oninput="renderSmModal()">
+      <select id="sm-rep-filter" onchange="renderSmModal()">
+        <option value="">All Sources</option>
+        <option value="Shivansh">Shivansh</option>
+        <option value="Priya">Priya</option>
+        <option value="Direct">Direct Leads</option>
+      </select>
+    </div>
+    <div class="modal-body">
+      <div class="table-wrap" style="border-radius:0;border:none">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Seller Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Source / Rep</th>
+              <th>Status</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody id="sm-modal-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <span class="modal-count" id="sm-modal-row-count"></span>
+      <button class="dl-btn dl-btn-g" onclick="dlShipmaxx()">⬇ Download List (.csv)</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-icon">CL</div>
+    <div>
+      <div class="brand-name">Celebro Leads</div>
+      <div class="brand-sub">Sales Intelligence Dashboard</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="sync-info">Synced: <strong id="last-sync">—</strong></span>
+    <span id="src-badge" class="chip chip-cached">Cached</span>
+    <button class="tb-btn" onclick="refreshData()">↻ Refresh</button>
+    <button id="edit-mode-btn" class="tb-btn" onclick="toggleEditMode()" title="Enable inline editing of status and notes">✏ Edit</button>
+    <button id="clear-edits-btn" class="clear-edits-btn" onclick="clearAllEdits()" hidden title="Remove all locally saved edits">✕ Clear Edits</button>
+    <button class="tb-btn" onclick="toggleTheme()">◐ Theme</button>
+  </div>
+</header>
+
+<!-- EDIT MODE BANNER -->
+<div id="edit-banner" class="edit-mode-banner" hidden>
+  ✏️ <strong>Edit mode on</strong> — Click status dropdowns or health dots to update. Changes save locally in your browser and export to CSV.
+</div>
+
+<!-- LIVE FETCH NOTICE -->
+<div id="live-banner" class="live-banner" hidden>
+  ⚠️ Live data could not be fetched from Google Sheets. Open locally? <strong>Host the file online</strong> (e.g. Netlify Drop) to enable auto-refresh. Showing cached data from Sep 21.
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Celebro · Sales Operations</div>
+    <div class="hero-title">Lead Tracker &amp; Pipeline Overview</div>
+    <div class="hero-sub">Outreach · Onboarding · Demo Pipeline · ShipMaxx Intelligence</div>
+  </div>
+</div>
+
+<!-- KPI ROW -->
+<div class="kpi-row">
+  <div class="kpi">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--blue),var(--purple))"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--blue-l)">🗂️</div>
+      <span class="kpi-trend trend-up">3 sheets</span>
+    </div>
+    <div class="kpi-val" id="k-total">1,613</div>
+    <div class="kpi-label">Total Database</div>
+    <div class="kpi-sub">Sellers in outreach pool</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--green),#0891b2)"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--green-l)">📞</div>
+      <span class="kpi-trend trend-up" id="k-rate-lbl">17.5%</span>
+    </div>
+    <div class="kpi-val" id="k-contacted">282</div>
+    <div class="kpi-label">Total Contacted</div>
+    <div class="kpi-sub">Sellers with any status</div>
+    <div class="kpi-progress"><div class="kpi-bar" id="k-rate-bar" style="width:17.5%;background:var(--green)"></div></div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--purple),#e879f9)"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--purple-l)">🎯</div>
+      <span class="kpi-trend trend-up">4 active</span>
+    </div>
+    <div class="kpi-val" id="k-demos">7</div>
+    <div class="kpi-label">Demos Given</div>
+    <div class="kpi-sub">2 unreachable · 1 self-onboarding</div>
+  </div>
+  <div class="kpi clickable" onclick="openSmModal()" title="Click to view flagged sellers">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--red),var(--orange))"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--red-l)">⚠️</div>
+      <span class="kpi-trend trend-warn">3.2% rate</span>
+    </div>
+    <div class="kpi-val" id="k-sm">9</div>
+    <div class="kpi-label">ShipMaxx Flags</div>
+    <div class="kpi-sub">Sellers flagged competitor</div>
+    <div class="kpi-click-hint">👆 Click to view full list</div>
+  </div>
+</div>
+
+<!-- KPI ROW 2 — Onboarding-specific metrics -->
+<div class="kpi-row-2">
+  <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--purple),#e879f9)"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--purple-l)">🎯</div>
+      <span class="kpi-trend trend-up" id="k2-demo-pct">—%</span>
+    </div>
+    <div class="kpi-val" id="k2-demo-done">—</div>
+    <div class="kpi-label">Demos Completed</div>
+    <div class="kpi-sub" id="k2-demo-sub">of pipeline clients</div>
+    <div class="kpi-progress"><div class="kpi-bar" id="k2-demo-bar" style="width:0%;background:var(--purple)"></div></div>
+  </div>
+  <div class="kpi" id="k2-today-card">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--blue),var(--teal))"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--blue-l)" id="k2-today-ico">📞</div>
+      <span class="kpi-trend" id="k2-today-badge" style="background:var(--blue-l);color:var(--blue)">Today</span>
+    </div>
+    <div class="kpi-val" id="k2-today">—</div>
+    <div class="kpi-label">Outreach Due Today</div>
+    <div class="kpi-sub" id="k2-today-sub">clients to contact today</div>
+  </div>
+  <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--green),#0891b2)"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--green-l)">🟢</div>
+      <span class="kpi-trend trend-up" id="k2-healthy-badge">healthy</span>
+    </div>
+    <div class="kpi-val" id="k2-healthy">—</div>
+    <div class="kpi-label">Healthy Clients</div>
+    <div class="kpi-sub" id="k2-healthy-sub">Green health status</div>
+  </div>
+  <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--orange),var(--red))"></div>
+    <div class="kpi-header">
+      <div class="kpi-icon" style="background:var(--orange-l)">⏰</div>
+      <span class="kpi-trend trend-warn" id="k2-fu-badge">watchlist</span>
+    </div>
+    <div class="kpi-val" id="k2-fu">—</div>
+    <div class="kpi-label">Follow-up Queue</div>
+    <div class="kpi-sub">No contact in 3+ days</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- INSIGHT STRIP -->
+  <div class="insight-strip" style="margin-top:24px">
+    <div class="insight-card">
+      <div class="ins-dot" style="background:var(--green-l)">📈</div>
+      <div>
+        <div class="ins-title">Priya has 2× Shivansh's rate</div>
+        <div class="ins-body">Priya contacted 10.6% of her list vs Shivansh's 5.9%. Same pool size — worth reviewing Shivansh's call approach.</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="ins-dot" style="background:var(--red-l)">🚨</div>
+      <div>
+        <div class="ins-title">ShipMaxx is a competitor pain</div>
+        <div class="ins-body">9 sellers proactively raised ShipMaxx issues — 67% from Direct Leads. Make "better than ShipMaxx" a key pitch hook.</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="ins-dot" style="background:var(--purple-l)">🎯</div>
+      <div>
+        <div class="ins-title">7 clients in demo pipeline</div>
+        <div class="ins-body">6 demos done · 4 Green health. 3 self-sufficient, 2 unreachable — check <strong>Onboarding</strong> tab for today's outreach queue, follow-up watchlist &amp; support breakdown.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('overview',this)">Overview</button>
+    <button class="tab-btn" onclick="showTab('outreach',this)">Outreach</button>
+    <button class="tab-btn" onclick="showTab('onboarding',this)">Onboarding</button>
+    <button class="tab-btn tab-warn" onclick="showTab('shipmaxx',this)">ShipMaxx Issues <span class="t-badge" id="sm-badge">9</span></button>
+  </nav>
+
+  <!-- ── OVERVIEW ── -->
+  <div id="tab-overview">
+    <div class="sec-head">
+      <div><div class="sec-title">Rep Performance Comparison</div><div class="sec-desc">Contact rate, status breakdown and ShipMaxx flags per source</div></div>
+      <button class="dl-btn" onclick="downloadAll()">⬇ Download All Sheets</button>
+    </div>
+    <div class="rep-grid">
+      <!-- Shivansh -->
+      <div class="rep-card">
+        <div class="rep-header"><div><div class="rep-name">Shivansh</div><div class="rep-tag">Sales Rep · Outreach</div></div><span class="pill p-blue">Rep</span></div>
+        <div class="rep-stats">
+          <div class="rep-stat"><div class="rs-val" id="sv-total">540</div><div class="rs-lbl">Total</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--blue)" id="sv-contact">32</div><div class="rs-lbl">Called</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--red)">1</div><div class="rs-lbl">ShipMaxx</div></div>
+        </div>
+        <div class="rep-chart-area"><canvas id="ch-shivansh"></canvas><div class="status-legend" id="leg-shivansh"></div></div>
+        <div class="rep-rate-wrap">
+          <div class="rate-row"><span>Contact Rate</span><span id="sv-rate" style="font-weight:700">5.9%</span></div>
+          <div class="rate-bar"><div class="rate-fill" id="sv-bar" style="width:5.9%;background:var(--blue)"></div></div>
+        </div>
+      </div>
+      <!-- Priya -->
+      <div class="rep-card">
+        <div class="rep-header"><div><div class="rep-name">Priya</div><div class="rep-tag">Sales Rep · Outreach</div></div><span class="pill p-purple">Rep</span></div>
+        <div class="rep-stats">
+          <div class="rep-stat"><div class="rs-val" id="pv-total">622</div><div class="rs-lbl">Total</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--purple)" id="pv-contact">66</div><div class="rs-lbl">Called</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--red)">2</div><div class="rs-lbl">ShipMaxx</div></div>
+        </div>
+        <div class="rep-chart-area"><canvas id="ch-priya"></canvas><div class="status-legend" id="leg-priya"></div></div>
+        <div class="rep-rate-wrap">
+          <div class="rate-row"><span>Contact Rate</span><span id="pv-rate" style="font-weight:700">10.6%</span></div>
+          <div class="rate-bar"><div class="rate-fill" id="pv-bar" style="width:10.6%;background:var(--purple)"></div></div>
+        </div>
+      </div>
+      <!-- Direct -->
+      <div class="rep-card">
+        <div class="rep-header"><div><div class="rep-name">Direct Leads</div><div class="rep-tag">Inbound · Seller Pro</div></div><span class="pill p-green">Inbound</span></div>
+        <div class="rep-stats">
+          <div class="rep-stat"><div class="rs-val" id="dv-total">451</div><div class="rs-lbl">Total</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--green)" id="dv-contact">184</div><div class="rs-lbl">Active</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--red)">6</div><div class="rs-lbl">ShipMaxx</div></div>
+        </div>
+        <div class="rep-chart-area"><canvas id="ch-direct"></canvas><div class="status-legend" id="leg-direct"></div></div>
+        <div class="rep-rate-wrap">
+          <div class="rate-row"><span>Active Rate</span><span id="dv-rate" style="font-weight:700">40.8%</span></div>
+          <div class="rate-bar"><div class="rate-fill" id="dv-bar" style="width:40.8%;background:var(--green)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OUTREACH ── -->
+  <div id="tab-outreach" hidden>
+    <div class="sec-head">
+      <div><div class="sec-title">Outreach Records</div><div class="sec-desc" id="out-desc">Filter and explore lead data by rep, status, or keyword</div></div>
+    </div>
+
+    <!-- STATIC MODE: Status breakdown with rep filter -->
+    <div id="out-static">
+      <div class="note note-warn" style="margin-bottom:16px">
+        📦 <strong>Cached mode:</strong> Individual rows load when hosted online. Showing status breakdown from the last sync (Sep 21).
+      </div>
+      <div class="static-filter-bar">
+        <span>View:</span>
+        <button class="fc on" id="sf-all" onclick="setStaticFilter('all',this)">All Reps</button>
+        <button class="fc" id="sf-sv" onclick="setStaticFilter('sv',this)">Shivansh</button>
+        <button class="fc" id="sf-pv" onclick="setStaticFilter('pv',this)">Priya</button>
+        <button class="fc" id="sf-dv" onclick="setStaticFilter('dv',this)">Direct Leads</button>
+      </div>
+      <div class="status-breakdown-grid" id="sb-grid"></div>
+    </div>
+
+    <!-- LIVE MODE: Full filterable table -->
+    <div id="out-live" hidden>
+      <div class="filter-bar">
+        <input id="search-box" type="text" placeholder="🔍  Search by name or phone…" oninput="renderOutreachTable()">
+        <div class="filter-sep"></div>
+        <label>Rep</label>
+        <div class="filter-chips" id="rep-chips">
+          <button class="fc on" onclick="setRepFilter('all',this)">All</button>
+          <button class="fc" onclick="setRepFilter('Shivansh',this)">Shivansh</button>
+          <button class="fc" onclick="setRepFilter('Priya',this)">Priya</button>
+          <button class="fc" onclick="setRepFilter('Direct',this)">Direct</button>
+        </div>
+        <div class="filter-sep"></div>
+        <label>Status</label>
+        <select id="status-filter" onchange="renderOutreachTable()"><option value="">All</option></select>
+        <div class="filter-sep"></div>
+        <label>ShipMaxx</label>
+        <button class="fc" id="sm-toggle" onclick="toggleSmFilter(this)">⚠ Flagged Only</button>
+        <div class="filter-sep"></div>
+        <button class="dl-btn dl-btn-g" onclick="downloadFiltered()">⬇ Download CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Email</th><th>Status</th><th>Rep</th><th>ShipMaxx?</th></tr></thead>
+          <tbody id="out-tbody"><tr><td colspan="7" class="tbl-empty">Loading…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="row-count" id="out-count"></div>
+    </div>
+  </div>
+
+  <!-- ── ONBOARDING ── -->
+  <div id="tab-onboarding" hidden>
+    <div class="sec-head">
+      <div><div class="sec-title">Onboarding Pipeline</div><div class="sec-desc">Demo-stage clients — filter by health, demo status, date, category &amp; more</div></div>
+      <button class="dl-btn dl-btn-g" onclick="dlOnboarding()">⬇ Download Pipeline</button>
+    </div>
+
+    <!-- ── COMPREHENSIVE FILTER BAR ── -->
+    <div class="onb-fb">
+      <!-- Row 1: Search + Health + Demo Status -->
+      <div class="onb-fb-row">
+        <input type="text" id="onb-search" placeholder="🔍  Search name, category, email…" oninput="onbSearchFilter()" style="max-width:280px">
+        <div class="onb-fb-sep"></div>
+        <span class="onb-fb-label">Health</span>
+        <button class="onb-fc on" id="ofb-h-all"   onclick="setOnbChipFilter('health','',this)">All</button>
+        <button class="onb-fc"    id="ofb-h-green"  onclick="setOnbChipFilter('health','green',this)">🟢 Green</button>
+        <button class="onb-fc"    id="ofb-h-orange" onclick="setOnbChipFilter('health','orange',this)">🟡 At Risk</button>
+        <button class="onb-fc"    id="ofb-h-red"    onclick="setOnbChipFilter('health','red',this)">🔴 Critical</button>
+        <div class="onb-fb-sep"></div>
+        <span class="onb-fb-label">Demo</span>
+        <button class="onb-fc on" id="ofb-d-all"    onclick="setOnbChipFilter('demo','',this)">All</button>
+        <button class="onb-fc"    id="ofb-d-done"   onclick="setOnbChipFilter('demo','done',this)">✅ Done</button>
+        <button class="onb-fc"    id="ofb-d-pend"   onclick="setOnbChipFilter('demo','pending',this)">⏳ Pending</button>
+      </div>
+      <!-- Row 2: Date filters + Category + Usage + Clear -->
+      <div class="onb-fb-row">
+        <span class="onb-fb-label">Last Contact</span>
+        <select id="ofb-lc" onchange="onbSelectFilter('lc',this)">
+          <option value="">Any</option>
+          <option value="fresh">Fresh (≤3 days)</option>
+          <option value="stale">Stale (3–7 days)</option>
+          <option value="cold">Cold (&gt;7 days)</option>
+          <option value="none">Not Contacted</option>
+        </select>
+        <div class="onb-fb-sep"></div>
+        <span class="onb-fb-label">Outreach Date</span>
+        <select id="ofb-out" onchange="onbSelectFilter('outDate',this)">
+          <option value="">Any</option>
+          <option value="today">Today</option>
+          <option value="week">This Week</option>
+        </select>
+        <div class="onb-fb-sep"></div>
+        <span class="onb-fb-label">Category</span>
+        <select id="ofb-cat" onchange="onbSelectFilter('cat',this)">
+          <option value="">All</option>
+        </select>
+        <div class="onb-fb-sep"></div>
+        <span class="onb-fb-label">Usage</span>
+        <select id="ofb-usage" onchange="onbSelectFilter('usage',this)">
+          <option value="">All</option>
+          <option value="self">Self-Sufficient</option>
+          <option value="guided">Needs Guidance</option>
+        </select>
+        <div style="flex:1"></div>
+        <button class="onb-clear-btn" id="onb-clear-btn" onclick="clearOnbFilters()" hidden>✕ Clear Filters</button>
+        <span class="onb-result-meta" id="onb-result-meta"></span>
+      </div>
+    </div>
+
+    <!-- ── ONBOARDING INSIGHT TILES ── -->
+    <div class="onb-insights" id="onb-insight-grid">
+
+      <!-- Demo Status -->
+      <div class="oi-tile">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="oi-icon" style="background:var(--purple-l)">🎯</div>
+          <div class="oi-label" style="margin:0">Demo Status</div>
+        </div>
+        <div class="oi-split">
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-demo-done" style="color:var(--green)">—</div>
+            <div class="oi-slbl" style="color:var(--green)">Done</div>
+          </div>
+          <div class="oi-divider"></div>
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-demo-pend" style="color:var(--orange)">—</div>
+            <div class="oi-slbl" style="color:var(--orange)">Pending</div>
+          </div>
+        </div>
+        <div class="oi-sub" id="oi-demo-sub" style="color:var(--text3)">—</div>
+      </div>
+
+      <!-- Outreach Today -->
+      <div class="oi-tile" id="oi-today-tile">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="oi-icon" id="oi-today-icon" style="background:var(--blue-l)">📞</div>
+          <div class="oi-label" style="margin:0">Outreach Today</div>
+        </div>
+        <div class="oi-val" id="oi-today-count">—</div>
+        <div class="oi-sub" id="oi-today-sub">clients scheduled for today</div>
+      </div>
+
+      <!-- Plan & Revenue -->
+      <div class="oi-tile">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="oi-icon" style="background:var(--green-l)">💰</div>
+          <div class="oi-label" style="margin:0">Plan &amp; Revenue</div>
+        </div>
+        <div class="oi-split">
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-paying" style="color:var(--green)">—</div>
+            <div class="oi-slbl" style="color:var(--green)">Paying</div>
+          </div>
+          <div class="oi-divider"></div>
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-free" style="color:var(--text3)">—</div>
+            <div class="oi-slbl" style="color:var(--text3)">No Plan</div>
+          </div>
+        </div>
+        <div id="oi-plan-breakdown" style="margin-top:4px;min-height:18px"></div>
+      </div>
+
+      <!-- Usage Split -->
+      <div class="oi-tile">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="oi-icon" style="background:var(--teal-l)">🧭</div>
+          <div class="oi-label" style="margin:0">Post-Onboarding Support</div>
+        </div>
+        <div class="oi-split">
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-self" style="color:var(--teal)">—</div>
+            <div class="oi-slbl" style="color:var(--teal)">Self-Sufficient</div>
+          </div>
+          <div class="oi-divider"></div>
+          <div class="oi-stat">
+            <div class="oi-val" id="oi-guided" style="color:var(--orange)">—</div>
+            <div class="oi-slbl" style="color:var(--orange)">Need Support</div>
+          </div>
+        </div>
+        <div class="oi-sub" id="oi-usage-sub" style="color:var(--text3)"></div>
+      </div>
+
+    </div><!-- /onb-insights -->
+
+    <!-- Follow-up Watchlist -->
+    <div id="onb-followup-card" class="card" style="padding:16px 18px;margin-bottom:20px" hidden>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span style="font-size:15px">⏰</span>
+        <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2)">Follow-up Needed</span>
+        <span id="fu-badge" class="pill p-orange" style="font-size:10px;margin-left:4px"></span>
+        <span style="font-size:11px;color:var(--text3);margin-left:4px">No contact in 3+ days</span>
+      </div>
+      <div id="onb-followup-list"></div>
+    </div>
+
+    <!-- Pipeline summary pills -->
+    <div class="pipeline-pills">
+      <div class="pp"><span style="font-size:20px">🎯</span><div><div class="pp-num" id="pp-d">7</div><div class="pp-lbl">In Pipeline</div></div></div>
+      <div class="pp"><span class="hdot hg" style="width:14px;height:14px"></span><div><div class="pp-num" id="pp-g">4</div><div class="pp-lbl">Green Health</div></div></div>
+      <div class="pp"><span class="hdot ho" style="width:14px;height:14px"></span><div><div class="pp-num" id="pp-o">2</div><div class="pp-lbl">At Risk</div></div></div>
+      <div class="pp"><span style="font-size:18px">🧭</span><div><div class="pp-num" id="pp-s">3</div><div class="pp-lbl">Self Usage</div></div></div>
+      <div class="pp"><span style="font-size:18px">📋</span><div><div class="pp-num" id="pp-p">0</div><div class="pp-lbl">Plan Assigned</div></div></div>
+    </div>
+
+    <!-- Mini insights row -->
+    <div style="display:grid;grid-template-columns:220px 1fr;gap:14px;margin-bottom:20px">
+      <div class="card" style="padding:16px">
+        <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">Health Mix</div>
+        <div style="position:relative;width:100px;height:100px;margin:0 auto 12px">
+          <canvas id="ch-onb-health" width="100" height="100"></canvas>
+        </div>
+        <div id="leg-onb-health" class="status-legend"></div>
+      </div>
+      <div class="card" style="padding:16px">
+        <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px">Product Categories</div>
+        <div style="position:relative;height:130px">
+          <canvas id="ch-onb-cat"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pipeline table -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Health</th><th>Client</th><th>Category</th>
+          <th>Demo Date</th><th>Last Connect</th><th>Meets</th>
+          <th>Usage</th><th>Plan</th><th>Remarks</th><th>By</th>
+        </tr></thead>
+        <tbody id="onb-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── SHIPMAXX ── -->
+  <div id="tab-shipmaxx" hidden>
+    <div class="alert-bar">
+      <div class="ai">🚨</div>
+      <div>
+        <h3>9 sellers flagged ShipMaxx as a pain point</h3>
+        <p>These sellers proactively mentioned bad experiences with ShipMaxx during outreach calls. This is a strong buying signal — they're already unhappy with a competitor. Prioritize with a direct comparison pitch.</p>
+      </div>
+    </div>
+    <div class="sm-grid">
+      <div class="sm-card"><div class="sm-val">1</div><div class="sm-lbl">Shivansh's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct">3.1% of contacted</div></div>
+      <div class="sm-card"><div class="sm-val">2</div><div class="sm-lbl">Priya's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct">3.0% of contacted</div></div>
+      <div class="sm-card"><div class="sm-val">6</div><div class="sm-lbl">Direct Leads</div><div class="sm-rep">Inbound · Seller Pro</div><div class="sm-pct">3.3% of contacted</div></div>
+    </div>
+    <div class="sec-head">
+      <div><div class="sec-title">Flagged Sellers</div><div class="sec-desc">Click the tile on the dashboard — or use the panel below</div></div>
+      <button class="dl-btn dl-btn-g" onclick="dlShipmaxx()">⬇ Download List</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Phone</th><th>Email</th><th>Source</th><th>Status</th><th>Remarks</th></tr></thead>
+        <tbody id="sm-tbody"></tbody>
+      </table>
+    </div>
+    <div class="note note-warn" style="margin-top:14px">
+      🎯 <strong>Recommended action:</strong> Create a separate outreach sequence for these 9 sellers with messaging like "Switch from ShipMaxx — lower rates, better support." They've already told you they're unhappy.
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<script>
+// ── CONFIG ──
+const OID  = '10NOima0tcnyRwl4iusBacNomQzmmVvimjyjBiUWykGg';
+const OBID = '1IYLwgQnj722wSv37KbXzyes9VRaNZ1YYEmnjTtZnd-E';
+const COLORS = ['#4f6ef7','#16a34a','#e53e3e','#d97706','#7c3aed','#0891b2','#f43f5e','#059669'];
+const OUTREACH_STATUSES = ['Interested','Follow Up','Not Interested','Busy / Call Later','In Progress','Not Called'];
+const HEALTH_LEVELS = ['Green','Orange','Red'];
+const USAGE_TYPES   = ['Self','Guided','Manual','—'];
+const PLAN_TYPES    = ['Basic','Growth','Pro','Enterprise','—'];
+
+const STATIC = {
+  date: '21 Sep 2026',
+  sv: { total:540, contacted:32, shipmaxx:1,
+    statuses:{'Interested':8,'Follow Up':12,'Not Interested':7,'Busy / Call Later':3,'In Progress':2} },
+  pv: { total:622, contacted:66, shipmaxx:2,
+    statuses:{'Interested':18,'Follow Up':22,'Not Interested':15,'Busy / Call Later':7,'In Progress':4} },
+  dv: { total:451, contacted:184, shipmaxx:6,
+    statuses:{'Interested':45,'Follow Up':62,'Not Interested':38,'Busy / Call Later':22,'In Progress':17} },
+  smRows: [
+    {name:'Wheels Culture', phone:'—', email:'—', status:'ShipMaxx Issue', rep:'Shivansh', remarks:'Competitor issue flagged during call'},
+    {name:'(Live data)', phone:'—', email:'—', status:'—', rep:'Priya', remarks:'2 more records load in live mode'},
+    {name:'(Live data)', phone:'—', email:'—', status:'—', rep:'Direct', remarks:'6 more records load in live mode'},
+  ],
+  onboarding: [
+    {health:'orange', name:'Midaswalk Enterprises', email:'nishant.raman@hotmail.com',     phone:'9911787260', cat:'Footwear',        demoDate:'11 Sep', lastConnect:'—',               outreachDate:'—',       meets:'—',              usage:'—',    plan:'—', amount:'—', initRemarks:'Ready to approach for onboarding — schedule ASAP', finalRemarks:'Not picking.. called 2 times/dropped WhatsApp', outreachPerson:'—'},
+    {health:'orange', name:'Harsh Goel',             email:'harshgoel1991@gmail.com',        phone:'9958833259', cat:'Bags (School)',   demoDate:'12 Sep', lastConnect:'—',               outreachDate:'—',       meets:'—',              usage:'—',    plan:'—', amount:'—', initRemarks:'Approach post 14th Sep — needs time with feature doc', finalRemarks:'Not Picking', outreachPerson:'—'},
+    {health:'green',  name:'Saurabh Kumar',          email:'nclsaurabhlaakha@gmail.com',     phone:'9259840626', cat:'Dry Fruits',      demoDate:'16 Sep', lastConnect:'17 Sep',          outreachDate:'16 Sep',  meets:'Scheduled 2nd',  usage:'Self', plan:'—', amount:'—', initRemarks:'Ready for onboarding — reach out today', finalRemarks:'Didnt show up on call / dropped WhatsApp', outreachPerson:'—'},
+    {health:'green',  name:'Vihaan',                 email:'info@kitchenpurefoods.com',       phone:'7827760052', cat:'Edible Oil',      demoDate:'16 Sep', lastConnect:'17 Sep',          outreachDate:'16 Sep',  meets:'Scheduled 1st',  usage:'Self', plan:'—', amount:'—', initRemarks:'', finalRemarks:'', outreachPerson:'—'},
+    {health:'green',  name:'Baldev Singh',            email:'indomadeindustries@gmail.com',   phone:'—',          cat:'Foods & Snacks',  demoDate:'17 Sep', lastConnect:'17 Sep',          outreachDate:'17 Sep',  meets:'—',              usage:'Self', plan:'—', amount:'—', initRemarks:'', finalRemarks:'', outreachPerson:'—'},
+    {health:'green',  name:'Shiv Kumar',              email:'manishtuteja86@gmail.com',        phone:'6239357090', cat:'Jewellery & Gifts',demoDate:'18 Sep',lastConnect:'Self-Onboarding', outreachDate:'Self-Onboarding',meets:'—',         usage:'—',    plan:'—', amount:'—', initRemarks:'', finalRemarks:'', outreachPerson:'—'},
+    {health:'grey',   name:'Anshu Sinha',             email:'—',                               phone:'—',          cat:'—',              demoDate:'—',      lastConnect:'—',               outreachDate:'—',       meets:'—',              usage:'—',    plan:'—', amount:'—', initRemarks:'—', finalRemarks:'—', outreachPerson:'—'},
+  ]
+};
+
+let STATE = {
+  live:false, tab:'overview', repFilter:'all', smFilter:false,
+  allRows:[], filteredRows:[], smRows:[],
+  staticRepFilter:'all', charts:{},
+  onbData: STATIC.onboarding,
+  editMode: false,
+  edits: {},
+  onbF: { search:'', health:'', demo:'', lc:'', cat:'', usage:'', outDate:'' }
+};
+
+// Global key registry to avoid escaping issues in onclick attributes
+let _keys = [];
+function _regKey(k){ _keys.push(k); return _keys.length - 1; }
+function _getKey(i){ return _keys[i]; }
+
+// ── EDIT PERSISTENCE ──
+function loadEdits(){
+  try{ const e = localStorage.getItem('cl-edits'); if(e) STATE.edits = JSON.parse(e); }catch(e){}
+}
+function saveEdit(key, field, val){
+  if(!STATE.edits[key]) STATE.edits[key] = {};
+  STATE.edits[key][field] = val;
+  try{ localStorage.setItem('cl-edits', JSON.stringify(STATE.edits)); }catch(e){}
+}
+function getEdit(key, field, fallback){
+  return (STATE.edits[key] && STATE.edits[key][field] !== undefined) ? STATE.edits[key][field] : fallback;
+}
+function hasEdits(key){
+  return !!(STATE.edits[key] && Object.keys(STATE.edits[key]).length > 0);
+}
+
+// Called from onclick with registered index
+function _saveEditByIdx(ki, field, val){ saveEdit(_getKey(ki), field, val); }
+function _cycleHealthByIdx(ki){
+  const key = _getKey(ki);
+  const base = STATE.onbData.find(r => ('onb|' + r.name) === key);
+  const baseH = base ? (base.health || 'grey') : 'grey';
+  const cur = getEdit(key, 'health', baseH);
+  const next = {grey:'green', green:'orange', orange:'red', red:'green'}[cur] || 'green';
+  saveEdit(key, 'health', next);
+  _rerenderOnb();
+}
+function _saveHealthByIdx(ki, val){
+  saveEdit(_getKey(ki), 'health', val.toLowerCase());
+  _rerenderOnb();
+}
+function _saveUsageByIdx(ki, val){ saveEdit(_getKey(ki), 'usage', val); _rerenderOnb(); }
+function _savePlanByIdx(ki, val){ saveEdit(_getKey(ki), 'plan', val); }
+function _saveNoteByIdx(ki, val){ saveEdit(_getKey(ki), 'note', val); }
+function _saveOutStatusByIdx(ki, val){
+  saveEdit(_getKey(ki), 'status', val);
+  // also sync into STATE.allRows so downloads reflect the edit
+}
+
+// ── EDIT MODE TOGGLE ──
+function toggleEditMode(){
+  STATE.editMode = !STATE.editMode;
+  const btn = document.getElementById('edit-mode-btn');
+  const banner = document.getElementById('edit-banner');
+  const clearBtn = document.getElementById('clear-edits-btn');
+  if(STATE.editMode){
+    btn.classList.add('edit-active');
+    btn.textContent = '✎ Editing';
+    banner.hidden = false;
+    clearBtn.hidden = false;
+  } else {
+    btn.classList.remove('edit-active');
+    btn.textContent = '✏ Edit';
+    banner.hidden = true;
+    clearBtn.hidden = true;
+  }
+  if(STATE.tab === 'outreach' && STATE.live) renderOutreachTable();
+  if(STATE.tab === 'onboarding') _rerenderOnb();
+}
+
+function clearAllEdits(){
+  if(!confirm('Remove all your local edits? Original data will be restored.')) return;
+  STATE.edits = {};
+  try{ localStorage.removeItem('cl-edits'); }catch(e){}
+  if(STATE.tab === 'outreach' && STATE.live) renderOutreachTable();
+  if(STATE.tab === 'onboarding') _rerenderOnb();
+}
+
+// ── ONBOARDING FILTER ENGINE ──
+function applyOnbFilters(data){
+  const f = STATE.onbF;
+  const today = new Date(); today.setHours(0,0,0,0);
+  // Compute start of this week (Monday)
+  const weekStart = new Date(today);
+  weekStart.setDate(today.getDate() - ((today.getDay()+6)%7));
+
+  return data.filter(r => {
+    const key    = 'onb|' + r.name;
+    const health = getEdit(key, 'health', r.health || 'grey');
+    const usage  = (getEdit(key, 'usage', r.usage || '—')||'').toLowerCase();
+    const demo   = r.demoDate || '—';
+    const lc     = r.lastConnect || '—';
+    const cat    = (r.cat||'—').toLowerCase();
+    const oDate  = r.outreachDate || '—';
+
+    // Search
+    if(f.search){
+      const q = f.search.toLowerCase();
+      const hit = (r.name||'').toLowerCase().includes(q)
+               || (r.cat||'').toLowerCase().includes(q)
+               || (r.email||'').toLowerCase().includes(q)
+               || (r.phone||'').includes(f.search);
+      if(!hit) return false;
+    }
+
+    // Health
+    if(f.health && health !== f.health) return false;
+
+    // Demo status
+    if(f.demo === 'done'    && (!demo || demo==='—')) return false;
+    if(f.demo === 'pending' && demo && demo!=='—')    return false;
+
+    // Last contact
+    if(f.lc){
+      const days = daysSince(lc);
+      if(f.lc === 'fresh'  && (days===null || days > 3))  return false;
+      if(f.lc === 'stale'  && (days===null || days <= 3 || days > 7)) return false;
+      if(f.lc === 'cold'   && (days===null || days <= 7))  return false;
+      if(f.lc === 'none'   && days !== null)               return false;
+    }
+
+    // Outreach date
+    if(f.outDate){
+      const od = parseSheetDate(oDate);
+      if(!od) return false;
+      od.setHours(0,0,0,0);
+      if(f.outDate === 'today' && od.getTime() !== today.getTime()) return false;
+      if(f.outDate === 'week'  && od < weekStart)                   return false;
+    }
+
+    // Category
+    if(f.cat && cat !== f.cat.toLowerCase()) return false;
+
+    // Usage
+    if(f.usage){
+      if(f.usage === 'self'    && !usage.includes('self'))                         return false;
+      if(f.usage === 'guided'  && !usage.includes('guid') && !usage.includes('manual')) return false;
+    }
+
+    return true;
+  });
+}
+
+function onbSearchFilter(){
+  STATE.onbF.search = (document.getElementById('onb-search')||{}).value || '';
+  _rerenderOnb();
+}
+
+function onbSelectFilter(key, el){
+  STATE.onbF[key] = el ? el.value : '';
+  _rerenderOnb();
+}
+
+function setOnbChipFilter(group, val, btn){
+  STATE.onbF[group] = val;
+  // Update chip visual states for this group
+  const groupPrefixes = {health:'ofb-h-', demo:'ofb-d-'};
+  const pre = groupPrefixes[group];
+  if(pre){
+    document.querySelectorAll('[id^="'+pre+'"]').forEach(b => {
+      b.className = 'onb-fc';
+    });
+    if(btn) btn.className = 'onb-fc on';
+  }
+  _rerenderOnb();
+}
+
+function clearOnbFilters(){
+  STATE.onbF = { search:'', health:'', demo:'', lc:'', cat:'', usage:'', outDate:'' };
+  const s = document.getElementById('onb-search');      if(s) s.value = '';
+  const lc= document.getElementById('ofb-lc');          if(lc) lc.value = '';
+  const od= document.getElementById('ofb-out');         if(od) od.value = '';
+  const ct= document.getElementById('ofb-cat');         if(ct) ct.value = '';
+  const us= document.getElementById('ofb-usage');       if(us) us.value = '';
+  // Reset all health chips
+  ['ofb-h-all','ofb-h-green','ofb-h-orange','ofb-h-red'].forEach((id,i)=>{
+    const el=document.getElementById(id);
+    if(el) el.className = i===0?'onb-fc on':'onb-fc';
+  });
+  // Reset all demo chips
+  ['ofb-d-all','ofb-d-done','ofb-d-pend'].forEach((id,i)=>{
+    const el=document.getElementById(id);
+    if(el) el.className = i===0?'onb-fc on':'onb-fc';
+  });
+  _rerenderOnb();
+}
+
+function updateOnbClearBtn(hasAny){
+  const btn  = document.getElementById('onb-clear-btn');
+  if(btn) btn.hidden = !hasAny;
+}
+
+function populateCatFilter(data){
+  const cats = [...new Set(data.map(r=>r.cat||'—').filter(c=>c&&c!=='—'))].sort();
+  const sel = document.getElementById('ofb-cat');
+  if(!sel) return;
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">All</option>' +
+    cats.map(c=>`<option value="${c.toLowerCase()}"${c.toLowerCase()===cur?' selected':''}>${c}</option>`).join('');
+}
+
+// Re-render onboarding without reloading data
+function _rerenderOnb(){
+  const filtered = applyOnbFilters(STATE.onbData);
+  const f = STATE.onbF;
+  const hasAny = !!(f.search||f.health||f.demo||f.lc||f.cat||f.usage||f.outDate);
+  updateOnbClearBtn(hasAny);
+
+  const meta = document.getElementById('onb-result-meta');
+  if(meta){
+    if(hasAny) meta.textContent = filtered.length + ' of ' + STATE.onbData.length + ' clients match';
+    else meta.textContent = '';
+  }
+
+  const isAllRows = !hasAny;
+  _renderOnbRows(filtered, isAllRows);
+}
+
+// ── CSV PARSER ──
+function parseCSV(t){
+  const rows=[];let i=0,row=[],field='',q=false;
+  while(i<t.length){const c=t[i];
+    if(q){if(c==='"'){if(t[i+1]==='"'){field+='"';i+=2;continue}else{q=false;i++;continue}}field+=c;i++;}
+    else{if(c==='"'){q=true;i++}else if(c===','){row.push(field.trim());field='';i++}
+      else if(c==='\n'){row.push(field.trim());if(row.some(Boolean))rows.push(row);row=[];field='';i++}
+      else if(c==='\r'){i++}else{field+=c;i++}}}
+  if(field||row.length){row.push(field.trim());if(row.some(Boolean))rows.push(row);}
+  return rows;
+}
+function toObjs(rows){if(!rows.length)return[];
+  const h=rows[0].map(x=>x.toLowerCase().trim());
+  return rows.slice(1).map(r=>{const o={};h.forEach((k,i)=>o[k]=(r[i]||'').trim());return o;});
+}
+function findCol(o,kws){const ks=Object.keys(o);for(const kw of kws){const k=ks.find(k=>k.includes(kw));if(k)return o[k]||'';}return '';}
+
+// ── FETCH ──
+async function fetchSheet(id,sheet){
+  const url=`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv${sheet?'&sheet='+encodeURIComponent(sheet):''}`;
+  const r=await fetch(url,{cache:'no-cache'});
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  const t=await r.text();
+  if(t.startsWith('<!'))throw new Error('Sheet not public');
+  return toObjs(parseCSV(t));
+}
+
+// ── CACHED JSON FETCH (GitHub Pages daily snapshot) ──
+async function fetchCached(){
+  const [sv,pv,dv,ob]=await Promise.all([
+    fetch('data/shivansh.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
+    fetch('data/priya.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
+    fetch('data/direct.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
+    fetch('data/onboarding.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
+  ]);
+  return [sv,pv,dv,ob];
+}
+
+async function refreshData(){
+  document.getElementById('loading').hidden=false;
+
+  // ── Try 1: daily-cached JSON (fastest, offline-safe) ──
+  try{
+    const [sv,pv,dv,ob]=await fetchCached();
+    processLive(sv,pv,dv,ob);
+    STATE.live=true;
+    const metaR=await fetch('data/meta.json').catch(()=>null);
+    const meta=metaR&&metaR.ok?await metaR.json():null;
+    document.getElementById('src-badge').textContent='Cached';
+    document.getElementById('src-badge').className='chip chip-cached';
+    document.getElementById('last-sync').textContent=meta?`Synced ${meta.fetched_at}`:'Daily snapshot';
+    document.getElementById('live-banner').hidden=true;
+    document.getElementById('out-static').hidden=true;
+    document.getElementById('out-live').hidden=false;
+    document.getElementById('loading').hidden=true;
+    return;
+  }catch(e){console.log('No cached data, trying live…');}
+
+  // ── Try 2: live Google Sheets ──
+  try{
+    const [sv,pv,dv,ob]=await Promise.all([
+      fetchSheet(OID,'shivansh'), fetchSheet(OID,'priya'),
+      fetchSheet(OID,'Seller Pro Direct Leads'), fetchSheet(OBID,'')
+    ]);
+    processLive(sv,pv,dv,ob);
+    STATE.live=true;
+    document.getElementById('src-badge').textContent='Live';
+    document.getElementById('src-badge').className='chip chip-live';
+    document.getElementById('last-sync').textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+    document.getElementById('live-banner').hidden=true;
+    document.getElementById('out-static').hidden=true;
+    document.getElementById('out-live').hidden=false;
+  }catch(err){
+    console.warn('Live fetch failed:',err.message);
+    loadStatic();
+    document.getElementById('live-banner').hidden=false;
+  }
+  document.getElementById('loading').hidden=true;
+}
+
+function processOutreach(rows,repName){
+  const statuses={};let contacted=0,sm=0;const smRows=[];const allR=[];
+  rows.forEach(r=>{
+    const name   = findCol(r,['name','seller','company','shop'])||'—';
+    const phone  = findCol(r,['phone','mobile','contact','number'])||'—';
+    const email  = findCol(r,['email','mail'])||'—';
+    const status = findCol(r,['status'])||'';
+    const smv    = findCol(r,['shipmax','ship max'])||'';
+    const remarks= findCol(r,['remark','note','comment'])||'—';
+    const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
+    if(status){contacted++;statuses[status]=(statuses[status]||0)+1;}
+    if(isSm){sm++;smRows.push({name,phone,email,status,rep:repName,remarks});}
+    allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm});
+  });
+  return{total:rows.length,contacted,statuses,shipmaxx:sm,smRows,allR};
+}
+
+function processLive(svR,pvR,dvR,obR){
+  const sv=processOutreach(svR,'Shivansh');
+  const pv=processOutreach(pvR,'Priya');
+  let dContacted=0,dSt={},dSm=0,dSmRows=[],dAllR=[];
+  dvR.forEach(r=>{
+    const name   = findCol(r,['name','seller','company','shop'])||'—';
+    const phone  = findCol(r,['phone','mobile','contact'])||'—';
+    const email  = findCol(r,['email','mail'])||'—';
+    const status = findCol(r,['status'])||'';
+    const smv    = findCol(r,['shipmax','ship max'])||'';
+    const remarks= findCol(r,['remark','note','comment'])||'—';
+    const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
+    if(status){dContacted++;dSt[status]=(dSt[status]||0)+1;}
+    if(isSm){dSm++;dSmRows.push({name,phone,email,status,rep:'Direct',remarks});}
+    dAllR.push({name,phone,email,status:status||'—',rep:'Direct',sm:isSm});
+  });
+  const dv={total:dvR.length,contacted:dContacted,statuses:dSt,shipmaxx:dSm};
+
+  STATE.allRows=[...sv.allR,...pv.allR,...dAllR];
+  STATE.smRows=[...sv.smRows,...pv.smRows,...dSmRows];
+
+  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx);
+  updateReps(sv,pv,dv);
+  renderCharts(sv.statuses,pv.statuses,dSt);
+  populateStatusFilter();
+  renderOutreachTable();
+  renderOnboarding(obR);
+  populateCatFilter(STATE.onbData);
+  renderShipmaxx();
+}
+
+function loadStatic(){
+  const {sv,pv,dv}=STATIC;
+  STATE.smRows=STATIC.smRows.filter(r=>r.name!=='(Live data)');
+  STATE.allRows=[];
+  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx);
+  updateReps(sv,pv,dv);
+  renderCharts(sv.statuses,pv.statuses,dv.statuses);
+  renderStatusBreakdown();
+  renderOnboarding(null);
+  populateCatFilter(STATE.onbData);
+  renderShipmaxx();
+  document.getElementById('src-badge').textContent='Cached';
+  document.getElementById('src-badge').className='chip chip-cached';
+  document.getElementById('last-sync').textContent=STATIC.date;
+}
+
+// ── KPIs ──
+function updateKPIs(tot,cont,sm){
+  document.getElementById('k-total').textContent=tot.toLocaleString('en-IN');
+  document.getElementById('k-contacted').textContent=cont.toLocaleString('en-IN');
+  const r=((cont/tot)*100).toFixed(1);
+  document.getElementById('k-rate-lbl').textContent=r+'%';
+  document.getElementById('k-rate-bar').style.width=Math.min(r,100)+'%';
+  document.getElementById('k-sm').textContent=sm;
+  document.getElementById('sm-badge').textContent=sm;
+  document.getElementById('sm-modal-count').textContent=sm;
+}
+
+function updateReps(sv,pv,dv){
+  const set=(pre,d,color)=>{
+    document.getElementById(pre+'-total').textContent=d.total.toLocaleString('en-IN');
+    document.getElementById(pre+'-contact').textContent=d.contacted.toLocaleString('en-IN');
+    const r=((d.contacted/d.total)*100).toFixed(1);
+    document.getElementById(pre+'-rate').textContent=r+'%';
+    const bar=document.getElementById(pre+'-bar');
+    if(bar){bar.style.width=Math.min(r,100)+'%';bar.style.background=color;}
+  };
+  set('sv',sv,'var(--blue)');set('pv',pv,'var(--purple)');set('dv',dv,'var(--green)');
+}
+
+// ── CHARTS ──
+function makeDonut(canvasId,legendId,statuses){
+  if(STATE.charts[canvasId]){STATE.charts[canvasId].destroy();}
+  const labels=Object.keys(statuses),vals=Object.values(statuses);
+  if(!labels.length)return;
+  STATE.charts[canvasId]=new Chart(document.getElementById(canvasId),{
+    type:'doughnut',
+    data:{labels,datasets:[{data:vals,backgroundColor:COLORS.slice(0,labels.length),borderWidth:0,hoverOffset:3}]},
+    options:{cutout:'70%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}`}}},responsive:false,maintainAspectRatio:false}
+  });
+  const leg=document.getElementById(legendId);
+  const total=vals.reduce((a,b)=>a+b,0);
+  leg.innerHTML=labels.map((l,i)=>`<div class="sl-row">
+    <span class="sl-dot" style="background:${COLORS[i]}"></span>
+    <span class="sl-label">${l}</span>
+    <span class="sl-val">${vals[i]} <span style="color:var(--text3);font-weight:400">(${Math.round(vals[i]/total*100)}%)</span></span>
+  </div>`).join('');
+}
+function renderCharts(sv,pv,dv){
+  makeDonut('ch-shivansh','leg-shivansh',sv);
+  makeDonut('ch-priya','leg-priya',pv);
+  makeDonut('ch-direct','leg-direct',dv);
+}
+
+// ── STATUS BREAKDOWN (static mode) ──
+function setStaticFilter(key,btn){
+  STATE.staticRepFilter=key;
+  document.querySelectorAll('.static-filter-bar .fc').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderStatusBreakdown();
+}
+function renderStatusBreakdown(){
+  const all=[
+    {key:'sv',name:'Shivansh',statuses:STATIC.sv.statuses,color:'var(--blue)'},
+    {key:'pv',name:'Priya',statuses:STATIC.pv.statuses,color:'var(--purple)'},
+    {key:'dv',name:'Direct Leads',statuses:STATIC.dv.statuses,color:'var(--green)'},
+  ];
+  const sources=STATE.staticRepFilter==='all'?all:all.filter(s=>s.key===STATE.staticRepFilter);
+  const grid=document.getElementById('sb-grid');
+  grid.innerHTML=sources.map(src=>{
+    const total=Object.values(src.statuses).reduce((a,b)=>a+b,0);
+    const rows=Object.entries(src.statuses).sort((a,b)=>b[1]-a[1]).map(([s,c])=>`
+      <div class="sb-row">
+        <div class="sb-status">${s}</div>
+        <div class="sb-bar-wrap"><div class="sb-bar-fill" style="width:${Math.round(c/total*100)}%;background:${src.color}"></div></div>
+        <div class="sb-count">${c}</div>
+      </div>`).join('');
+    return`<div class="sb-card"><div class="sb-rep">${src.name} · ${total} contacted</div>${rows}</div>`;
+  }).join('');
+}
+
+// ── OUTREACH FILTERS ──
+function setRepFilter(name,btn){
+  STATE.repFilter=name;
+  document.querySelectorAll('#rep-chips .fc').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  populateStatusFilter();
+  renderOutreachTable();
+}
+function toggleSmFilter(btn){
+  STATE.smFilter=!STATE.smFilter;
+  btn.classList.toggle('sm-on',STATE.smFilter);
+  renderOutreachTable();
+}
+function populateStatusFilter(){
+  const rows=STATE.repFilter==='all'?STATE.allRows:STATE.allRows.filter(r=>r.rep===STATE.repFilter);
+  const sts=[...new Set(rows.map(r=>r.status).filter(Boolean))].sort();
+  const sel=document.getElementById('status-filter');
+  const cur=sel.value;
+  sel.innerHTML='<option value="">All</option>'+sts.map(s=>`<option value="${s}"${s===cur?' selected':''}>${s}</option>`).join('');
+}
+function pillSt(s){
+  if(!s||s==='Not Called'||s==='—')return`<span class="pill p-grey">${s||'—'}</span>`;
+  const l=s.toLowerCase();
+  if(l.includes('interest'))return`<span class="pill p-green">${s}</span>`;
+  if(l.includes('follow')||l.includes('progress'))return`<span class="pill p-blue">${s}</span>`;
+  if(l.includes('not int')||l.includes('reject'))return`<span class="pill p-red">${s}</span>`;
+  if(l.includes('busy')||l.includes('later')||l.includes('call back'))return`<span class="pill p-orange">${s}</span>`;
+  return`<span class="pill p-purple">${s}</span>`;
+}
+function renderOutreachTable(){
+  _keys = []; // reset key registry
+  let rows=STATE.repFilter==='all'?STATE.allRows:STATE.allRows.filter(r=>r.rep===STATE.repFilter);
+  const q=(document.getElementById('search-box')||{}).value||'';
+  const sf=(document.getElementById('status-filter')||{}).value||'';
+  if(q)rows=rows.filter(r=>(r.name||'').toLowerCase().includes(q.toLowerCase())||(r.phone||'').includes(q));
+  if(sf)rows=rows.filter(r=>r.status===sf);
+  if(STATE.smFilter)rows=rows.filter(r=>r.sm);
+  STATE.filteredRows=rows;
+  const tbody=document.getElementById('out-tbody');
+  if(!tbody)return;
+  if(!rows.length){tbody.innerHTML='<tr><td colspan="7" class="tbl-empty">No records match your filter</td></tr>';document.getElementById('out-count').textContent='0 rows';return;}
+  const repPill={Shivansh:'p-blue',Priya:'p-purple',Direct:'p-green'};
+
+  tbody.innerHTML=rows.slice(0,500).map((r,i)=>{
+    const eKey = 'out|' + r.name + '|' + r.phone;
+    const ki = _regKey(eKey);
+    const effStatus = getEdit(eKey, 'status', r.status);
+    const edited = hasEdits(eKey);
+
+    // Build status cell: dropdown in edit mode, pill otherwise
+    let statusCell;
+    if(STATE.editMode){
+      // Collect all known statuses for this context
+      const allStatOpts = [...new Set([...OUTREACH_STATUSES, effStatus])].filter(Boolean);
+      statusCell = `<select class="edit-select" onchange="_saveOutStatusByIdx(${ki},this.value)">${
+        allStatOpts.map(s=>`<option${s===effStatus?' selected':''}>${s}</option>`).join('')
+      }</select>`;
+    } else {
+      statusCell = pillSt(effStatus);
+    }
+
+    return `<tr class="${edited?'row-edited':''}">
+      <td style="color:var(--text3);font-variant-numeric:tabular-nums">${i+1}${edited?'<span class="edited-dot" title="Locally edited"></span>':''}</td>
+      <td class="td-name">${r.name||'—'}</td>
+      <td class="td-phone">${r.phone||'—'}</td>
+      <td style="font-size:12px;color:var(--text2)">${r.email||'—'}</td>
+      <td>${statusCell}</td>
+      <td><span class="pill ${repPill[r.rep]||'p-grey'}">${r.rep}</span></td>
+      <td>${r.sm?'<span class="pill p-red">⚠ Yes</span>':'<span style="color:var(--text3)">—</span>'}</td>
+    </tr>`;
+  }).join('');
+
+  const more=rows.length>500?' (showing first 500)':'';
+  document.getElementById('out-count').textContent=`${rows.length.toLocaleString('en-IN')} rows${more}`;
+}
+
+// ── ONBOARDING ──
+function renderOnboarding(liveRows, keepData){
+  _keys = []; // reset key registry
+  const data = keepData ? STATE.onbData : (liveRows ? parseLiveOnb(liveRows) : STATIC.onboarding);
+  if(!keepData) STATE.onbData = data;
+  _renderOnbRows(data, true);
+}
+
+function _renderOnbRows(data, updatePills){
+  _keys = [];
+  let cGreen=0, cOrange=0, cRed=0, cSelf=0, cWithPlan=0;
+  const tbody = document.getElementById('onb-tbody');
+  if(!data.length){
+    tbody.innerHTML='<tr><td colspan="10" class="tbl-empty">No records match this filter</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = data.map(r => {
+    const key = 'onb|' + r.name;
+    const ki  = _regKey(key);
+    const editedH    = getEdit(key, 'health',       r.health       || 'grey');
+    const editedU    = getEdit(key, 'usage',        r.usage        || '—');
+    const editedPlan = getEdit(key, 'plan',         r.plan         || '—');
+    const editedNote = getEdit(key, 'note',         r.finalRemarks || r.initRemarks || '—');
+    const edited     = hasEdits(key);
+
+    const hc = {green:'hg', orange:'ho', red:'hr', grey:'hgrey'}[editedH] || 'hgrey';
+    const hLabel = editedH.charAt(0).toUpperCase() + editedH.slice(1);
+
+    if(editedH==='green') cGreen++;
+    else if(editedH==='orange') cOrange++;
+    else if(editedH==='red') cRed++;
+    if((editedU||'').toLowerCase().includes('self')) cSelf++;
+    if(editedPlan && editedPlan!=='—') cWithPlan++;
+
+    // ── Health cell ──
+    const healthCell = STATE.editMode
+      ? `<div style="display:flex;align-items:center;gap:5px">
+           <select class="edit-select" style="min-width:90px" onchange="_saveHealthByIdx(${ki},this.value)">
+             ${HEALTH_LEVELS.map(h=>`<option value="${h}"${h===hLabel?' selected':''}>${h}</option>`).join('')}
+             <option value="grey"${editedH==='grey'?' selected':''}>—</option>
+           </select>
+           ${edited?'<span class="edited-dot" title="Locally edited"></span>':''}
+         </div>`
+      : `<div style="display:flex;align-items:center;gap:5px">
+           <span class="hdot ${hc}"></span>
+           <span style="font-size:11px;color:var(--text3)">${hLabel==='Grey'?'—':hLabel}</span>
+           ${edited?'<span class="edited-dot" title="Locally edited"></span>':''}
+         </div>`;
+
+    // ── Usage cell ──
+    const usageCell = STATE.editMode
+      ? `<select class="edit-select" style="min-width:90px" onchange="_saveUsageByIdx(${ki},this.value)">
+           ${USAGE_TYPES.map(u=>`<option${u===(editedU||'—')?' selected':''}>${u}</option>`).join('')}
+         </select>`
+      : `<span style="font-size:12px;color:var(--text2)">${editedU||'—'}</span>`;
+
+    // ── Plan cell ──
+    const planCell = STATE.editMode
+      ? `<select class="edit-select" style="min-width:100px" onchange="_savePlanByIdx(${ki},this.value)">
+           ${PLAN_TYPES.map(p=>`<option${p===(editedPlan||'—')?' selected':''}>${p}</option>`).join('')}
+         </select>`
+      : editedPlan && editedPlan!=='—'
+        ? `<span class="pill p-blue" style="font-size:11px">${editedPlan}</span>`
+        : `<span style="color:var(--text3);font-size:12px">—</span>`;
+
+    // ── Remarks cell ──
+    const remarkCell = STATE.editMode
+      ? `<textarea class="edit-textarea" onblur="_saveNoteByIdx(${ki},this.value)" placeholder="Add notes…">${editedNote==='—'?'':editedNote}</textarea>`
+      : `<span style="font-size:12px;color:var(--text2);line-height:1.4">${editedNote||'—'}</span>`;
+
+    return `<tr class="${edited?'row-edited':''}">
+      <td style="min-width:110px">${healthCell}</td>
+      <td class="td-name">${r.name||'—'}</td>
+      <td style="color:var(--text2);font-size:12px">${r.cat||'—'}</td>
+      <td style="font-size:12px">${r.demoDate||r.demo||'—'}</td>
+      <td style="font-size:12px">${r.lastConnect||r.onb||'—'}</td>
+      <td style="text-align:center;font-size:12px">${r.meets||'—'}</td>
+      <td style="min-width:100px">${usageCell}</td>
+      <td style="min-width:110px">${planCell}</td>
+      <td style="max-width:240px">${remarkCell}</td>
+      <td style="font-size:12px;color:var(--text3)">${r.outreachPerson||'—'}</td>
+    </tr>`;
+  }).join('');
+
+  if(updatePills){
+    document.getElementById('pp-d').textContent  = STATE.onbData.length;
+    document.getElementById('pp-g').textContent  = cGreen;
+    document.getElementById('pp-o').textContent  = cOrange + cRed;
+    document.getElementById('pp-s').textContent  = cSelf;
+    document.getElementById('pp-p').textContent  = cWithPlan;
+    renderOnbCharts();
+    renderOnbInsights(STATE.onbData);
+  }
+}
+
+function renderOnbCharts(){
+  // Health donut
+  const healthCounts = {};
+  STATE.onbData.forEach(r=>{
+    const h = getEdit('onb|'+r.name,'health',r.health||'grey');
+    const lbl = h.charAt(0).toUpperCase()+h.slice(1);
+    healthCounts[lbl]=(healthCounts[lbl]||0)+1;
+  });
+  const HCOLORS = {Green:'#16a34a',Orange:'#d97706',Red:'#e53e3e',Grey:'#9ba8c8'};
+  if(STATE.charts['ch-onb-health']){STATE.charts['ch-onb-health'].destroy();}
+  const hLabels=Object.keys(healthCounts),hVals=Object.values(healthCounts);
+  if(hLabels.length && document.getElementById('ch-onb-health')){
+    STATE.charts['ch-onb-health']=new Chart(document.getElementById('ch-onb-health'),{
+      type:'doughnut',
+      data:{labels:hLabels,datasets:[{data:hVals,backgroundColor:hLabels.map(l=>HCOLORS[l]||'#9ba8c8'),borderWidth:0,hoverOffset:3}]},
+      options:{cutout:'68%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}`}}},responsive:false,maintainAspectRatio:false}
+    });
+    document.getElementById('leg-onb-health').innerHTML=hLabels.map((l,i)=>`<div class="sl-row"><span class="sl-dot" style="background:${HCOLORS[l]||'#9ba8c8'}"></span><span class="sl-label">${l}</span><span class="sl-val">${hVals[i]}</span></div>`).join('');
+  }
+
+  // Category breakdown (horizontal bar)
+  const catCounts = {};
+  STATE.onbData.forEach(r=>{ const c=r.cat||'—'; catCounts[c]=(catCounts[c]||0)+1; });
+  const cLabels=Object.keys(catCounts).filter(c=>c!=='—');
+  const cVals=cLabels.map(c=>catCounts[c]);
+  if(STATE.charts['ch-onb-cat']){STATE.charts['ch-onb-cat'].destroy();}
+  if(cLabels.length && document.getElementById('ch-onb-cat')){
+    STATE.charts['ch-onb-cat']=new Chart(document.getElementById('ch-onb-cat'),{
+      type:'bar',
+      data:{labels:cLabels,datasets:[{data:cVals,backgroundColor:'#4f6ef7cc',borderRadius:5,borderWidth:0}]},
+      options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed.x} client${c.parsed.x!==1?'s':''}`}}},scales:{x:{ticks:{stepSize:1,color:'var(--text3)'},grid:{color:'var(--border)'}},y:{ticks:{color:'var(--text2)',font:{size:11}},grid:{display:false}}},responsive:true,maintainAspectRatio:false}
+    });
+  }
+}
+
+
+function parseLiveOnb(rows){
+  return rows.filter(r=>r['client name']||r['name']).map(r=>{
+    const h=(r['client health']||'').trim().toLowerCase();
+    const health = h.includes('green')?'green':h.includes('orange')?'orange':h.includes('red')?'red':'grey';
+    const usage  = (r['usage']||'').trim() || '—';
+    const plan   = (r['plan']||'').trim()  || '—';
+    return {
+      name         : (r['client name']||r['name']||'—').trim(),
+      email        : (r['email']||'—').trim(),
+      phone        : (r['phone']||'—').trim(),
+      cat          : (r['product category']||'—').trim(),
+      demoDate     : (r['demo date']||'—').trim(),
+      lastConnect  : (r['last connect date']||'—').trim(),
+      outreachDate : (r['outreach date']||'—').trim(),
+      meets        : (r['no. of meetings']||'—').trim(),
+      usage, health, plan,
+      amount       : (r['amount']||'—').trim(),
+      initRemarks  : (r[' initial remarks']||r['initial remarks']||'—').trim(),
+      finalRemarks : (r['final remarks']||'—').trim(),
+      outreachPerson:(r['outreach person']||'—').trim(),
+    };
+  });
+}
+
+// ── SHIPMAXX (tab) ──
+function renderShipmaxx(){
+  const rows=STATE.smRows;
+  const tbody=document.getElementById('sm-tbody');
+  if(!rows.length){
+    tbody.innerHTML=`<tr><td colspan="7" class="tbl-empty">${STATE.live?'No flagged rows found in live data':'Full list loads in live mode (host the file online).'}`;
+    return;
+  }
+  const repPill={Shivansh:'p-blue',Priya:'p-purple',Direct:'p-green'};
+  tbody.innerHTML=rows.map((r,i)=>`<tr>
+    <td style="color:var(--text3)">${i+1}</td>
+    <td class="td-name">${r.name||'—'}</td>
+    <td class="td-phone">${r.phone||'—'}</td>
+    <td style="font-size:12px;color:var(--text2)">${r.email||'—'}</td>
+    <td><span class="pill ${repPill[r.rep]||'p-grey'}">${r.rep}</span></td>
+    <td>${pillSt(r.status)}</td>
+    <td style="font-size:12px;color:var(--text2);max-width:220px">${r.remarks||'—'}</td>
+  </tr>`).join('');
+}
+
+// ── SHIPMAXX MODAL ──
+function openSmModal(){
+  renderSmModal();
+  document.getElementById('sm-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeSmModal(e){
+  if(e&&e.target!==document.getElementById('sm-modal'))return;
+  document.getElementById('sm-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSmModal(null);});
+function renderSmModal(){
+  const q=(document.getElementById('sm-search')||{}).value||'';
+  const repF=(document.getElementById('sm-rep-filter')||{}).value||'';
+  let rows=STATE.smRows;
+  if(q)rows=rows.filter(r=>(r.name||'').toLowerCase().includes(q.toLowerCase())||(r.phone||'').includes(q));
+  if(repF)rows=rows.filter(r=>r.rep===repF);
+  const repPill={Shivansh:'p-blue',Priya:'p-purple',Direct:'p-green'};
+  const tbody=document.getElementById('sm-modal-tbody');
+  if(!rows.length){
+    tbody.innerHTML=`<tr><td colspan="7" class="tbl-empty">${STATE.live?'No records match filter':'1 named record in cached mode — host file online for full list.'}</td></tr>`;
+    document.getElementById('sm-modal-row-count').textContent='0 records';
+    return;
+  }
+  tbody.innerHTML=rows.map((r,i)=>`<tr>
+    <td style="color:var(--text3);font-variant-numeric:tabular-nums">${i+1}</td>
+    <td class="td-name">${r.name||'—'}</td>
+    <td class="td-phone">${r.phone||'—'}</td>
+    <td style="font-size:12px;color:var(--text2)">${r.email||'—'}</td>
+    <td><span class="pill ${repPill[r.rep]||'p-grey'}">${r.rep}</span></td>
+    <td>${pillSt(r.status)}</td>
+    <td style="font-size:12px;color:var(--text2);max-width:220px">${r.remarks||'—'}</td>
+  </tr>`).join('');
+  document.getElementById('sm-modal-row-count').textContent=`${rows.length} seller${rows.length!==1?'s':''} flagged`;
+}
+
+// ── TAB SWITCHING ──
+function showTab(name,btn){
+  STATE.tab=name;
+  ['overview','outreach','onboarding','shipmaxx'].forEach(t=>document.getElementById('tab-'+t).hidden=t!==name);
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  if(name==='outreach'&&STATE.live){populateStatusFilter();renderOutreachTable();}
+  if(name==='onboarding'){_rerenderOnb();}
+}
+
+// ── THEME ──
+function toggleTheme(){
+  const r=document.documentElement;
+  r.setAttribute('data-theme',r.getAttribute('data-theme')==='dark'?'light':'dark');
+  try{localStorage.setItem('cl-theme',r.getAttribute('data-theme'));}catch(e){}
+}
+
+// ── DOWNLOADS (with edits overlay) ──
+function dl(content,name){const b=new Blob([content],{type:'text/csv;charset=utf-8;'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+function downloadAll(){window.open(`https://docs.google.com/spreadsheets/d/${OID}/export?format=xlsx`,'_blank');}
+function downloadFiltered(){
+  const rows = STATE.filteredRows;
+  if(!rows.length){alert('No rows to download');return;}
+  const csvRows = rows.map(r => {
+    const eKey = 'out|' + r.name + '|' + r.phone;
+    const effStatus = getEdit(eKey, 'status', r.status);
+    return [r.name, r.phone, r.email, effStatus, r.rep, r.sm ? 'Yes' : 'No']
+      .map(v => `"${String(v||'').replace(/"/g,'""')}"`).join(',');
+  });
+  dl(['Name,Phone,Email,Status,Rep,ShipMaxx', ...csvRows].join('\n'),
+    `celebro-outreach-${new Date().toISOString().slice(0,10)}.csv`);
+}
+function dlOnboarding(){
+  const d = STATE.onbData;
+  const csvRows = d.map(r => {
+    const key = 'onb|' + r.name;
+    const effHealth = getEdit(key, 'health',  r.health       || '');
+    const effUsage  = getEdit(key, 'usage',   r.usage        || '');
+    const effPlan   = getEdit(key, 'plan',    r.plan         || '');
+    const effNote   = getEdit(key, 'note',    r.finalRemarks || r.initRemarks || '');
+    return [r.name, r.email, r.phone, r.cat, r.demoDate||'', r.lastConnect||'', r.outreachDate||'', r.meets||'', effUsage, effHealth, effPlan, r.amount||'', effNote, r.outreachPerson||'']
+      .map(v => `"${String(v||'').replace(/"/g,'""')}"`).join(',');
+  });
+  dl(['Client,Email,Phone,Category,Demo Date,Last Connect,Outreach Date,Meetings,Usage,Health,Plan,Amount,Remarks,Outreach By', ...csvRows].join('\n'),
+    `celebro-onboarding-${new Date().toISOString().slice(0,10)}.csv`);
+}
+function dlShipmaxx(){
+  const rows=STATE.smRows.length?STATE.smRows:[{name:'Wheels Culture',phone:'—',email:'—',status:'ShipMaxx Issue',rep:'Shivansh',remarks:'Flagged during call'}];
+  dl(['Name,Phone,Email,Status,Source,Remarks',...rows.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks].map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','))].join('\n'),`celebro-shipmaxx-${new Date().toISOString().slice(0,10)}.csv`);
+}
+
+// ── ONBOARDING INSIGHTS ──
+function computeTodayLabel(){
+  const now = new Date();
+  const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return now.getDate() + ' ' + m[now.getMonth()];
+}
+
+function parseSheetDate(s){
+  if(!s || s==='—' || s.toLowerCase().includes('self')) return null;
+  const MONTHS = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+  const parts = s.trim().split(/\s+/);
+  if(parts.length < 2) return null;
+  const day = parseInt(parts[0]);
+  const mon = parts[1].toLowerCase().slice(0,3);
+  if(isNaN(day) || !(mon in MONTHS)) return null;
+  const yr = new Date().getFullYear();
+  return new Date(yr, MONTHS[mon], day);
+}
+
+function daysSince(s){
+  const d = parseSheetDate(s);
+  if(!d) return null;
+  const now = new Date(); now.setHours(0,0,0,0); d.setHours(0,0,0,0);
+  return Math.floor((now - d) / 86400000);
+}
+
+const PLAN_CHIP_CLASS = {basic:'', growth:'chip-growth', pro:'chip-pro', enterprise:'chip-enterprise'};
+
+function renderOnbInsights(data){
+  const todayStr = computeTodayLabel();
+  let demoDone=0, demoPending=0, pendNames=[];
+  let outToday=0, todayNames=[];
+  let paying=0, free=0;
+  const planCounts={};
+  let selfN=0, guidedN=0;
+  const followUp=[];
+
+  data.forEach(r=>{
+    const key = 'onb|' + r.name;
+    const demo    = r.demoDate || '—';
+    const outDate = r.outreachDate || '—';
+    const usage   = getEdit(key, 'usage', r.usage || '—');
+    const plan    = getEdit(key, 'plan',  r.plan  || '—');
+    const health  = getEdit(key, 'health', r.health || 'grey');
+    const lastCon = r.lastConnect || '—';
+
+    // Demo status
+    if(demo && demo !== '—') demoDone++;
+    else { demoPending++; if(r.name && r.name!=='—') pendNames.push(r.name); }
+
+    // Outreach today
+    if(outDate && outDate!=='—' && !outDate.toLowerCase().includes('self')){
+      const d = parseSheetDate(outDate);
+      if(d){
+        const chk = new Date(); chk.setHours(0,0,0,0); d.setHours(0,0,0,0);
+        if(d.getTime()===chk.getTime()){ outToday++; todayNames.push(r.name); }
+      }
+    }
+
+    // Plan & revenue
+    if(plan && plan!=='—'){ paying++; planCounts[plan]=(planCounts[plan]||0)+1; }
+    else free++;
+
+    // Usage
+    const u=(usage||'').toLowerCase();
+    if(u.includes('self')) selfN++;
+    else if(u.includes('guid')||u.includes('manual')) guidedN++;
+
+    // Follow-up watchlist (last contact > 3 days & active health)
+    if(health !== 'grey'){
+      const days = daysSince(lastCon);
+      if(days !== null && days > 3){
+        followUp.push({name:r.name, cat:r.cat||'—', days, health});
+      }
+    }
+  });
+
+  // ── Demo status ──
+  const el_done = document.getElementById('oi-demo-done');
+  const el_pend = document.getElementById('oi-demo-pend');
+  const el_dsub = document.getElementById('oi-demo-sub');
+  if(el_done) el_done.textContent = demoDone;
+  if(el_pend) el_pend.textContent = demoPending;
+  if(el_dsub){
+    if(demoDone > 0 && demoPending > 0)
+      el_dsub.textContent = Math.round(demoDone/(demoDone+demoPending)*100)+'% completion rate';
+    else if(demoPending > 0)
+      el_dsub.textContent = 'Pending: ' + pendNames.slice(0,2).join(', ') + (pendNames.length>2?'…':'');
+    else el_dsub.textContent = 'All demos complete 🎉';
+  }
+
+  // ── Outreach today ──
+  const el_tc = document.getElementById('oi-today-count');
+  const el_tile = document.getElementById('oi-today-tile');
+  const el_tsub = document.getElementById('oi-today-sub');
+  const el_tico = document.getElementById('oi-today-icon');
+  if(el_tc) el_tc.textContent = outToday;
+  if(el_tile){
+    if(outToday > 0){
+      el_tile.classList.add('oi-hot');
+      if(el_tsub) el_tsub.innerHTML = todayNames.slice(0,3).map(n=>`<strong>${n}</strong>`).join(', ') + (todayNames.length>3?'…':'');
+      if(el_tsub) el_tsub.style.color = 'var(--blue)';
+      if(el_tico) el_tico.textContent = '🔥';
+    } else {
+      el_tile.classList.remove('oi-hot');
+      if(el_tsub){ el_tsub.textContent = 'No outreach scheduled for today'; el_tsub.style.color=''; }
+      if(el_tico) el_tico.textContent = '📞';
+    }
+  }
+
+  // ── Plan & revenue ──
+  const el_pay = document.getElementById('oi-paying');
+  const el_free= document.getElementById('oi-free');
+  const el_pb  = document.getElementById('oi-plan-breakdown');
+  if(el_pay) el_pay.textContent = paying;
+  if(el_free) el_free.textContent = free;
+  if(el_pb){
+    if(Object.keys(planCounts).length){
+      el_pb.innerHTML = Object.entries(planCounts).map(([p,c])=>{
+        const cls = PLAN_CHIP_CLASS[p.toLowerCase()] || '';
+        return `<span class="oi-plan-chip ${cls}">${p} × ${c}</span>`;
+      }).join('');
+    } else {
+      el_pb.innerHTML = '<span style="font-size:10px;color:var(--text3);font-style:italic">Awaiting plan assignments</span>';
+    }
+  }
+
+  // ── Usage split ──
+  const el_self = document.getElementById('oi-self');
+  const el_guid = document.getElementById('oi-guided');
+  const el_usub = document.getElementById('oi-usage-sub');
+  if(el_self) el_self.textContent = selfN;
+  if(el_guid) el_guid.textContent = guidedN;
+  if(el_usub){
+    const unk = data.length - selfN - guidedN;
+    if(guidedN > 0) el_usub.textContent = guidedN + ' client' + (guidedN!==1?'s':'') + ' may need guided plan';
+    else if(selfN > 0) el_usub.textContent = 'All active clients self-sufficient 🎉';
+    else el_usub.textContent = unk + ' not yet assessed';
+  }
+
+  // ── Follow-up watchlist ──
+  const fuCard = document.getElementById('onb-followup-card');
+  const fuList = document.getElementById('onb-followup-list');
+  const fuBadge= document.getElementById('fu-badge');
+  if(fuCard && fuList){
+    followUp.sort((a,b)=>b.days-a.days);
+    if(followUp.length){
+      fuCard.hidden = false;
+      if(fuBadge) fuBadge.textContent = followUp.length;
+      const hc={green:'hg',orange:'ho',red:'hr',grey:'hgrey'};
+      fuList.innerHTML = followUp.map(f=>`
+        <div class="fu-row">
+          <span class="hdot ${hc[f.health]||'hgrey'}" style="flex-shrink:0"></span>
+          <span class="fu-name">${f.name}</span>
+          <span class="fu-cat">${f.cat}</span>
+          <span class="fu-age ${f.days>7?'fu-age-red':'fu-age-warn'}">${f.days}d silent</span>
+        </div>`).join('');
+    } else {
+      fuCard.hidden = true;
+    }
+  }
+
+  // ── Row 2 KPI cards ──
+  const total = data.length;
+  const el_k2dd   = document.getElementById('k2-demo-done');
+  const el_k2pct  = document.getElementById('k2-demo-pct');
+  const el_k2bar  = document.getElementById('k2-demo-bar');
+  const el_k2dsub = document.getElementById('k2-demo-sub');
+  if(el_k2dd)   el_k2dd.textContent  = demoDone;
+  if(el_k2pct)  el_k2pct.textContent = total ? Math.round(demoDone/total*100)+'%' : '—%';
+  if(el_k2bar)  el_k2bar.style.width = total ? Math.min(demoDone/total*100,100)+'%' : '0%';
+  if(el_k2dsub) el_k2dsub.textContent = total ? `of ${total} pipeline clients` : 'pipeline clients';
+
+  const el_k2t    = document.getElementById('k2-today');
+  const el_k2tsub = document.getElementById('k2-today-sub');
+  const el_k2tico = document.getElementById('k2-today-ico');
+  const el_k2tc   = document.getElementById('k2-today-card');
+  const el_k2tbdg = document.getElementById('k2-today-badge');
+  if(el_k2t)    el_k2t.textContent    = outToday;
+  if(el_k2tsub) el_k2tsub.textContent = outToday > 0
+    ? todayNames.slice(0,2).join(', ') + (todayNames.length>2?' +more':'')
+    : 'No outreach scheduled today';
+  if(el_k2tico) el_k2tico.textContent = outToday > 0 ? '🔥' : '📞';
+  if(el_k2tc){
+    if(outToday > 0){ el_k2tc.style.background='var(--blue-l)'; el_k2tc.style.borderColor='var(--blue)'; }
+    else { el_k2tc.style.background=''; el_k2tc.style.borderColor=''; }
+  }
+  if(el_k2tbdg) el_k2tbdg.textContent = outToday > 0 ? outToday+' due' : 'Today';
+
+  const cGreen2 = data.filter(r=>getEdit('onb|'+r.name,'health',r.health||'grey')==='green').length;
+  const cAtRisk = data.filter(r=>{ const h=getEdit('onb|'+r.name,'health',r.health||'grey'); return h==='orange'||h==='red'; }).length;
+  const el_k2h    = document.getElementById('k2-healthy');
+  const el_k2hsub = document.getElementById('k2-healthy-sub');
+  const el_k2hbdg = document.getElementById('k2-healthy-badge');
+  if(el_k2h)    el_k2h.textContent    = cGreen2;
+  if(el_k2hsub) el_k2hsub.textContent = cAtRisk > 0 ? `${cAtRisk} at risk` : 'All healthy 🎉';
+  if(el_k2hbdg) el_k2hbdg.textContent = cGreen2 + ' green';
+
+  const el_k2fu   = document.getElementById('k2-fu');
+  const el_k2fbdg = document.getElementById('k2-fu-badge');
+  if(el_k2fu)   el_k2fu.textContent   = followUp.length;
+  if(el_k2fbdg) el_k2fbdg.textContent = followUp.length > 0 ? followUp.length+' urgent' : 'watchlist';
+}
+
+// ── BOOT ──
+(function(){
+  try{const t=localStorage.getItem('cl-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+  loadEdits();
+  loadStatic();
+  refreshData();
+})();
+</script>
+</body>
+</html>
