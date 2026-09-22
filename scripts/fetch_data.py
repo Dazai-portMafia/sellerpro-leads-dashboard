@@ -27,8 +27,7 @@ TABS = [
 
 def fetch_sheet_csv(sheet_id: str, tab_name: str = '') -> list[dict]:
     """Fetch a Google Sheet tab as a list of row-dicts."""
-    # tq=select * ensures all rows are returned even if a filter is applied on the sheet
-    url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&tq=select%20*'
+    url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv'
     if tab_name:
         url += '&sheet=' + urllib.parse.quote(tab_name)
 
