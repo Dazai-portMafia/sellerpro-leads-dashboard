@@ -487,7 +487,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
       <span class="kpi-trend trend-up" id="k2-demo-pct">—%</span>
     </div>
     <div class="kpi-val" id="k2-demo-done">—</div>
-    <div class="kpi-label">Demos Completed</div>
+    <div class="kpi-label">Onboarding: Demo Done</div>
     <div class="kpi-sub" id="k2-demo-sub">of pipeline clients</div>
     <div class="kpi-progress"><div class="kpi-bar" id="k2-demo-bar" style="width:0%;background:var(--purple)"></div></div>
   </div>
@@ -1148,7 +1148,7 @@ function normalizeKeys(rows){return rows.map(r=>{const n={};Object.keys(r).forEa
 
 // ── FETCH ──
 async function fetchSheet(id,sheet){
-  const url=`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv${sheet?'&sheet='+encodeURIComponent(sheet):''}`;
+  const url=`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&tq=select%20*${sheet?'&sheet='+encodeURIComponent(sheet):''}`;
   const ctrl=new AbortController();
   const timer=setTimeout(()=>ctrl.abort(),10000); // 10-second timeout
   try{
@@ -1268,7 +1268,9 @@ function processLive(svR,pvR,dvR,obR){
   STATE.allRows=[...sv.allR,...pv.allR,...dAllR];
   STATE.smRows=[...sv.smRows,...pv.smRows,...dSmRows];
 
-  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx);
+  // Count demo-related outreach rows across all 3 sheets
+  const demoCount = STATE.allRows.filter(r => r.status && r.status.toLowerCase().includes('demo')).length;
+  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, demoCount);
   updateReps(sv,pv,dv);
   renderCharts(sv.statuses,pv.statuses,dSt);
   populateStatusFilter();
@@ -1282,7 +1284,7 @@ function loadStatic(){
   const {sv,pv,dv}=STATIC;
   STATE.smRows=STATIC.smRows.filter(r=>r.name!=='(Live data)');
   STATE.allRows=[];
-  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx);
+  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, STATIC.demos||0);
   updateReps(sv,pv,dv);
   renderCharts(sv.statuses,pv.statuses,dv.statuses);
   renderStatusBreakdown();
@@ -1295,7 +1297,7 @@ function loadStatic(){
 }
 
 // ── KPIs ──
-function updateKPIs(tot,cont,sm){
+function updateKPIs(tot,cont,sm,demos){
   document.getElementById('k-total').textContent=tot.toLocaleString('en-IN');
   document.getElementById('k-contacted').textContent=cont.toLocaleString('en-IN');
   const r=((cont/tot)*100).toFixed(1);
@@ -1304,6 +1306,7 @@ function updateKPIs(tot,cont,sm){
   document.getElementById('k-sm').textContent=sm;
   document.getElementById('sm-badge').textContent=sm;
   document.getElementById('sm-modal-count').textContent=sm;
+  if(demos!=null) document.getElementById('k-demos').textContent=demos;
 }
 
 function updateReps(sv,pv,dv){
