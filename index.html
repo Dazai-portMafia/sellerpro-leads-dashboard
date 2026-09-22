@@ -1194,7 +1194,7 @@ async function refreshData(){
     document.getElementById('live-banner').hidden=true;
     document.getElementById('out-static').hidden=true;
     document.getElementById('out-live').hidden=false;
-    document.getElementById('loading').hidden=true;
+    const _ld=document.getElementById('loading');if(_ld)_ld.style.display='none';
     return;
   }catch(e){console.log('No cached data, trying live…',e.message);}
 
@@ -1220,7 +1220,7 @@ async function refreshData(){
     if(badge){badge.textContent='Offline';badge.className='chip';}
     document.getElementById('live-banner').hidden=false;
   }
-  document.getElementById('loading').hidden=true;
+  const _ld=document.getElementById('loading');if(_ld)_ld.style.display='none';
 }
 
 function processOutreach(rows,repName){
@@ -1904,6 +1904,15 @@ function renderOnbInsights(data){
   }
   if(el_k2tbdg) el_k2tbdg.textContent = outToday > 0 ? outToday+' due' : 'Today';
 
+  // ── Follow-up Queue KPI (all 3 outreach sheets, by status/remarks keywords) ──
+  const outreachFU = (STATE.allRows||[]).filter(r => {
+    const st  = (getEdit('out|'+r.name+'|'+r.phone, 'status', r.status)||'').toLowerCase();
+    const rmk = r.rep === 'Direct'
+      ? (getEdit('out|'+r.name+'|'+r.phone, 'remarks', r.remarks||'')||'').toLowerCase()
+      : '';
+    return FOLLOWUP_KEYWORDS.some(kw => st.includes(kw)) ||
+           (rmk && FOLLOWUP_KEYWORDS.some(kw => rmk.includes(kw)));
+  });
   const el_k2fu   = document.getElementById('k2-fu');
   const el_k2fbdg = document.getElementById('k2-fu-badge');
   if(el_k2fu)   el_k2fu.textContent   = outreachFU.length;
@@ -1917,7 +1926,7 @@ function renderOnbInsights(data){
   loadStatic();
   // Hide blocking spinner immediately — page is already rendered with static data
   const ld=document.getElementById('loading');
-  if(ld)ld.hidden=true;
+  if(ld)ld.style.display='none';
   // Sync live/cached data in background without blocking the UI
   refreshData().catch(()=>{});
 })();
