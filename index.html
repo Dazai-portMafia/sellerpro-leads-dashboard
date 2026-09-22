@@ -1176,28 +1176,31 @@ async function fetchCached(){
 }
 
 async function refreshData(){
-  document.getElementById('loading').hidden=false;
+  // ── Non-blocking: show data immediately, update badge while syncing ──
+  const badge=document.getElementById('src-badge');
+  const syncEl=document.getElementById('last-sync');
+  if(badge){badge.textContent='Syncing…';badge.className='chip chip-cached';}
 
-  // ── Try 1: daily-cached JSON (fastest, offline-safe) ──
+  // ── Try 1: daily-cached JSON with 8-second timeout ──
   try{
-    const [sv,pv,dv,ob]=await fetchCached();
+    const cacheTimeout=new Promise((_,rej)=>setTimeout(()=>rej(new Error('cache timeout')),8000));
+    const [sv,pv,dv,ob]=await Promise.race([fetchCached(),cacheTimeout]);
     processLive(sv,pv,dv,ob);
     STATE.live=true;
     const metaR=await fetch('data/meta.json').catch(()=>null);
     const meta=metaR&&metaR.ok?await metaR.json():null;
-    document.getElementById('src-badge').textContent='Cached';
-    document.getElementById('src-badge').className='chip chip-cached';
-    document.getElementById('last-sync').textContent=meta?`Synced ${meta.fetched_at}`:'Daily snapshot';
+    if(badge){badge.textContent='Cached';badge.className='chip chip-cached';}
+    if(syncEl)syncEl.textContent=meta?`Synced ${meta.fetched_at}`:'Daily snapshot';
     document.getElementById('live-banner').hidden=true;
     document.getElementById('out-static').hidden=true;
     document.getElementById('out-live').hidden=false;
     document.getElementById('loading').hidden=true;
     return;
-  }catch(e){console.log('No cached data, trying live…');}
+  }catch(e){console.log('No cached data, trying live…',e.message);}
 
-  // ── Try 2: live Google Sheets (15-second overall cap) ──
+  // ── Try 2: live Google Sheets (15-second cap) ──
   try{
-    const timeout=new Promise((_,rej)=>setTimeout(()=>rej(new Error('Overall live fetch timed out after 15s')),15000));
+    const timeout=new Promise((_,rej)=>setTimeout(()=>rej(new Error('live fetch timed out')),15000));
     const [sv,pv,dv,ob]=await Promise.race([
       Promise.all([
         fetchSheet(OID,'shivansh'), fetchSheet(OID,'priya'),
@@ -1207,15 +1210,14 @@ async function refreshData(){
     ]);
     processLive(sv,pv,dv,ob);
     STATE.live=true;
-    document.getElementById('src-badge').textContent='Live';
-    document.getElementById('src-badge').className='chip chip-live';
-    document.getElementById('last-sync').textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+    if(badge){badge.textContent='Live';badge.className='chip chip-live';}
+    if(syncEl)syncEl.textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
     document.getElementById('live-banner').hidden=true;
     document.getElementById('out-static').hidden=true;
     document.getElementById('out-live').hidden=false;
   }catch(err){
     console.warn('Live fetch failed:',err.message);
-    loadStatic();
+    if(badge){badge.textContent='Offline';badge.className='chip';}
     document.getElementById('live-banner').hidden=false;
   }
   document.getElementById('loading').hidden=true;
@@ -1913,7 +1915,11 @@ function renderOnbInsights(data){
   try{const t=localStorage.getItem('cl-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
   loadEdits();
   loadStatic();
-  refreshData();
+  // Hide blocking spinner immediately — page is already rendered with static data
+  const ld=document.getElementById('loading');
+  if(ld)ld.hidden=true;
+  // Sync live/cached data in background without blocking the UI
+  refreshData().catch(()=>{});
 })();
 </script>
 </body>
