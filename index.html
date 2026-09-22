@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Celebro Pipeline v7</title>
+<title>SellerPro Pipeline</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
@@ -399,7 +399,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
   <div class="brand">
     <div class="brand-icon">CL</div>
     <div>
-      <div class="brand-name">Celebro Leads</div>
+      <div class="brand-name">SellerPro Leads</div>
       <div class="brand-sub">Sales Intelligence Dashboard</div>
     </div>
   </div>
@@ -426,7 +426,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-label">Celebro · Sales Operations</div>
+    <div class="hero-label">SellerPro · Sales Operations</div>
     <div class="hero-title">Lead Tracker &amp; Pipeline Overview</div>
     <div class="hero-sub">Outreach · Onboarding · Demo Pipeline · ShipMaxx Intelligence</div>
   </div>
@@ -1673,7 +1673,7 @@ function downloadFiltered(){
       .map(v => `"${String(v||'').replace(/"/g,'""')}"`).join(',');
   });
   dl(['Name,Phone,Email,Status,Rep,ShipMaxx', ...csvRows].join('\n'),
-    `celebro-outreach-${new Date().toISOString().slice(0,10)}.csv`);
+    `sellerpro-outreach-${new Date().toISOString().slice(0,10)}.csv`);
 }
 function dlOnboarding(){
   const d = STATE.onbData;
@@ -1687,11 +1687,11 @@ function dlOnboarding(){
       .map(v => `"${String(v||'').replace(/"/g,'""')}"`).join(',');
   });
   dl(['Client,Email,Phone,Category,Demo Date,Last Connect,Outreach Date,Meetings,Usage,Health,Plan,Amount,Remarks,Outreach By', ...csvRows].join('\n'),
-    `celebro-onboarding-${new Date().toISOString().slice(0,10)}.csv`);
+    `sellerpro-onboarding-${new Date().toISOString().slice(0,10)}.csv`);
 }
 function dlShipmaxx(){
   const rows=STATE.smRows.length?STATE.smRows:[{name:'Wheels Culture',phone:'—',email:'—',status:'ShipMaxx Issue',rep:'Shivansh',remarks:'Flagged during call'}];
-  dl(['Name,Phone,Email,Status,Source,Remarks',...rows.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks].map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','))].join('\n'),`celebro-shipmaxx-${new Date().toISOString().slice(0,10)}.csv`);
+  dl(['Name,Phone,Email,Status,Source,Remarks',...rows.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks].map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','))].join('\n'),`sellerpro-shipmaxx-${new Date().toISOString().slice(0,10)}.csv`);
 }
 
 // ── ONBOARDING INSIGHTS ──
