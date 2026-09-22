@@ -875,7 +875,7 @@ const OBID = '1IYLwgQnj722wSv37KbXzyes9VRaNZ1YYEmnjTtZnd-E';
 const COLORS = ['#4f6ef7','#16a34a','#e53e3e','#d97706','#7c3aed','#0891b2','#f43f5e','#059669'];
 const OUTREACH_STATUSES = ['Interested','Follow Up','Not Interested','Busy / Call Later','In Progress','Not Called'];
 const REMARK_OPTS = ['—','Follow Up','Busy / Call Later','Not Picking','Interested','Wrong Number','Not Interested','In Progress','Self-Onboarding'];
-const FOLLOWUP_KEYWORDS = ['follow','later','connect','busy'];
+const FOLLOWUP_KEYWORDS = ['follow','later','connect','busy','pickup','hang'];
 const HEALTH_LEVELS = ['Green','Orange','Red'];
 const USAGE_TYPES   = ['Self','Guided','Manual','—'];
 const PLAN_TYPES    = ['Basic','Growth','Pro','Enterprise','—'];
@@ -1234,7 +1234,8 @@ function processOutreach(rows,repName){
     const status = findCol(r,['status'])||'';
     const smv    = findCol(r,['shipmax','ship max'])||'';
     const remarks= findCol(r,['remark','note','comment'])||'—';
-    const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
+    // Shipmaxx: dedicated column OR status/remarks text mentions shipmax
+    const isSm   = (smv && smv.toLowerCase()!=='no' && smv!=='') || status.toLowerCase().includes('shipmax') || remarks.toLowerCase().includes('shipmax');
     if(status){contacted++;statuses[status]=(statuses[status]||0)+1;}
     if(isSm){sm++;smRows.push({name,phone,email,status,rep:repName,remarks});}
     allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm,remarks});
@@ -1252,11 +1253,15 @@ function processLive(svR,pvR,dvR,obR){
     const email  = findCol(r,['email','mail'])||'—';
     const status = findCol(r,['status'])||'';
     const smv    = findCol(r,['shipmax','ship max'])||'';
-    const remarks= findCol(r,['remark','note','comment'])||'—';
-    const isSm   = smv && smv.toLowerCase()!=='no' && smv!=='';
-    if(status){dContacted++;dSt[status]=(dSt[status]||0)+1;}
+    // For Direct sheet: remarks = Shipmaxx issue value if raised, else '—'
+    const remarks= (smv && smv.toLowerCase()!=='no' && smv!=='')?smv:(findCol(r,['remark','note','comment'])||'—');
+    // Shipmaxx: dedicated column OR status text mentions shipmax
+    const isSm   = (smv && smv.toLowerCase()!=='no' && smv!=='') || status.toLowerCase().includes('shipmax');
+    // Skip accidental header rows (e.g. status === 'STATUS')
+    if(!status || status.toLowerCase()==='status'){return;}
+    dContacted++;dSt[status]=(dSt[status]||0)+1;
     if(isSm){dSm++;dSmRows.push({name,phone,email,status,rep:'Direct',remarks});}
-    dAllR.push({name,phone,email,status:status||'—',rep:'Direct',sm:isSm,remarks});
+    dAllR.push({name,phone,email,status,rep:'Direct',sm:isSm,remarks});
   });
   const dv={total:dvR.length,contacted:dContacted,statuses:dSt,shipmaxx:dSm};
 
