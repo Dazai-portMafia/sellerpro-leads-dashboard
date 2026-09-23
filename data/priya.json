@@ -36,18 +36,6 @@
     "": ""
   },
   {
-    "company_id": "36",
-    "brand_name": "Tushar Fashions",
-    "username": "Tushar Gupta",
-    "phone_number": "9555647884",
-    "email_id": "tushar.gupta@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "38",
     "brand_name": "DK Enterprise",
     "username": "Navin Kumar",
@@ -281,18 +269,6 @@
     "username": "ANURADHA PRODUCTS",
     "phone_number": "8756975007",
     "email_id": "anuradhaproducts@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "64",
-    "brand_name": "Lo",
-    "username": "Khaimchand Soni",
-    "phone_number": "7836053158",
-    "email_id": "khaimchand.soni@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -600,18 +576,6 @@
     "": ""
   },
   {
-    "company_id": "96",
-    "brand_name": "Anshul Enterprises",
-    "username": "Anshul Testing",
-    "phone_number": "8307388377",
-    "email_id": "anshul@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "97",
     "brand_name": "GIVESTA",
     "username": "SUBHAM .",
@@ -708,59 +672,11 @@
     "": ""
   },
   {
-    "company_id": "106",
-    "brand_name": "testing_enterprises",
-    "username": "test lead",
-    "phone_number": "7838786536",
-    "email_id": "testing_tech@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "107",
-    "brand_name": "Ankit enterprises",
-    "username": "ankit testing2",
-    "phone_number": "8950462140",
-    "email_id": "ankit.testing@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "108",
-    "brand_name": "akhil test",
-    "username": "akhil testing",
-    "phone_number": "6399649124",
-    "email_id": "akhil@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "109",
     "brand_name": "ARJUN&GADGETS",
     "username": "Arjun Singh",
     "phone_number": "8558926323",
     "email_id": "AS0945849@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "110",
-    "brand_name": "lalit testing",
-    "username": "Lalit testing",
-    "phone_number": "7988473948",
-    "email_id": "lalittest@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -821,30 +737,6 @@
     "username": "Sandeep Kumar",
     "phone_number": "8273092154",
     "email_id": "sk602407855@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "119",
-    "brand_name": "Test Company Name",
-    "username": "Test Manoj",
-    "phone_number": "7827388365",
-    "email_id": "test+manoj@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "120",
-    "brand_name": "losung test",
-    "username": "Surya Raj",
-    "phone_number": "8210930523",
-    "email_id": "surya.raj+1@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -1776,18 +1668,6 @@
     "": ""
   },
   {
-    "company_id": "199",
-    "brand_name": "Kangana Fashions",
-    "username": "Kangana rai",
-    "phone_number": "8756299527",
-    "email_id": "kangana.rai@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "200",
     "brand_name": "Uasahi bridge",
     "username": "Swranalata panda",
@@ -2676,18 +2556,6 @@
     "": ""
   },
   {
-    "company_id": "278",
-    "brand_name": "Losung360",
-    "username": "Saurabh Patel",
-    "phone_number": "6392812854",
-    "email_id": "saurabh.patel@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "279",
     "brand_name": "Jai maa santoshi fashion point ",
     "username": "Chandan Singh",
@@ -2705,18 +2573,6 @@
     "username": "manjay m",
     "phone_number": "9153471211",
     "email_id": "ym1672881@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "282",
-    "brand_name": "abc",
-    "username": "test a",
-    "phone_number": "8851306858",
-    "email_id": "test@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -2897,18 +2753,6 @@
     "username": "Radhey jaiswal",
     "phone_number": "8779922388",
     "email_id": "onedeskcourier@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "298",
-    "brand_name": "GrowOwn",
-    "username": "Amit Kumar Singh",
-    "phone_number": "7366945604",
-    "email_id": "amitkumarsingh@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -3797,18 +3641,6 @@
     "username": "shahina banu I patel",
     "phone_number": "9272122006",
     "email_id": "pshahina7479@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "378",
-    "brand_name": "Prozo",
-    "username": "kundan Kumar",
-    "phone_number": "8377965756",
-    "email_id": "kundan.kumar@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -5057,18 +4889,6 @@
     "username": "Vipin kumar patel",
     "phone_number": "8799740411",
     "email_id": "vipinpatel2401@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "488",
-    "brand_name": "tradeindia",
-    "username": "test rahul",
-    "phone_number": "9717320126",
-    "email_id": "rahul.meena@tradeindia.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -6449,18 +6269,6 @@
     "username": "RAVINDRA THUMMAR",
     "phone_number": "9099167099",
     "email_id": "broyaarshop@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "605",
-    "brand_name": "Losungtest",
-    "username": "Kundan Kumar",
-    "phone_number": "9674969312",
-    "email_id": "kundan.kumar@losung.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -8232,18 +8040,6 @@
     "": ""
   },
   {
-    "company_id": "753",
-    "brand_name": "Losung360",
-    "username": "Akshay Anand",
-    "phone_number": "9607027812",
-    "email_id": "akshay@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "754",
     "brand_name": "Happy customizations",
     "username": "Thalari harsha",
@@ -8693,18 +8489,6 @@
     "username": "Rama Krishna",
     "phone_number": "9448849161",
     "email_id": "ramakrishna7245@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "792",
-    "brand_name": "Ishika Test",
-    "username": "Ishika Chaudhary",
-    "phone_number": "8107011440",
-    "email_id": "ishika@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -9468,18 +9252,6 @@
     "": ""
   },
   {
-    "company_id": "856",
-    "brand_name": "Test - do not contact ",
-    "username": "Ravi Rana",
-    "phone_number": "7404126200",
-    "email_id": "ravi.rana@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "857",
     "brand_name": "Farhan traders ",
     "username": "Farhan Malik",
@@ -10140,18 +9912,6 @@
     "": ""
   },
   {
-    "company_id": "912",
-    "brand_name": "Losung360",
-    "username": "Madhup Goyal",
-    "phone_number": "9690342000",
-    "email_id": "madhup.agarwal@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "913",
     "brand_name": "Mehta Heritage",
     "username": "Ved Mehta",
@@ -10169,18 +9929,6 @@
     "username": "Pooja Prakash",
     "phone_number": "9311572389",
     "email_id": "poojaprakashan1984@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "915",
-    "brand_name": "Losung",
-    "username": "Priya Test",
-    "phone_number": "7763010340",
-    "email_id": "xyui@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -10325,18 +10073,6 @@
     "username": "Mahesh Vaghela",
     "phone_number": "9712349003",
     "email_id": "maheshvaghe1016@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "928",
-    "brand_name": "XYZ_testing",
-    "username": "Nishu Gupta",
-    "phone_number": "9911995842",
-    "email_id": "nishu_test@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -10980,18 +10716,6 @@
     "": ""
   },
   {
-    "company_id": "982",
-    "brand_name": "Mumbai WH-ShipBulk",
-    "username": "NULL",
-    "phone_number": "9412544867",
-    "email_id": "product@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "983",
     "brand_name": "Arte Di Legno",
     "username": "Praful Chaudhari",
@@ -11429,18 +11153,6 @@
     "username": "Shiva Kr",
     "phone_number": "9873535109",
     "email_id": "shivakrshi@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "1020",
-    "brand_name": "test-seller",
-    "username": "Akshay Anand",
-    "phone_number": "8459213753",
-    "email_id": "akshay2002anand@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -12377,18 +12089,6 @@
     "username": "Chandresh singh",
     "phone_number": "9519641241",
     "email_id": "singhchandresh279@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "1099",
-    "brand_name": "Losung360",
-    "username": "Subhagi Gupta",
-    "phone_number": "9045396997",
-    "email_id": "subhagi.gupta@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -14328,18 +14028,6 @@
     "": ""
   },
   {
-    "company_id": "1261",
-    "brand_name": "god records",
-    "username": "kunal shi",
-    "phone_number": "8800305041",
-    "email_id": "kunal@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "1262",
     "brand_name": "Aafiya selection ",
     "username": "TOSIB MEMAN",
@@ -14393,18 +14081,6 @@
     "username": "Manisha Bansal",
     "phone_number": "8527280725",
     "email_id": "Kradhaenterprises@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "1267",
-    "brand_name": "Trendycraft",
-    "username": "Shah Alam",
-    "phone_number": "9711126641",
-    "email_id": "Shah.alam@losung360.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
@@ -14796,18 +14472,6 @@
     "": ""
   },
   {
-    "company_id": "1300",
-    "brand_name": "Test Sellers",
-    "username": "Papolli Kharanshu",
-    "phone_number": "9925012105",
-    "email_id": "papolli.kharanshu@losung360.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
     "company_id": "1301",
     "brand_name": "Alan Scott Enterprises Limited ",
     "username": "Vishesh Bapna",
@@ -14885,18 +14549,6 @@
     "username": "Power Music",
     "phone_number": "7679469620",
     "email_id": "powermusicdotin@gmail.com",
-    "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "": ""
-  },
-  {
-    "company_id": "1308",
-    "brand_name": "Losung360",
-    "username": "Anil Maurya",
-    "phone_number": "8726245020",
-    "email_id": "kumaranil6547654@gmail.com",
     "Status": "",
     "Demo Date ": "",
     "Response": "",
