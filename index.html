@@ -1347,8 +1347,7 @@ function downloadAds(){
   const rows=STATE.adsRows||[];
   if(!rows.length){alert('No Paid Ads data loaded yet. Please wait for live data to load.');return;}
   const cols=['name','company','phone','email','campaign','platform','status','remarks','date'];
-  const csv=[cols.join(','),...rows.map(r=>cols.map(c=>`"${(r[c]||'').replace(/"/g,'""')}"`).join(','))].join('
-');
+  const csv=[cols.join(','),...rows.map(r=>cols.map(c=>`"${(r[c]||'').replace(/"/g,'""')}"`).join(','))].join('\n');
   const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
   a.download='paid_ads_leads.csv';a.click();
 }
