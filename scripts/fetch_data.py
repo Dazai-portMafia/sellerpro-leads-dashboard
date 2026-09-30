@@ -21,6 +21,7 @@ TABS = [
     ('shivansh',   OUTREACH_SHEET_ID,  'shivansh'),
     ('priya',      OUTREACH_SHEET_ID,  'priya'),
     ('direct',     OUTREACH_SHEET_ID,  'Seller Pro Direct Leads'),
+    ('paid_leads', OUTREACH_SHEET_ID,  'Paid Leads'),
     ('onboarding', ONBOARDING_SHEET_ID, ''),
 ]
 
