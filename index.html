@@ -99,6 +99,22 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'In
 .kpi-progress{height:4px;background:var(--border);border-radius:4px;margin-top:10px;overflow:hidden}
 .kpi-bar{height:100%;border-radius:4px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
 .kpi-click-hint{font-size:10px;color:var(--text3);margin-top:8px;display:flex;align-items:center;gap:3px}
+.kpi-export-btn{margin-top:10px;background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:11px;font-weight:600;color:var(--text2);cursor:pointer;width:100%;font-family:inherit;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:5px}
+.kpi-export-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* ─ TREND CHARTS STRIP ─ */
+.trend-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+@media(max-width:900px){.trend-strip{grid-template-columns:1fr}}
+.trend-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.trend-title{font-size:13px;font-weight:700;margin-bottom:2px;letter-spacing:-.2px}
+.trend-sub{font-size:11px;color:var(--text3);margin-bottom:12px}
+.trend-canvas-wrap{position:relative;height:130px}
+.funnel-bar{margin-bottom:10px}
+.funnel-label{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-bottom:4px}
+.funnel-label strong{color:var(--text);font-weight:700}
+.funnel-track{height:10px;background:var(--border);border-radius:8px;overflow:hidden;margin-bottom:2px}
+.funnel-fill{height:100%;border-radius:8px;transition:width 1s ease}
+.funnel-pct{font-size:10px;color:var(--text3);text-align:right}
 
 /* ─ MAIN ─ */
 .main{max-width:1300px;margin:28px auto 60px;padding:0 28px}
@@ -367,6 +383,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
         <option value="Shivansh">Shivansh</option>
         <option value="Priya">Priya</option>
         <option value="Direct">Direct Leads</option>
+        <option value="PaidAds">Paid Ads</option>
       </select>
     </div>
     <div class="modal-body">
@@ -458,12 +475,13 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
   <div class="kpi">
     <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--purple),#e879f9)"></div>
     <div class="kpi-header">
-      <div class="kpi-icon" style="background:var(--purple-l)">🎯</div>
-      <span class="kpi-trend trend-up">4 active</span>
+      <div class="kpi-icon" style="background:var(--purple-l)">🗓️</div>
+      <span class="kpi-trend trend-up" id="k-demos-badge">across 3 sheets</span>
     </div>
-    <div class="kpi-val" id="k-demos">7</div>
-    <div class="kpi-label">Demos Given</div>
-    <div class="kpi-sub">2 unreachable · 1 self-onboarding</div>
+    <div class="kpi-val" id="k-demos">—</div>
+    <div class="kpi-label">Demo Scheduled</div>
+    <div class="kpi-sub">Sellers with status "Demo Scheduled"</div>
+    <button class="kpi-export-btn" onclick="dlDemoScheduled()" title="Export Demo Scheduled list">⬇ Export</button>
   </div>
   <div class="kpi clickable" onclick="openSmModal()" title="Click to view flagged sellers">
     <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--red),var(--orange))"></div>
@@ -478,30 +496,32 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
   </div>
 </div>
 
-<!-- KPI ROW 2 — Onboarding-specific metrics -->
-<div class="kpi-row-2">
+<!-- KPI ROW 2 — Demo pipeline metrics -->
+<div class="kpi-row-2" style="grid-template-columns:repeat(3,1fr)">
   <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
-    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--purple),#e879f9)"></div>
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--green),#0891b2)"></div>
     <div class="kpi-header">
-      <div class="kpi-icon" style="background:var(--purple-l)">🎯</div>
+      <div class="kpi-icon" style="background:var(--green-l)">✅</div>
       <span class="kpi-trend trend-up" id="k2-demo-pct">—%</span>
     </div>
     <div class="kpi-val" id="k2-demo-done">—</div>
-    <div class="kpi-label">Onboarding: Demo Done</div>
-    <div class="kpi-sub" id="k2-demo-sub">of pipeline clients</div>
-    <div class="kpi-progress"><div class="kpi-bar" id="k2-demo-bar" style="width:0%;background:var(--purple)"></div></div>
+    <div class="kpi-label">Demo Done</div>
+    <div class="kpi-sub" id="k2-demo-sub">Total onboarding entries</div>
+    <div class="kpi-progress"><div class="kpi-bar" id="k2-demo-bar" style="width:0%;background:var(--green)"></div></div>
+    <button class="kpi-export-btn" onclick="dlDemoDone(event)" title="Export Demo Done list">⬇ Export</button>
   </div>
-  <div class="kpi" id="k2-today-card">
-    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--blue),var(--teal))"></div>
+  <div class="kpi">
+    <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--red),var(--orange))"></div>
     <div class="kpi-header">
-      <div class="kpi-icon" style="background:var(--blue-l)" id="k2-today-ico">📞</div>
-      <span class="kpi-trend" id="k2-today-badge" style="background:var(--blue-l);color:var(--blue)">Today</span>
+      <div class="kpi-icon" style="background:var(--red-l)">📉</div>
+      <span class="kpi-trend trend-warn" id="k2-dropoff-badge">gap</span>
     </div>
-    <div class="kpi-val" id="k2-today">—</div>
-    <div class="kpi-label">Outreach Due Today</div>
-    <div class="kpi-sub" id="k2-today-sub">clients to contact today</div>
+    <div class="kpi-val" id="k2-dropoff">—</div>
+    <div class="kpi-label">Demo Dropoff</div>
+    <div class="kpi-sub" id="k2-dropoff-sub">Scheduled but not onboarded</div>
+    <button class="kpi-export-btn" onclick="dlDemoDropoff(event)" title="Export Demo Dropoff list">⬇ Export</button>
   </div>
-  <div class="kpi clickable" onclick="showTab('onboarding',document.querySelectorAll('.tab-btn')[2])">
+  <div class="kpi clickable" onclick="showTab('outreach',document.querySelectorAll('.tab-btn')[1])">
     <div class="kpi-accent-bar" style="background:linear-gradient(90deg,var(--orange),var(--red))"></div>
     <div class="kpi-header">
       <div class="kpi-icon" style="background:var(--orange-l)">⏰</div>
@@ -510,34 +530,32 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
     <div class="kpi-val" id="k2-fu">—</div>
     <div class="kpi-label">Follow-up Queue</div>
     <div class="kpi-sub">Follow up / call later statuses</div>
+    <button class="kpi-export-btn" onclick="dlFollowupQueue(event)" title="Export Follow-up Queue">⬇ Export</button>
   </div>
 </div>
 
 <!-- MAIN -->
 <div class="main">
 
-  <!-- INSIGHT STRIP -->
-  <div class="insight-strip" style="margin-top:24px">
-    <div class="insight-card">
-      <div class="ins-dot" style="background:var(--green-l)">📈</div>
-      <div>
-        <div class="ins-title">Priya has 2× Shivansh's rate</div>
-        <div class="ins-body">Priya contacted 10.6% of her list vs Shivansh's 5.9%. Same pool size — worth reviewing Shivansh's call approach.</div>
-      </div>
+  <!-- TREND CHARTS STRIP -->
+  <div class="trend-strip" style="margin-top:24px" id="trend-strip">
+    <!-- Chart 1: Daily outreach activity (calls per rep) -->
+    <div class="trend-card">
+      <div class="trend-title">📞 Daily Call Activity</div>
+      <div class="trend-sub">Calls logged per day (last 30 days · all reps)</div>
+      <div class="trend-canvas-wrap"><canvas id="ch-daily-calls"></canvas></div>
     </div>
-    <div class="insight-card">
-      <div class="ins-dot" style="background:var(--red-l)">🚨</div>
-      <div>
-        <div class="ins-title">ShipMaxx is a competitor pain</div>
-        <div class="ins-body">9 sellers proactively raised ShipMaxx issues — 67% from Direct Leads. Make "better than ShipMaxx" a key pitch hook.</div>
-      </div>
+    <!-- Chart 2: Demo scheduling rate -->
+    <div class="trend-card">
+      <div class="trend-title">🗓️ Demo Scheduling Trend</div>
+      <div class="trend-sub">Daily "Demo Scheduled" entries across all sheets</div>
+      <div class="trend-canvas-wrap"><canvas id="ch-demo-trend"></canvas></div>
     </div>
-    <div class="insight-card">
-      <div class="ins-dot" style="background:var(--purple-l)">🎯</div>
-      <div>
-        <div class="ins-title">7 clients in demo pipeline</div>
-        <div class="ins-body">6 demos done · 4 Green health. 3 self-sufficient, 2 unreachable — check <strong>Onboarding</strong> tab for today's outreach queue, follow-up watchlist &amp; support breakdown.</div>
-      </div>
+    <!-- Chart 3: Sales Conversion Funnel -->
+    <div class="trend-card" id="funnel-card">
+      <div class="trend-title">🔁 Sales Conversion Funnel</div>
+      <div class="trend-sub">End-to-end pipeline conversion rates</div>
+      <div id="funnel-bars" style="margin-top:8px"></div>
     </div>
   </div>
 
@@ -547,6 +565,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
     <button class="tab-btn" onclick="showTab('outreach',this)">Outreach</button>
     <button class="tab-btn" onclick="showTab('onboarding',this)">Onboarding</button>
     <button class="tab-btn tab-warn" onclick="showTab('shipmaxx',this)">ShipMaxx Issues <span class="t-badge" id="sm-badge">9</span></button>
+    <button class="tab-btn" onclick="showTab('paid-ads',this)">📢 Paid Ads <span class="t-badge" style="background:var(--orange-l);color:var(--orange)" id="ad-badge">0</span></button>
   </nav>
 
   <!-- ── OVERVIEW ── -->
@@ -598,6 +617,21 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
           <div class="rate-bar"><div class="rate-fill" id="dv-bar" style="width:40.8%;background:var(--green)"></div></div>
         </div>
       </div>
+
+      <!-- Paid Ads -->
+      <div class="rep-card">
+        <div class="rep-header"><div><div class="rep-name">Paid Ads</div><div class="rep-tag">Meta / Google · Inbound</div></div><span class="pill p-orange">Ads</span></div>
+        <div class="rep-stats">
+          <div class="rep-stat"><div class="rs-val" id="ad-total">0</div><div class="rs-lbl">Total</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--orange)" id="ad-contact">0</div><div class="rs-lbl">Contacted</div></div>
+          <div class="rep-stat"><div class="rs-val" style="color:var(--green)" id="ad-qualified">0</div><div class="rs-lbl">Interested</div></div>
+        </div>
+        <div class="rep-chart-area"><canvas id="ch-paid"></canvas><div class="status-legend" id="leg-paid"></div></div>
+        <div class="rep-rate-wrap">
+          <div class="rate-row"><span>Contact Rate</span><span id="ad-rate" style="font-weight:700">0%</span></div>
+          <div class="rate-bar"><div class="rate-fill" id="ad-bar" style="width:0%;background:var(--orange)"></div></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -618,6 +652,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
         <button class="fc" id="sf-sv" onclick="setStaticFilter('sv',this)">Shivansh</button>
         <button class="fc" id="sf-pv" onclick="setStaticFilter('pv',this)">Priya</button>
         <button class="fc" id="sf-dv" onclick="setStaticFilter('dv',this)">Direct Leads</button>
+        <button class="fc" id="sf-ad" onclick="setStaticFilter('ad',this)">Paid Ads</button>
       </div>
       <div class="status-breakdown-grid" id="sb-grid"></div>
     </div>
@@ -633,6 +668,7 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
           <button class="fc" onclick="setRepFilter('Shivansh',this)">Shivansh</button>
           <button class="fc" onclick="setRepFilter('Priya',this)">Priya</button>
           <button class="fc" onclick="setRepFilter('Direct',this)">Direct</button>
+          <button class="fc" onclick="setRepFilter('PaidAds',this)">Paid Ads</button>
         </div>
         <div class="filter-sep"></div>
         <label>Status</label>
@@ -842,14 +878,14 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
     <div class="alert-bar">
       <div class="ai">🚨</div>
       <div>
-        <h3>9 sellers flagged ShipMaxx as a pain point</h3>
+        <h3 id="sm-tab-headline">ShipMaxx Flagged Sellers</h3>
         <p>These sellers proactively mentioned bad experiences with ShipMaxx during outreach calls. This is a strong buying signal — they're already unhappy with a competitor. Prioritize with a direct comparison pitch.</p>
       </div>
     </div>
     <div class="sm-grid">
-      <div class="sm-card"><div class="sm-val">1</div><div class="sm-lbl">Shivansh's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct">3.1% of contacted</div></div>
-      <div class="sm-card"><div class="sm-val">2</div><div class="sm-lbl">Priya's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct">3.0% of contacted</div></div>
-      <div class="sm-card"><div class="sm-val">6</div><div class="sm-lbl">Direct Leads</div><div class="sm-rep">Inbound · Seller Pro</div><div class="sm-pct">3.3% of contacted</div></div>
+      <div class="sm-card"><div class="sm-val" id="sm-sv-val">—</div><div class="sm-lbl">Shivansh's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct" id="sm-sv-pct"></div></div>
+      <div class="sm-card"><div class="sm-val" id="sm-pv-val">—</div><div class="sm-lbl">Priya's List</div><div class="sm-rep">Outreach sheet</div><div class="sm-pct" id="sm-pv-pct"></div></div>
+      <div class="sm-card"><div class="sm-val" id="sm-dv-val">—</div><div class="sm-lbl">Direct Leads</div><div class="sm-rep">Inbound · Seller Pro</div><div class="sm-pct" id="sm-dv-pct"></div></div>
     </div>
     <div class="sec-head">
       <div><div class="sec-title">Flagged Sellers</div><div class="sec-desc">Click the tile on the dashboard — or use the panel below</div></div>
@@ -865,6 +901,61 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
       🎯 <strong>Recommended action:</strong> Create a separate outreach sequence for these 9 sellers with messaging like "Switch from ShipMaxx — lower rates, better support." They've already told you they're unhappy.
     </div>
   </div>
+
+  <!-- ── PAID ADS ── -->
+  <div id="tab-paid-ads" hidden>
+    <div class="sec-head">
+      <div><div class="sec-title">📢 Paid Ads Leads</div><div class="sec-desc">Leads captured from Meta &amp; Google ad campaigns — <span id="ad-k-total" style="font-weight:700">0</span> total</div></div>
+      <button class="dl-btn dl-btn-g" onclick="downloadAds()">⬇ Download CSV</button>
+    </div>
+    <!-- Summary chips -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px">
+      <div class="kpi" style="flex:1;min-width:140px;padding:12px 16px">
+        <div class="kpi-val" id="ad-k-total2" style="font-size:28px">—</div>
+        <div class="kpi-lbl">Total Ads Leads</div>
+      </div>
+      <div class="kpi" style="flex:1;min-width:140px;padding:12px 16px">
+        <div class="kpi-val" id="ad-k-contacted" style="font-size:28px;color:var(--orange)">—</div>
+        <div class="kpi-lbl">Contacted</div>
+      </div>
+      <div class="kpi" style="flex:1;min-width:140px;padding:12px 16px">
+        <div class="kpi-val" id="ad-k-interested" style="font-size:28px;color:var(--green)">—</div>
+        <div class="kpi-lbl">Interested / Hot</div>
+      </div>
+      <div class="kpi" style="flex:1;min-width:140px;padding:12px 16px">
+        <div class="kpi-val" id="ad-k-rate2" style="font-size:28px">—</div>
+        <div class="kpi-lbl">Contact Rate</div>
+      </div>
+    </div>
+    <!-- Platform / Campaign breakdown -->
+    <div id="ads-breakdown" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
+      <div class="kpi" style="padding:14px 16px">
+        <div style="font-weight:700;margin-bottom:10px;font-size:13px">By Platform</div>
+        <div id="ads-platform-rows"></div>
+      </div>
+      <div class="kpi" style="padding:14px 16px">
+        <div style="font-weight:700;margin-bottom:10px;font-size:13px">By Campaign</div>
+        <div id="ads-campaign-rows"></div>
+      </div>
+    </div>
+    <!-- Leads table (live mode only) -->
+    <div id="ads-live-wrap" hidden>
+      <div class="filter-bar" style="margin-bottom:10px">
+        <input id="ads-search" type="text" placeholder="🔍 Search name, phone, campaign…" oninput="renderAdsTable()" style="flex:1">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Company</th><th>Phone</th><th>Email</th><th>Campaign</th><th>Platform</th><th>Status</th><th>Remarks</th><th>Date</th></tr></thead>
+          <tbody id="ads-tbody"><tr><td colspan="10" class="tbl-empty">Loading…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="row-count" id="ads-count"></div>
+    </div>
+    <div id="ads-static-note" class="note note-warn" style="margin-top:8px">
+      📦 <strong>Full table loads in live/cached mode.</strong> Data above reflects the last GitHub Actions sync.
+    </div>
+  </div>
+
 
 </div><!-- /main -->
 
@@ -888,6 +979,7 @@ const STATIC = {
     statuses:{'Interested':18,'Follow Up':22,'Not Interested':15,'Busy / Call Later':7,'In Progress':4} },
   dv: { total:451, contacted:184, shipmaxx:6,
     statuses:{'Interested':45,'Follow Up':62,'Not Interested':38,'Busy / Call Later':22,'In Progress':17} },
+  ad: { total:23, contacted:0, statuses:{} },
   smRows: [
     {name:'Wheels Culture', phone:'—', email:'—', status:'ShipMaxx Issue', rep:'Shivansh', remarks:'Competitor issue flagged during call'},
     {name:'(Live data)', phone:'—', email:'—', status:'—', rep:'Priya', remarks:'2 more records load in live mode'},
@@ -906,7 +998,7 @@ const STATIC = {
 
 let STATE = {
   live:false, tab:'overview', repFilter:'all', smFilter:false,
-  allRows:[], filteredRows:[], smRows:[],
+  allRows:[], filteredRows:[], smRows:[], demoScheduledRows:[],
   staticRepFilter:'all', charts:{},
   onbData: STATIC.onboarding,
   editMode: false,
@@ -1165,16 +1257,114 @@ async function fetchSheet(id,sheet){
   }
 }
 
+// ── PAID ADS PROCESSING ──
+function processAdsLeads(rows){
+  const statuses={};let contacted=0;const allR=[];
+  rows.forEach(r=>{
+    const name    = r['full_name']||r['name']||'—';
+    const company = r['company_name']||'—';
+    const phone   = r['phone_number']||r['phone']||'—';
+    const email   = r['email']||r['work_email']||'—';
+    const status  = r['status']||r['lead_status']||'New';
+    const remarks = r['remarks']||r['remark']||'—';
+    const campaign= r['campaign_name']||'—';
+    const platform= r['platform']||'Meta';
+    const date    = r['created_time']||r['date']||'—';
+    // Skip test rows injected by Meta
+    if(name.includes('<test lead')||phone.includes('<test lead')) return;
+    if(status && status.toLowerCase()!=='' && status!=='New'){
+      contacted++;statuses[status]=(statuses[status]||0)+1;
+    }
+    allR.push({name,company,phone,email,status:status||'New',rep:'PaidAds',campaign,platform,remarks,date});
+  });
+  return{total:allR.length,contacted,statuses,allR};
+}
+
+// ── RENDER ADS SECTION ──
+function renderAdsSection(ad){
+  if(!ad) return;
+  const rows=ad.allR||[];
+  const ge=id=>document.getElementById(id);
+
+  // Summary KPIs
+  if(ge('ad-k-total2'))ge('ad-k-total2').textContent=(ad.total||0).toLocaleString('en-IN');
+  if(ge('ad-k-contacted'))ge('ad-k-contacted').textContent=(ad.contacted||0).toLocaleString('en-IN');
+  const intCount=Object.entries(ad.statuses||{}).filter(([s])=>s&&(s.toLowerCase().includes('interest')||s.toLowerCase().includes('hot')||s.toLowerCase()==='qualified')).reduce((a,[,v])=>a+v,0);
+  if(ge('ad-k-interested'))ge('ad-k-interested').textContent=intCount;
+  const r2=ad.total?((ad.contacted/ad.total)*100).toFixed(1):'0.0';
+  if(ge('ad-k-rate2'))ge('ad-k-rate2').textContent=r2+'%';
+
+  // By Platform
+  const byPlatform={};
+  rows.forEach(r=>{const p=r.platform||'Unknown';byPlatform[p]=(byPlatform[p]||0)+1;});
+  const total=rows.length||1;
+  if(ge('ads-platform-rows')){
+    ge('ads-platform-rows').innerHTML=Object.entries(byPlatform).sort((a,b)=>b[1]-a[1]).map(([p,c])=>`
+      <div class="sb-row">
+        <div class="sb-status">${p||'Unknown'}</div>
+        <div class="sb-bar-wrap"><div class="sb-bar-fill" style="width:${Math.round(c/total*100)}%;background:var(--orange)"></div></div>
+        <div class="sb-count">${c}</div>
+      </div>`).join('')||'<div style="color:var(--text3);font-size:12px">No data yet</div>';
+  }
+
+  // By Campaign
+  const byCampaign={};
+  rows.forEach(r=>{const c=r.campaign||'—';byCampaign[c]=(byCampaign[c]||0)+1;});
+  if(ge('ads-campaign-rows')){
+    ge('ads-campaign-rows').innerHTML=Object.entries(byCampaign).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([c,cnt])=>`
+      <div class="sb-row">
+        <div class="sb-status" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${c}">${c}</div>
+        <div class="sb-bar-wrap"><div class="sb-bar-fill" style="width:${Math.round(cnt/total*100)}%;background:var(--teal)"></div></div>
+        <div class="sb-count">${cnt}</div>
+      </div>`).join('')||'<div style="color:var(--text3);font-size:12px">No data yet</div>';
+  }
+
+  // Table (live mode)
+  if(STATE.live&&rows.length&&ge('ads-live-wrap')){
+    ge('ads-live-wrap').hidden=false;
+    if(ge('ads-static-note'))ge('ads-static-note').hidden=true;
+    renderAdsTable();
+  }
+}
+
+function renderAdsTable(){
+  const tbody=document.getElementById('ads-tbody');
+  if(!tbody)return;
+  const q=(document.getElementById('ads-search')||{}).value||'';
+  let rows=STATE.adsRows||[];
+  if(q)rows=rows.filter(r=>Object.values(r).join(' ').toLowerCase().includes(q.toLowerCase()));
+  tbody.innerHTML=rows.map((r,i)=>`<tr>
+    <td>${i+1}</td><td>${r.name}</td><td>${r.company}</td><td>${r.phone}</td>
+    <td>${r.email}</td><td>${r.campaign}</td><td>${r.platform}</td>
+    <td><span class="pill" style="background:var(--orange-l);color:var(--orange)">${r.status}</span></td>
+    <td>${r.remarks}</td><td style="white-space:nowrap">${r.date?r.date.slice(0,10):'—'}</td>
+  </tr>`).join('')||'<tr><td colspan="10" class="tbl-empty">No paid ads leads yet</td></tr>';
+  const cnt=document.getElementById('ads-count');
+  if(cnt)cnt.textContent=`Showing ${rows.length} of ${(STATE.adsRows||[]).length} leads`;
+}
+
+function downloadAds(){
+  const rows=STATE.adsRows||[];
+  if(!rows.length){alert('No Paid Ads data loaded yet. Please wait for live data to load.');return;}
+  const cols=['name','company','phone','email','campaign','platform','status','remarks','date'];
+  const csv=[cols.join(','),...rows.map(r=>cols.map(c=>`"${(r[c]||'').replace(/"/g,'""')}"`).join(','))].join('
+');
+  const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  a.download='paid_ads_leads.csv';a.click();
+}
+
+
 // ── CACHED JSON FETCH (GitHub Pages daily snapshot) ──
 async function fetchCached(){
-  const [sv,pv,dv,ob]=await Promise.all([
+  const [sv,pv,dv,ad,ob]=await Promise.all([
     fetch('data/shivansh.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
     fetch('data/priya.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
     fetch('data/direct.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
+    fetch('data/paid_leads.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
     fetch('data/onboarding.json').then(r=>{if(!r.ok)throw new Error('no cache');return r.json();}),
   ]);
   // Normalize all keys to lowercase so findCol() and parseLiveOnb() work consistently
-  return [normalizeKeys(sv),normalizeKeys(pv),normalizeKeys(dv),normalizeKeys(ob)];
+  return [normalizeKeys(sv),normalizeKeys(pv),normalizeKeys(dv),ad,normalizeKeys(ob)];
 }
 
 async function refreshData(){
@@ -1186,8 +1376,8 @@ async function refreshData(){
   // ── Try 1: daily-cached JSON with 8-second timeout ──
   try{
     const cacheTimeout=new Promise((_,rej)=>setTimeout(()=>rej(new Error('cache timeout')),8000));
-    const [sv,pv,dv,ob]=await Promise.race([fetchCached(),cacheTimeout]);
-    processLive(sv,pv,dv,ob);
+    const [sv,pv,dv,ad,ob]=await Promise.race([fetchCached(),cacheTimeout]);
+    processLive(sv,pv,dv,ad,ob);
     STATE.live=true;
     const metaR=await fetch('data/meta.json').catch(()=>null);
     const meta=metaR&&metaR.ok?await metaR.json():null;
@@ -1203,14 +1393,14 @@ async function refreshData(){
   // ── Try 2: live Google Sheets (15-second cap) ──
   try{
     const timeout=new Promise((_,rej)=>setTimeout(()=>rej(new Error('live fetch timed out')),15000));
-    const [sv,pv,dv,ob]=await Promise.race([
+    const [sv,pv,dv,ad,ob]=await Promise.race([
       Promise.all([
         fetchSheet(OID,'shivansh'), fetchSheet(OID,'priya'),
-        fetchSheet(OID,'Seller Pro Direct Leads'), fetchSheet(OBID,'')
+        fetchSheet(OID,'Seller Pro Direct Leads'), fetchSheet(OID,'Paid Leads'), fetchSheet(OBID,'')
       ]),
       timeout
     ]);
-    processLive(sv,pv,dv,ob);
+    processLive(sv,pv,dv,ad,ob);
     STATE.live=true;
     if(badge){badge.textContent='Live';badge.className='chip chip-live';}
     if(syncEl)syncEl.textContent=new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
@@ -1234,16 +1424,17 @@ function processOutreach(rows,repName){
     const status = findCol(r,['status'])||'';
     const smv    = findCol(r,['shipmax','ship max'])||'';
     const remarks= findCol(r,['remark','note','comment'])||'—';
+    const date   = findCol(r,['date','call date','called date','contact date','entry date','sr. no.'])||'';
     // Shipmaxx: dedicated column OR status/remarks text mentions shipmax
     const isSm   = (smv && smv.toLowerCase()!=='no' && smv!=='') || status.toLowerCase().includes('shipmax') || remarks.toLowerCase().includes('shipmax');
     if(status){contacted++;statuses[status]=(statuses[status]||0)+1;}
     if(isSm){sm++;smRows.push({name,phone,email,status,rep:repName,remarks});}
-    allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm,remarks});
+    allR.push({name,phone,email,status:status||'Not Called',rep:repName,sm:isSm,remarks,date});
   });
   return{total:rows.length,contacted,statuses,shipmaxx:sm,smRows,allR};
 }
 
-function processLive(svR,pvR,dvR,obR){
+function processLive(svR,pvR,dvR,adR,obR){
   const sv=processOutreach(svR,'Shivansh');
   const pv=processOutreach(pvR,'Priya');
   let dContacted=0,dSt={},dSm=0,dSmRows=[],dAllR=[];
@@ -1253,44 +1444,58 @@ function processLive(svR,pvR,dvR,obR){
     const email  = findCol(r,['email','mail'])||'—';
     const status = findCol(r,['status'])||'';
     const smv    = findCol(r,['shipmax','ship max'])||'';
-    // For Direct sheet: remarks = Shipmaxx issue value if raised, else '—'
+    const date   = findCol(r,['date','call date','called date','contact date','entry date'])||'';
+    // For Direct sheet: remarks = Shipmaxx issue value if raised, else check remarks col
     const remarks= (smv && smv.toLowerCase()!=='no' && smv!=='')?smv:(findCol(r,['remark','note','comment'])||'—');
-    // Shipmaxx: dedicated column OR status text mentions shipmax
-    const isSm   = (smv && smv.toLowerCase()!=='no' && smv!=='') || status.toLowerCase().includes('shipmax');
+    // Shipmaxx: dedicated column OR status/remarks text mentions shipmax
+    const isSm   = (smv && smv.toLowerCase()!=='no' && smv!=='') || status.toLowerCase().includes('shipmax') || remarks.toLowerCase().includes('shipmax');
     // Skip accidental header rows (e.g. status === 'STATUS')
     if(!status || status.toLowerCase()==='status'){return;}
     dContacted++;dSt[status]=(dSt[status]||0)+1;
     if(isSm){dSm++;dSmRows.push({name,phone,email,status,rep:'Direct',remarks});}
-    dAllR.push({name,phone,email,status,rep:'Direct',sm:isSm,remarks});
+    dAllR.push({name,phone,email,status,rep:'Direct',sm:isSm,remarks,date});
   });
   const dv={total:dvR.length,contacted:dContacted,statuses:dSt,shipmaxx:dSm};
 
-  STATE.allRows=[...sv.allR,...pv.allR,...dAllR];
+  // Process paid ads leads
+  const ad=processAdsLeads(adR||[]);
+  STATE.adsRows=ad.allR;
+
+  STATE.allRows=[...sv.allR,...pv.allR,...dAllR,...ad.allR];
   STATE.smRows=[...sv.smRows,...pv.smRows,...dSmRows];
 
-  // Count demo-related outreach rows across all 3 sheets
-  const demoCount = STATE.allRows.filter(r => r.status && r.status.toLowerCase().includes('demo')).length;
-  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, demoCount);
-  updateReps(sv,pv,dv);
-  renderCharts(sv.statuses,pv.statuses,dSt);
+  // Demo Scheduled: exact status match across all 4 outreach sheets
+  STATE.demoScheduledRows = STATE.allRows.filter(r => r.status && r.status.toLowerCase() === 'demo scheduled');
+  const demoCount = STATE.demoScheduledRows.length;
+  const totAll = sv.total+pv.total+dv.total+ad.total;
+  const contAll = sv.contacted+pv.contacted+dv.contacted+ad.contacted;
+  updateKPIs(totAll, contAll, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, demoCount);
+  updateReps(sv,pv,dv,ad);
+  renderCharts(sv.statuses,pv.statuses,dSt,ad.statuses);
   populateStatusFilter();
   renderOutreachTable();
   renderOnboarding(obR);
   populateCatFilter(STATE.onbData);
   renderShipmaxx();
+  // Trend charts need onboarding data (renderOnboarding must run first)
+  renderAdsSection(ad);
+  renderTrendCharts(totAll, contAll, demoCount, STATE.onbData.length);
 }
 
 function loadStatic(){
-  const {sv,pv,dv}=STATIC;
+  const {sv,pv,dv,ad}=STATIC;
   STATE.smRows=STATIC.smRows.filter(r=>r.name!=='(Live data)');
-  STATE.allRows=[];
-  updateKPIs(sv.total+pv.total+dv.total, sv.contacted+pv.contacted+dv.contacted, sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, STATIC.demos||0);
-  updateReps(sv,pv,dv);
-  renderCharts(sv.statuses,pv.statuses,dv.statuses);
+  STATE.allRows=[];STATE.adsRows=[];
+  updateKPIs(sv.total+pv.total+dv.total+(ad?ad.total:0), sv.contacted+pv.contacted+dv.contacted+(ad?ad.contacted:0), sv.shipmaxx+pv.shipmaxx+dv.shipmaxx, STATIC.demos||0);
+  updateReps(sv,pv,dv,ad);
+  renderCharts(sv.statuses,pv.statuses,dv.statuses,ad?ad.statuses:{});
   renderStatusBreakdown();
   renderOnboarding(null);
   populateCatFilter(STATE.onbData);
   renderShipmaxx();
+  // Render trend charts in static mode too (funnel always works; daily charts show placeholder)
+  renderAdsSection(ad);
+  renderTrendCharts(sv.total+pv.total+dv.total+(ad?ad.total:0), sv.contacted+pv.contacted+dv.contacted+(ad?ad.contacted:0), STATIC.demos||0, STATIC.onboarding.length);
   document.getElementById('src-badge').textContent='Cached';
   document.getElementById('src-badge').className='chip chip-cached';
   document.getElementById('last-sync').textContent=STATIC.date;
@@ -1309,7 +1514,7 @@ function updateKPIs(tot,cont,sm,demos){
   if(demos!=null) document.getElementById('k-demos').textContent=demos;
 }
 
-function updateReps(sv,pv,dv){
+function updateReps(sv,pv,dv,ad){
   const set=(pre,d,color)=>{
     document.getElementById(pre+'-total').textContent=d.total.toLocaleString('en-IN');
     document.getElementById(pre+'-contact').textContent=d.contacted.toLocaleString('en-IN');
@@ -1319,6 +1524,30 @@ function updateReps(sv,pv,dv){
     if(bar){bar.style.width=Math.min(r,100)+'%';bar.style.background=color;}
   };
   set('sv',sv,'var(--blue)');set('pv',pv,'var(--purple)');set('dv',dv,'var(--green)');
+  // Per-rep ShipMaxx counts on ShipMaxx tab
+  const svSm=sv.shipmaxx||0,pvSm=pv.shipmaxx||0,dvSm=dv.shipmaxx||0;
+  const smTot=svSm+pvSm+dvSm;
+  const ge=id=>document.getElementById(id);
+  if(ge('sm-sv-val'))ge('sm-sv-val').textContent=svSm;
+  if(ge('sm-pv-val'))ge('sm-pv-val').textContent=pvSm;
+  if(ge('sm-dv-val'))ge('sm-dv-val').textContent=dvSm;
+  if(smTot){
+    if(ge('sm-sv-pct'))ge('sm-sv-pct').textContent=Math.round(svSm/smTot*100)+'% of flags';
+    if(ge('sm-pv-pct'))ge('sm-pv-pct').textContent=Math.round(pvSm/smTot*100)+'% of flags';
+    if(ge('sm-dv-pct'))ge('sm-dv-pct').textContent=Math.round(dvSm/smTot*100)+'% of flags';
+  }
+  // Paid Ads card in Overview
+  if(ad){
+    if(ge('ad-total'))ge('ad-total').textContent=(ad.total||0).toLocaleString('en-IN');
+    if(ge('ad-contact'))ge('ad-contact').textContent=(ad.contacted||0).toLocaleString('en-IN');
+    const intCount=Object.entries(ad.statuses||{}).filter(([s])=>s&&(s.toLowerCase().includes('interest')||s.toLowerCase().includes('hot')||s.toLowerCase()==='qualified')).reduce((a,[,v])=>a+v,0);
+    if(ge('ad-qualified'))ge('ad-qualified').textContent=intCount;
+    const ar=ad.total?((ad.contacted/ad.total)*100).toFixed(1):'0.0';
+    if(ge('ad-rate'))ge('ad-rate').textContent=ar+'%';
+    const abar=ge('ad-bar');if(abar){abar.style.width=Math.min(ar,100)+'%';}
+    if(ge('ad-badge'))ge('ad-badge').textContent=ad.total||0;
+    if(ge('ad-k-total'))ge('ad-k-total').textContent=(ad.total||0).toLocaleString('en-IN');
+  }
 }
 
 // ── CHARTS ──
@@ -1339,10 +1568,11 @@ function makeDonut(canvasId,legendId,statuses){
     <span class="sl-val">${vals[i]} <span style="color:var(--text3);font-weight:400">(${Math.round(vals[i]/total*100)}%)</span></span>
   </div>`).join('');
 }
-function renderCharts(sv,pv,dv){
+function renderCharts(sv,pv,dv,ad){
   makeDonut('ch-shivansh','leg-shivansh',sv);
   makeDonut('ch-priya','leg-priya',pv);
   makeDonut('ch-direct','leg-direct',dv);
+  if(ad&&Object.keys(ad).length)makeDonut('ch-paid','leg-paid',ad);
 }
 
 // ── STATUS BREAKDOWN (static mode) ──
@@ -1357,6 +1587,7 @@ function renderStatusBreakdown(){
     {key:'sv',name:'Shivansh',statuses:STATIC.sv.statuses,color:'var(--blue)'},
     {key:'pv',name:'Priya',statuses:STATIC.pv.statuses,color:'var(--purple)'},
     {key:'dv',name:'Direct Leads',statuses:STATIC.dv.statuses,color:'var(--green)'},
+    {key:'ad',name:'Paid Ads',statuses:STATIC.ad?STATIC.ad.statuses:{},color:'var(--orange)'},
   ];
   const sources=STATE.staticRepFilter==='all'?all:all.filter(s=>s.key===STATE.staticRepFilter);
   const grid=document.getElementById('sb-grid');
@@ -1677,7 +1908,7 @@ function renderSmModal(){
 // ── TAB SWITCHING ──
 function showTab(name,btn){
   STATE.tab=name;
-  ['overview','outreach','onboarding','shipmaxx'].forEach(t=>document.getElementById('tab-'+t).hidden=t!==name);
+  ['overview','outreach','onboarding','shipmaxx','paid-ads'].forEach(t=>document.getElementById('tab-'+t).hidden=t!==name);
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
   if(name==='outreach'&&STATE.live){populateStatusFilter();renderOutreachTable();}
@@ -1887,32 +2118,33 @@ function renderOnbInsights(data){
     }
   }
 
-  // ── Row 2 KPI cards ──
-  const total = data.length;
+  // ── Row 2 KPI cards — Demo Done (= total onboarding entries) & Demo Dropoff ──
+  const total = data.length;  // total onboarding entries = Demo Done
+  const demoScheduledCount = (STATE.demoScheduledRows||[]).length;
+  // Dropoff = sellers scheduled for demo but not found in onboarding by name match
+  const onbNames = new Set(data.map(r=>(r.name||'').toLowerCase().trim()));
+  const dropoffRows = (STATE.demoScheduledRows||[]).filter(r=>!onbNames.has((r.name||'').toLowerCase().trim()));
+  const dropoffCount = dropoffRows.length;
+
   const el_k2dd   = document.getElementById('k2-demo-done');
   const el_k2pct  = document.getElementById('k2-demo-pct');
   const el_k2bar  = document.getElementById('k2-demo-bar');
   const el_k2dsub = document.getElementById('k2-demo-sub');
-  if(el_k2dd)   el_k2dd.textContent  = demoDone;
-  if(el_k2pct)  el_k2pct.textContent = total ? Math.round(demoDone/total*100)+'%' : '—%';
-  if(el_k2bar)  el_k2bar.style.width = total ? Math.min(demoDone/total*100,100)+'%' : '0%';
-  if(el_k2dsub) el_k2dsub.textContent = total ? `of ${total} pipeline clients` : 'pipeline clients';
+  if(el_k2dd)   el_k2dd.textContent  = total;
+  if(el_k2pct)  el_k2pct.textContent = demoScheduledCount ? Math.round(total/demoScheduledCount*100)+'%' : '—%';
+  if(el_k2bar)  el_k2bar.style.width = demoScheduledCount ? Math.min(total/demoScheduledCount*100,100)+'%' : '0%';
+  if(el_k2dsub) el_k2dsub.textContent = demoScheduledCount
+    ? `of ${demoScheduledCount} scheduled (${Math.round(total/demoScheduledCount*100)}% converted)`
+    : `${total} onboarding entries`;
 
-  const el_k2t    = document.getElementById('k2-today');
-  const el_k2tsub = document.getElementById('k2-today-sub');
-  const el_k2tico = document.getElementById('k2-today-ico');
-  const el_k2tc   = document.getElementById('k2-today-card');
-  const el_k2tbdg = document.getElementById('k2-today-badge');
-  if(el_k2t)    el_k2t.textContent    = outToday;
-  if(el_k2tsub) el_k2tsub.textContent = outToday > 0
-    ? todayNames.slice(0,2).join(', ') + (todayNames.length>2?' +more':'')
-    : 'No outreach scheduled today';
-  if(el_k2tico) el_k2tico.textContent = outToday > 0 ? '🔥' : '📞';
-  if(el_k2tc){
-    if(outToday > 0){ el_k2tc.style.background='var(--blue-l)'; el_k2tc.style.borderColor='var(--blue)'; }
-    else { el_k2tc.style.background=''; el_k2tc.style.borderColor=''; }
-  }
-  if(el_k2tbdg) el_k2tbdg.textContent = outToday > 0 ? outToday+' due' : 'Today';
+  const el_k2drop    = document.getElementById('k2-dropoff');
+  const el_k2dropbdg = document.getElementById('k2-dropoff-badge');
+  const el_k2dropsub = document.getElementById('k2-dropoff-sub');
+  if(el_k2drop)    el_k2drop.textContent    = dropoffCount;
+  if(el_k2dropbdg) el_k2dropbdg.textContent = dropoffCount > 0 ? dropoffCount+' at risk' : 'none';
+  if(el_k2dropsub) el_k2dropsub.textContent = dropoffCount > 0
+    ? 'Scheduled but not in onboarding'
+    : 'All scheduled demos converted ✓';
 
   // ── Follow-up Queue KPI (all 3 outreach sheets, by status/remarks keywords) ──
   const outreachFU = (STATE.allRows||[]).filter(r => {
@@ -1927,6 +2159,206 @@ function renderOnbInsights(data){
   const el_k2fbdg = document.getElementById('k2-fu-badge');
   if(el_k2fu)   el_k2fu.textContent   = outreachFU.length;
   if(el_k2fbdg) el_k2fbdg.textContent = outreachFU.length > 0 ? outreachFU.length+' in queue' : 'none yet';
+}
+
+// ── TREND CHARTS ──
+function renderTrendCharts(svTotal, contTotal, demoScheduledCount, onbCount){
+  // ── Build daily activity data from STATE.allRows ──
+  const dateCounts = {};   // { 'YYYY-MM-DD' : {Shivansh:0,Priya:0,Direct:0} }
+  const demoDates  = {};   // { 'YYYY-MM-DD' : count }
+
+  // Parse a loose date string — handles ISO, "15 Sep 2026", "15/09/2026", "09/15/2026"
+  function parseLooseDate(s){
+    if(!s||s==='—'||String(s).trim()==='') return null;
+    s = String(s).trim();
+    // ISO format YYYY-MM-DD
+    const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(iso) return new Date(+iso[1],+iso[2]-1,+iso[3]);
+    // dd/mm/yyyy or mm/dd/yyyy or dd-mm-yyyy
+    const slashFmt = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
+    if(slashFmt){
+      let [,a,b,yr]=slashFmt; yr=+yr; if(yr<100) yr+=2000;
+      // assume dd/mm if day<=12 ambiguous → prefer dd/mm (Indian convention)
+      const day=+a, mon=+b-1;
+      if(day>=1&&day<=31&&mon>=0&&mon<=11) return new Date(yr,mon,day);
+    }
+    // "15 Sep 2026" or "15 Sep" or "Sep 15" or "Sep 15 2026"
+    const MONTHS = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+    const parts = s.trim().split(/[\s\-\/]+/);
+    // try parts[0]=day, parts[1]=month-name
+    let day = parseInt(parts[0]);
+    let mon = (parts[1]||'').toLowerCase().slice(0,3);
+    if(isNaN(day)||!(mon in MONTHS)){
+      // try parts[0]=month-name, parts[1]=day (e.g. "Sep 15")
+      mon = (parts[0]||'').toLowerCase().slice(0,3);
+      day = parseInt(parts[1]);
+    }
+    if(isNaN(day)||!(mon in MONTHS)) return null;
+    const yr = parseInt((parts[2])||'') || new Date().getFullYear();
+    return new Date(yr, MONTHS[mon], day);
+  }
+  function dateKey(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+
+  const now = new Date(); now.setHours(0,0,0,0);
+  const cutoff = new Date(now); cutoff.setDate(now.getDate()-29);
+
+  STATE.allRows.forEach(r=>{
+    const d = parseLooseDate(r.date);
+    if(!d||d<cutoff||d>now) return;
+    const k = dateKey(d);
+    if(!dateCounts[k]) dateCounts[k]={Shivansh:0,Priya:0,Direct:0};
+    dateCounts[k][r.rep] = (dateCounts[k][r.rep]||0)+1;
+    if(r.status && r.status.toLowerCase()==='demo scheduled'){
+      demoDates[k]=(demoDates[k]||0)+1;
+    }
+  });
+
+  // Build sorted label array for last 30 days
+  const labels=[], svVals=[], pvVals=[], dvVals=[], demoVals=[];
+  for(let i=29;i>=0;i--){
+    const d=new Date(now); d.setDate(now.getDate()-i);
+    const k=dateKey(d);
+    const mon=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+    labels.push(d.getDate()+' '+mon);
+    svVals.push((dateCounts[k]||{}).Shivansh||0);
+    pvVals.push((dateCounts[k]||{}).Priya||0);
+    dvVals.push((dateCounts[k]||{}).Direct||0);
+    demoVals.push(demoDates[k]||0);
+  }
+
+  const hasAny = svVals.some(v=>v>0)||pvVals.some(v=>v>0)||dvVals.some(v=>v>0);
+
+  // Chart 1: Daily calls (line chart)
+  if(STATE.charts['ch-daily-calls']){STATE.charts['ch-daily-calls'].destroy();}
+  const c1=document.getElementById('ch-daily-calls');
+  if(c1){
+    if(hasAny){
+      STATE.charts['ch-daily-calls']=new Chart(c1,{
+        type:'line',
+        data:{
+          labels,
+          datasets:[
+            {label:'Shivansh',data:svVals,borderColor:'#4f6ef7',backgroundColor:'rgba(79,110,247,.08)',tension:.35,fill:true,pointRadius:svVals.map(v=>v>0?3:0),pointHoverRadius:5,borderWidth:2},
+            {label:'Priya',   data:pvVals,borderColor:'#7c3aed',backgroundColor:'rgba(124,58,237,.06)',tension:.35,fill:true,pointRadius:pvVals.map(v=>v>0?3:0),pointHoverRadius:5,borderWidth:2},
+            {label:'Direct',  data:dvVals,borderColor:'#16a34a',backgroundColor:'rgba(22,163,74,.06)',tension:.35,fill:true,pointRadius:dvVals.map(v=>v>0?3:0),pointHoverRadius:5,borderWidth:2},
+          ]
+        },
+        options:{
+          responsive:true,maintainAspectRatio:false,
+          interaction:{mode:'index',intersect:false},
+          plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:10},color:'var(--text2)',padding:8}},tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y} calls`}}},
+          scales:{
+            x:{ticks:{color:'var(--text3)',font:{size:9},maxTicksLimit:8},grid:{display:false}},
+            y:{ticks:{color:'var(--text3)',font:{size:9},stepSize:1},grid:{color:'rgba(148,163,184,.1)'},beginAtZero:true}
+          }
+        }
+      });
+    } else {
+      c1.parentElement.innerHTML='<div style="height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--text3);font-size:11px;text-align:center"><span style="font-size:22px">📅</span>Add a <strong style="color:var(--text2)">"Date"</strong> column in your sheets<br>to unlock daily call trend charts</div>';
+    }
+  }
+
+  // Chart 2: Demo scheduling trend (bar + line)
+  if(STATE.charts['ch-demo-trend']){STATE.charts['ch-demo-trend'].destroy();}
+  const c2=document.getElementById('ch-demo-trend');
+  if(c2){
+    if(hasAny){
+      const totalCalls=labels.map((_,i)=>svVals[i]+pvVals[i]+dvVals[i]);
+      const rateVals=totalCalls.map((t,i)=>t>0?Math.round(demoVals[i]/t*100):0);
+      STATE.charts['ch-demo-trend']=new Chart(c2,{
+        type:'bar',
+        data:{
+          labels,
+          datasets:[
+            {label:'Demo Scheduled',data:demoVals,backgroundColor:'rgba(124,58,237,.7)',borderRadius:4,borderWidth:0,yAxisID:'y'},
+            {label:'Rate %',data:rateVals,type:'line',borderColor:'#e879f9',backgroundColor:'transparent',tension:.4,pointRadius:rateVals.map(v=>v>0?3:0),borderWidth:2,yAxisID:'y2'},
+          ]
+        },
+        options:{
+          responsive:true,maintainAspectRatio:false,
+          interaction:{mode:'index',intersect:false},
+          plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:10},color:'var(--text2)',padding:8}},tooltip:{callbacks:{label:c=>c.dataset.yAxisID==='y2'?` Rate: ${c.parsed.y}%`:` Demos: ${c.parsed.y}`}}},
+          scales:{
+            x:{ticks:{color:'var(--text3)',font:{size:9},maxTicksLimit:8},grid:{display:false}},
+            y:{ticks:{color:'var(--text3)',font:{size:9},stepSize:1},grid:{color:'rgba(148,163,184,.1)'},beginAtZero:true,position:'left'},
+            y2:{ticks:{color:'var(--text3)',font:{size:9},callback:v=>v+'%'},grid:{display:false},beginAtZero:true,position:'right'}
+          }
+        }
+      });
+    } else {
+      c2.parentElement.innerHTML='<div style="height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--text3);font-size:11px;text-align:center"><span style="font-size:22px">🗓️</span>Add a <strong style="color:var(--text2)">"Date"</strong> column in your sheets<br>to unlock demo scheduling trend charts</div>';
+    }
+  }
+
+  // Chart 3: Conversion funnel (custom bar)
+  const funnelEl=document.getElementById('funnel-bars');
+  if(funnelEl){
+    const steps=[
+      {label:'Total Database',    val:svTotal,       color:'var(--blue)',  base:svTotal},
+      {label:'Contacted',         val:contTotal,     color:'var(--teal)',  base:svTotal},
+      {label:'Demo Scheduled',    val:demoScheduledCount, color:'var(--purple)', base:svTotal},
+      {label:'Demo Done (Onb.)',  val:onbCount,      color:'var(--green)', base:svTotal},
+    ];
+    funnelEl.innerHTML=steps.map(s=>{
+      const pct=s.base>0?Math.min(Math.round(s.val/s.base*100),100):0;
+      const convPct=steps[0].val>0?((s.val/steps[0].val)*100).toFixed(1)+'%':'—';
+      return`<div class="funnel-bar">
+        <div class="funnel-label"><span>${s.label}</span><strong>${s.val.toLocaleString('en-IN')}</strong></div>
+        <div class="funnel-track"><div class="funnel-fill" style="width:${pct}%;background:${s.color}"></div></div>
+        <div class="funnel-pct">${convPct} of total</div>
+      </div>`;
+    }).join('');
+  }
+}
+
+// ── DEMO PIPELINE DOWNLOAD FUNCTIONS ──
+function dlDemoScheduled(e){
+  if(e){e.stopPropagation();}
+  const rows=STATE.demoScheduledRows;
+  if(!rows||!rows.length){alert('No "Demo Scheduled" rows found');return;}
+  const csvRows=rows.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks||'—']
+    .map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','));
+  dl(['Name,Phone,Email,Status,Rep,Remarks',...csvRows].join('\n'),
+    `demo-scheduled-${new Date().toISOString().slice(0,10)}.csv`);
+}
+function dlDemoDone(e){
+  if(e){e.stopPropagation();}
+  const data=STATE.onbData||[];
+  if(!data.length){alert('No onboarding data loaded');return;}
+  const csvRows=data.map(r=>{
+    const key='onb|'+r.name;
+    const h=getEdit(key,'health',r.health||'');
+    const u=getEdit(key,'usage',r.usage||'');
+    const p=getEdit(key,'plan',r.plan||'');
+    return [r.name,r.email,r.phone,r.cat,r.demoDate||'',r.lastConnect||'',h,u,p,r.finalRemarks||r.initRemarks||'']
+      .map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(',');
+  });
+  dl(['Client,Email,Phone,Category,Demo Date,Last Connect,Health,Usage,Plan,Remarks',...csvRows].join('\n'),
+    `demo-done-onboarding-${new Date().toISOString().slice(0,10)}.csv`);
+}
+function dlDemoDropoff(e){
+  if(e){e.stopPropagation();}
+  const sched=STATE.demoScheduledRows||[];
+  const onbNames=new Set((STATE.onbData||[]).map(r=>(r.name||'').toLowerCase().trim()));
+  const dropoff=sched.filter(r=>!onbNames.has((r.name||'').toLowerCase().trim()));
+  if(!dropoff.length){alert('No demo dropoff records found');return;}
+  const csvRows=dropoff.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks||'—']
+    .map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','));
+  dl(['Name,Phone,Email,Status,Rep,Remarks',...csvRows].join('\n'),
+    `demo-dropoff-${new Date().toISOString().slice(0,10)}.csv`);
+}
+function dlFollowupQueue(e){
+  if(e){e.stopPropagation();}
+  const rows=(STATE.allRows||[]).filter(r=>{
+    const st=(getEdit('out|'+r.name+'|'+r.phone,'status',r.status)||'').toLowerCase();
+    const rmk=r.rep==='Direct'?(getEdit('out|'+r.name+'|'+r.phone,'remarks',r.remarks||'')||'').toLowerCase():'';
+    return FOLLOWUP_KEYWORDS.some(kw=>st.includes(kw))||(rmk&&FOLLOWUP_KEYWORDS.some(kw=>rmk.includes(kw)));
+  });
+  if(!rows.length){alert('No follow-up rows found');return;}
+  const csvRows=rows.map(r=>[r.name,r.phone,r.email,r.status,r.rep,r.remarks||'—']
+    .map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(','));
+  dl(['Name,Phone,Email,Status,Rep,Remarks',...csvRows].join('\n'),
+    `followup-queue-${new Date().toISOString().slice(0,10)}.csv`);
 }
 
 // ── BOOT ──
