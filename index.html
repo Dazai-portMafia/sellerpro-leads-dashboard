@@ -1270,7 +1270,8 @@ function processAdsLeads(rows){
     const campaign= r['campaign_name']||'—';
     const platform= r['platform']||'Meta';
     const date    = r['created_time']||r['date']||'—';
-    // Skip test rows injected by Meta
+    // Skip empty stubs (no name) and test rows injected by Meta
+    if(!r['full_name']&&!r['name']) return;
     if(name.includes('<test lead')||phone.includes('<test lead')) return;
     if(status && status.toLowerCase()!=='' && status!=='New'){
       contacted++;statuses[status]=(statuses[status]||0)+1;
