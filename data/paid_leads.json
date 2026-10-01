@@ -203,7 +203,7 @@
     "company_name": "narharijewelry",
     "work_email": "ganeshsonawane29071@gmail.com",
     "lead_status": "CREATED",
-    "Remarks": "Scheduled",
+    "Remarks": "Didn't show up",
     "Status": "Demo Scheduled",
     "": ""
   },
@@ -229,8 +229,8 @@
     "company_name": "Dihar, Bihār, India",
     "work_email": "rohitk49803@gmail.com",
     "lead_status": "",
-    "Remarks": "Scheduled",
-    "Status": "Demo Scheduled",
+    "Remarks": "Initially interested denied later",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -360,7 +360,7 @@
     "work_email": "dswandco75@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "No Pickup",
     "": ""
   },
   {
@@ -386,7 +386,7 @@
     "work_email": "sreesanker20@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -412,7 +412,7 @@
     "work_email": "GSM57100@GMAIL.COM",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -438,7 +438,7 @@
     "work_email": "support@flipstock.co.in",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -464,7 +464,7 @@
     "work_email": "meenaanuj743@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -490,7 +490,7 @@
     "work_email": "ahirnanku@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Demo Scheduled",
     "": ""
   },
   {
@@ -516,7 +516,7 @@
     "work_email": "zeentlalit@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -542,7 +542,7 @@
     "work_email": "rodesanket10@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Follow Up ",
     "": ""
   },
   {
@@ -568,7 +568,7 @@
     "work_email": "mytishta@gmail.com",
     "lead_status": "",
     "Remarks": "",
-    "Status": "",
+    "Status": "Rejected",
     "": ""
   },
   {
@@ -593,6 +593,110 @@
     "company_name": "Sorifa",
     "work_email": "khatunsorifaa1122@gmail.com",
     "lead_status": "",
+    "Remarks": "",
+    "Status": "Follow Up ",
+    "": ""
+  },
+  {
+    "id": "l:1313261040779180",
+    "created_time": "2026-09-30T05:39:20-05:00",
+    "ad_id": "ag:120252527421570659",
+    "ad_name": "Seller Pro Video",
+    "adset_id": "as:120252527421580659",
+    "adset_name": "SellerPro Video Ads",
+    "campaign_id": "c:120252527421590659",
+    "campaign_name": "SellerPro_Leads",
+    "form_id": "f:1641945764080541",
+    "form_name": "Sellerpro_Lead_Form",
+    "is_organic": "false",
+    "platform": "ig",
+    "where_do_you_currently_sell_your_products?": "amazon_/_flipkart",
+    "are_you_currently_running_paid_marketing?": "no",
+    "_what_marketing_support_are_you_looking_for?": "get_more_orders",
+    "full_name": "Jeettttt",
+    "email": "jeetsethia5@gmail.com",
+    "phone_number": "p:+919229259850",
+    "company_name": "Mahalaxmi Textiles",
+    "work_email": "jeetsethia5@gmail.com",
+    "lead_status": "CREATED",
+    "Remarks": "",
+    "Status": "",
+    "": ""
+  },
+  {
+    "id": "l:1129890406155294",
+    "created_time": "2026-09-30T13:21:30-05:00",
+    "ad_id": "ag:120252527421570659",
+    "ad_name": "Seller Pro Video",
+    "adset_id": "as:120252527421580659",
+    "adset_name": "SellerPro Video Ads",
+    "campaign_id": "c:120252527421590659",
+    "campaign_name": "SellerPro_Leads",
+    "form_id": "f:1641945764080541",
+    "form_name": "Sellerpro_Lead_Form",
+    "is_organic": "false",
+    "platform": "ig",
+    "where_do_you_currently_sell_your_products?": "own_website",
+    "are_you_currently_running_paid_marketing?": "no",
+    "_what_marketing_support_are_you_looking_for?": "get_more_orders",
+    "full_name": "Piyush",
+    "email": "piyushmhatre1101@gmail.com",
+    "phone_number": "p:+919619885995",
+    "company_name": "Dropkart",
+    "work_email": "10a31piyushmhatre@gmail.com",
+    "lead_status": "CREATED",
+    "Remarks": "",
+    "Status": "",
+    "": ""
+  },
+  {
+    "id": "l:1466287105410315",
+    "created_time": "2026-09-30T13:44:00-05:00",
+    "ad_id": "ag:120252527421570659",
+    "ad_name": "Seller Pro Video",
+    "adset_id": "as:120252527421580659",
+    "adset_name": "SellerPro Video Ads",
+    "campaign_id": "c:120252527421590659",
+    "campaign_name": "SellerPro_Leads",
+    "form_id": "f:1641945764080541",
+    "form_name": "Sellerpro_Lead_Form",
+    "is_organic": "false",
+    "platform": "ig",
+    "where_do_you_currently_sell_your_products?": "own_website",
+    "are_you_currently_running_paid_marketing?": "yes_–_both",
+    "_what_marketing_support_are_you_looking_for?": "scale_my_business",
+    "full_name": "vishalshekhar ( सनातनी)",
+    "email": "vshekhar9411@gmail.com",
+    "phone_number": "p:+917088551344",
+    "company_name": "Study Care English Shool",
+    "work_email": "rajsings@gmail.com",
+    "lead_status": "CREATED",
+    "Remarks": "",
+    "Status": "",
+    "": ""
+  },
+  {
+    "id": "l:1594941562114948",
+    "created_time": "2026-09-30T21:35:33-05:00",
+    "ad_id": "ag:120252527421570659",
+    "ad_name": "Seller Pro Video",
+    "adset_id": "as:120252527421580659",
+    "adset_name": "SellerPro Video Ads",
+    "campaign_id": "c:120252527421590659",
+    "campaign_name": "SellerPro_Leads",
+    "form_id": "f:1641945764080541",
+    "form_name": "Sellerpro_Lead_Form",
+    "is_organic": "false",
+    "platform": "ig",
+    "where_do_you_currently_sell_your_products?": "own_website",
+    "are_you_currently_running_paid_marketing?": "yes_–_meta_ads",
+    "_what_marketing_support_are_you_looking_for?": "scale_my_business",
+    "full_name": "shivam kumar",
+    "email": "shivamkumarvishwakarma15@gmail.com",
+    "phone_number": "p:+919670167885",
+    "company_name": "Network  marketing",
+    "work_email": "shivamkumarvishwakarma15@gmail.com",
+    "lead_status": "CREATED",
     "Remarks": "",
     "Status": "",
     "": ""
