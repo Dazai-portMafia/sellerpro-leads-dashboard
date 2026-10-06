@@ -1,6 +1,6 @@
 {
-  "fetched_at": "5 Oct 2026, 1:17 PM IST",
-  "fetched_utc": "2026-10-05T07:47:15.952713+00:00",
+  "fetched_at": "6 Oct 2026, 1:43 PM IST",
+  "fetched_utc": "2026-10-06T08:13:21.951641+00:00",
   "tabs": {
     "shivansh": {
       "rows": 2276,
@@ -15,7 +15,7 @@
       "status": "ok"
     },
     "paid_leads": {
-      "rows": 290,
+      "rows": 40,
       "status": "ok"
     },
     "onboarding": {
