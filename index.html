@@ -116,6 +116,57 @@ html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'In
 .funnel-fill{height:100%;border-radius:8px;transition:width 1s ease}
 .funnel-pct{font-size:10px;color:var(--text3);text-align:right}
 
+
+/* ─ INCENTIVE TRACKER ─ */
+.incentive-section{margin-bottom:24px}
+.incentive-section-head{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.incentive-section-title{font-size:14px;font-weight:700;letter-spacing:-.2px}
+.incentive-section-sub{font-size:12px;color:var(--text3)}
+.incentive-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.incentive-grid{grid-template-columns:1fr}}
+.inc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.inc-header{padding:14px 18px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.inc-name{font-size:14px;font-weight:700}
+.inc-tag{font-size:11px;color:var(--text3);margin-top:1px}
+.inc-body{padding:16px 18px}
+.inc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.inc-metric{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.inc-metric-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:4px}
+.inc-metric-val{font-size:22px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums;line-height:1}
+.inc-metric-sub{font-size:11px;color:var(--text2);margin-top:4px}
+.inc-progress-wrap{margin-bottom:4px}
+.inc-progress-header{display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-bottom:5px}
+.inc-progress-header strong{color:var(--text);font-weight:700}
+.inc-progress-track{height:8px;background:var(--border);border-radius:8px;overflow:hidden}
+.inc-progress-fill{height:100%;border-radius:8px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.inc-progress-sub{font-size:10px;color:var(--text3);margin-top:4px;text-align:right}
+.inc-reward{display:flex;align-items:center;justify-content:space-between;background:var(--green-l);border:1px solid rgba(22,163,74,.2);border-radius:9px;padding:10px 14px;margin-top:4px}
+.inc-reward-label{font-size:11px;font-weight:600;color:var(--green)}
+.inc-reward-val{font-size:15px;font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
+.inc-reward.locked{background:var(--surface2);border-color:var(--border)}
+.inc-reward.locked .inc-reward-label,.inc-reward.locked .inc-reward-val{color:var(--text3)}
+.inc-conv-item{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:var(--surface2);border-radius:7px;margin-bottom:6px;font-size:12px}
+.inc-conv-name{font-weight:600;color:var(--text)}
+.inc-conv-plan{color:var(--text3)}
+.inc-conv-amt{font-weight:700;color:var(--green)}
+.inc-empty{font-size:12px;color:var(--text3);text-align:center;padding:14px 0}
+.inc-note{font-size:11px;color:var(--text3);background:var(--surface2);border-radius:7px;padding:8px 12px;margin-top:10px;display:flex;align-items:flex-start;gap:6px}
+.inc-month-badge{font-size:10px;font-weight:700;background:var(--blue-l);color:var(--blue);border-radius:5px;padding:2px 7px;margin-left:auto}
+
+/* ─ DAILY ACTIVITY TRACKER ─ */
+.daily-tracker{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);margin-top:14px;overflow:hidden}
+.daily-tracker-head{padding:14px 18px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.daily-tracker-title{font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px}
+.daily-tracker-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.daily-kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--border)}
+.daily-kpi{padding:12px 18px;border-right:1px solid var(--border);text-align:center}
+.daily-kpi:last-child{border-right:none}
+.daily-kpi-val{font-size:22px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums;line-height:1}
+.daily-kpi-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-top:3px}
+.daily-kpi-sub{font-size:11px;color:var(--text2);margin-top:2px}
+.daily-chart-wrap{padding:16px 18px}
+.daily-chart-canvas{position:relative;height:160px}
+.daily-no-date-note{font-size:11px;color:var(--text3);background:var(--orange-l);border:1px solid rgba(217,119,6,.15);border-radius:8px;padding:9px 12px;margin:12px 18px;display:flex;align-items:flex-start;gap:6px}
 /* ─ MAIN ─ */
 .main{max-width:1300px;margin:28px auto 60px;padding:0 28px}
 
@@ -634,6 +685,168 @@ tr.row-edited:hover{background:rgba(79,110,247,.06)}
       </div>
     </div>
   </div>
+
+
+    <!-- ── INCENTIVE TRACKER ── -->
+    <div class="incentive-section" id="incentive-section">
+      <div class="incentive-section-head">
+        <span style="font-size:18px">🏆</span>
+        <div>
+          <div class="incentive-section-title">Monthly Incentive Tracker</div>
+          <div class="incentive-section-sub">Oct 2026 · Effective from Oct 1 · Verify with Finance</div>
+        </div>
+        <span class="inc-month-badge" id="inc-month-label">Oct 2026</span>
+      </div>
+      <div class="incentive-grid">
+
+        <!-- Shivansh -->
+        <div class="inc-card">
+          <div class="inc-header">
+            <div><div class="inc-name">Shivansh</div><div class="inc-tag">Sales Rep · Outreach</div></div>
+            <span class="pill p-blue">Rep</span>
+          </div>
+          <div class="inc-body">
+            <!-- Demo incentive -->
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:10px">🎯 Demo Meeting Incentive</div>
+            <div class="inc-row">
+              <div class="inc-metric">
+                <div class="inc-metric-label">Demos This Month</div>
+                <div class="inc-metric-val" id="sv-demo-count" style="color:var(--blue)">—</div>
+                <div class="inc-metric-sub">of 100 target</div>
+              </div>
+              <div class="inc-metric">
+                <div class="inc-metric-label">Target Reward</div>
+                <div class="inc-metric-val" style="color:var(--green)">₹5,000</div>
+                <div class="inc-metric-sub">on 100 demos</div>
+              </div>
+            </div>
+            <div class="inc-progress-wrap">
+              <div class="inc-progress-header"><span>Progress</span><strong id="sv-demo-pct">0%</strong></div>
+              <div class="inc-progress-track"><div class="inc-progress-fill" id="sv-demo-bar" style="width:0%;background:var(--blue)"></div></div>
+              <div class="inc-progress-sub" id="sv-demo-left">— demos to unlock ₹5,000</div>
+            </div>
+            <div class="inc-reward locked" id="sv-demo-reward">
+              <span class="inc-reward-label">🔒 Demo Incentive</span>
+              <span class="inc-reward-val" id="sv-demo-reward-val">₹0 earned</span>
+            </div>
+
+            <div style="border-top:1px solid var(--border);margin:14px 0 12px"></div>
+
+            <!-- Conversion incentive -->
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:10px">💳 Paid Conversion Incentive (10%)</div>
+            <div class="inc-row">
+              <div class="inc-metric">
+                <div class="inc-metric-label">Paid Conversions</div>
+                <div class="inc-metric-val" id="sv-conv-count" style="color:var(--purple)">—</div>
+                <div class="inc-metric-sub">this month</div>
+              </div>
+              <div class="inc-metric">
+                <div class="inc-metric-label">Est. Incentive</div>
+                <div class="inc-metric-val" id="sv-conv-amt" style="color:var(--green)">₹0</div>
+                <div class="inc-metric-sub">10% of 1st month rev</div>
+              </div>
+            </div>
+            <div id="sv-conv-list"><div class="inc-empty">No paid conversions recorded yet</div></div>
+            <div class="inc-note">ℹ️ Fill <strong>Outreach person</strong> &amp; <strong>Plan/Amount</strong> in the Onboarding sheet to track conversions here.</div>
+          </div>
+        </div>
+
+        <!-- Priya -->
+        <div class="inc-card">
+          <div class="inc-header">
+            <div><div class="inc-name">Priya</div><div class="inc-tag">Sales Rep · Outreach</div></div>
+            <span class="pill p-purple">Rep</span>
+          </div>
+          <div class="inc-body">
+            <!-- Demo incentive -->
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:10px">🎯 Demo Meeting Incentive</div>
+            <div class="inc-row">
+              <div class="inc-metric">
+                <div class="inc-metric-label">Demos This Month</div>
+                <div class="inc-metric-val" id="pv-demo-count" style="color:var(--purple)">—</div>
+                <div class="inc-metric-sub">of 100 target</div>
+              </div>
+              <div class="inc-metric">
+                <div class="inc-metric-label">Target Reward</div>
+                <div class="inc-metric-val" style="color:var(--green)">₹5,000</div>
+                <div class="inc-metric-sub">on 100 demos</div>
+              </div>
+            </div>
+            <div class="inc-progress-wrap">
+              <div class="inc-progress-header"><span>Progress</span><strong id="pv-demo-pct">0%</strong></div>
+              <div class="inc-progress-track"><div class="inc-progress-fill" id="pv-demo-bar" style="width:0%;background:var(--purple)"></div></div>
+              <div class="inc-progress-sub" id="pv-demo-left">— demos to unlock ₹5,000</div>
+            </div>
+            <div class="inc-reward locked" id="pv-demo-reward">
+              <span class="inc-reward-label">🔒 Demo Incentive</span>
+              <span class="inc-reward-val" id="pv-demo-reward-val">₹0 earned</span>
+            </div>
+
+            <div style="border-top:1px solid var(--border);margin:14px 0 12px"></div>
+
+            <!-- Conversion incentive -->
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:10px">💳 Paid Conversion Incentive (10%)</div>
+            <div class="inc-row">
+              <div class="inc-metric">
+                <div class="inc-metric-label">Paid Conversions</div>
+                <div class="inc-metric-val" id="pv-conv-count" style="color:var(--purple)">—</div>
+                <div class="inc-metric-sub">this month</div>
+              </div>
+              <div class="inc-metric">
+                <div class="inc-metric-label">Est. Incentive</div>
+                <div class="inc-metric-val" id="pv-conv-amt" style="color:var(--green)">₹0</div>
+                <div class="inc-metric-sub">10% of 1st month rev</div>
+              </div>
+            </div>
+            <div id="pv-conv-list"><div class="inc-empty">No paid conversions recorded yet</div></div>
+            <div class="inc-note">ℹ️ Fill <strong>Outreach person</strong> &amp; <strong>Plan/Amount</strong> in the Onboarding sheet to track conversions here.</div>
+          </div>
+        </div>
+
+      </div><!-- /incentive-grid -->
+    </div><!-- /incentive-section -->
+    <!-- ── DAILY ACTIVITY TRACKER ── -->
+    <div class="daily-tracker" id="daily-tracker">
+      <div class="daily-tracker-head">
+        <div>
+          <div class="daily-tracker-title">📞 Daily Calls Connected</div>
+          <div class="daily-tracker-sub">Rows where status was filled &amp; is not "Not Connected" — last 30 days</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <span style="font-size:11px;color:var(--text3)" id="daily-date-range">—</span>
+          <span class="chip" id="daily-mode-chip" style="background:var(--orange-l);color:var(--orange);font-size:10px">Partial data</span>
+        </div>
+      </div>
+
+      <!-- Today KPIs -->
+      <div class="daily-kpi-row">
+        <div class="daily-kpi">
+          <div class="daily-kpi-val" id="daily-sv-today" style="color:var(--blue)">—</div>
+          <div class="daily-kpi-lbl">Shivansh Today</div>
+          <div class="daily-kpi-sub" id="daily-sv-today-sub">needs Date column</div>
+        </div>
+        <div class="daily-kpi">
+          <div class="daily-kpi-val" id="daily-pv-today" style="color:var(--purple)">—</div>
+          <div class="daily-kpi-lbl">Priya Today</div>
+          <div class="daily-kpi-sub" id="daily-pv-today-sub">needs Date column</div>
+        </div>
+        <div class="daily-kpi">
+          <div class="daily-kpi-val" id="daily-dv-today" style="color:var(--green)">—</div>
+          <div class="daily-kpi-lbl">Direct Leads Today</div>
+          <div class="daily-kpi-sub" id="daily-dv-today-sub">—</div>
+        </div>
+      </div>
+
+      <!-- Note about missing date columns -->
+      <div class="daily-no-date-note" id="daily-date-note">
+        ⚠️ <span><strong>Shivansh &amp; Priya sheets have no Date column yet.</strong> Add a <code>Date</code> column to those Google Sheets (fill today's date each time you log a call) and the chart will auto-populate on next sync. Direct Leads data is live below.</span>
+      </div>
+
+      <!-- Chart -->
+      <div class="daily-chart-wrap">
+        <div class="daily-chart-canvas"><canvas id="ch-daily-calls"></canvas></div>
+      </div>
+    </div>
 
   <!-- ── OUTREACH ── -->
   <div id="tab-outreach" hidden>
@@ -1241,18 +1454,15 @@ function normalizeKeys(rows){return rows.map(r=>{const n={};Object.keys(r).forEa
 // ── FETCH ──
 async function fetchSheet(id,sheet){
   const url=`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&tq=select%20*${sheet?'&sheet='+encodeURIComponent(sheet):''}`;
-  const ctrl=new AbortController();
-  const timer=setTimeout(()=>ctrl.abort(),10000); // 10-second timeout
+  // Note: AbortSignal NOT passed to fetch — it cannot be cloned via postMessage
+  // (breaks when browser extensions intercept the request). Timeout handled by Promise.race in caller.
   try{
-    const r=await fetch(url,{cache:'no-cache',signal:ctrl.signal});
-    clearTimeout(timer);
+    const r=await fetch(url,{cache:'no-cache'});
     if(!r.ok)throw new Error('HTTP '+r.status);
     const t=await r.text();
     if(t.startsWith('<!'))throw new Error('Sheet not public');
     return toObjs(parseCSV(t));
   }catch(e){
-    clearTimeout(timer);
-    if(e.name==='AbortError')throw new Error('Sheet fetch timed out');
     throw e;
   }
 }
@@ -1388,7 +1598,7 @@ async function refreshData(){
     document.getElementById('out-live').hidden=false;
     const _ld=document.getElementById('loading');if(_ld)_ld.style.display='none';
     return;
-  }catch(e){console.log('No cached data, trying live…',e.message);}
+  }catch(e){console.log('Cached JSON not found (normal when running locally or before first push):', e.message);}
 
   // ── Try 2: live Google Sheets (15-second cap) ──
   try{
@@ -1408,7 +1618,7 @@ async function refreshData(){
     document.getElementById('out-static').hidden=true;
     document.getElementById('out-live').hidden=false;
   }catch(err){
-    console.warn('Live fetch failed:',err.message);
+    console.warn('Live Google Sheets fetch failed:', err.message, '— showing static data');
     if(badge){badge.textContent='Offline';badge.className='chip';}
     document.getElementById('live-banner').hidden=false;
   }
@@ -1475,6 +1685,8 @@ function processLive(svR,pvR,dvR,adR,obR){
   populateStatusFilter();
   renderOutreachTable();
   renderOnboarding(obR);
+  renderIncentiveTracker(STATE.onbData);
+  renderDailyTracker(svR,pvR,dvR);
   populateCatFilter(STATE.onbData);
   renderShipmaxx();
   // Trend charts need onboarding data (renderOnboarding must run first)
@@ -1491,6 +1703,8 @@ function loadStatic(){
   renderCharts(sv.statuses,pv.statuses,dv.statuses,ad?ad.statuses:{});
   renderStatusBreakdown();
   renderOnboarding(null);
+  renderIncentiveTracker(STATE.onbData);
+  renderDailyTracker([],[],STATE.allRows.filter(r=>r.rep==='Direct'));
   populateCatFilter(STATE.onbData);
   renderShipmaxx();
   // Render trend charts in static mode too (funnel always works; daily charts show placeholder)
@@ -1823,6 +2037,277 @@ function renderOnbCharts(){
   }
 }
 
+
+
+
+// ── DAILY ACTIVITY TRACKER ──
+var _dailyChart = null;
+function renderDailyTracker(svRows, pvRows, dvRows){
+  // Build 30-day window ending today
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const labels = [];
+  const days = [];
+  for(let i=29;i>=0;i--){
+    const d=new Date(today); d.setDate(d.getDate()-i);
+    const iso=d.toISOString().slice(0,10);
+    const short=d.getDate()+'/'+(d.getMonth()+1);
+    labels.push(short);
+    days.push(iso);
+  }
+
+  // Parse a date string (handles M/D/YYYY, DD-MM-YY, YYYY-MM-DD)
+  function parseDate(s){
+    if(!s||s==='—') return null;
+    s=String(s).trim();
+    const iso=s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(iso) return new Date(+iso[1],+iso[2]-1,+iso[3]);
+    // M/D/YYYY (Direct sheet format)
+    const mdy=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+    if(mdy) return new Date(+mdy[3],+mdy[1]-1,+mdy[2]);
+    // DD-MM-YY or DD/MM/YY
+    const dmy=s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
+    if(dmy){ let[,a,b,yr]=dmy; yr=+yr; if(yr<100)yr+=2000; return new Date(yr,+b-1,+a); }
+    return null;
+  }
+  function toISO(d){ return d?d.toISOString().slice(0,10):null; }
+  function isConnected(status){
+    const s=(status||'').trim().toLowerCase();
+    return s !== '' && s !== 'not connected' && s !== 'not connected ';
+  }
+
+  // Count connected calls per ISO date per rep
+  function buildDaily(rows, dateCol, statusCol){
+    const counts={};
+    (rows||[]).forEach(r=>{
+      const d=parseDate(r[dateCol]||(r[dateCol.toLowerCase()])||'');
+      const status=r[statusCol]||(r[statusCol.toLowerCase()])||'';
+      if(d && isConnected(status)){
+        const k=toISO(d); if(k) counts[k]=(counts[k]||0)+1;
+      }
+    });
+    return counts;
+  }
+
+  // Try known date col names for each rep
+  const svCounts = buildDaily(svRows, 'date', 'Status') ;   // will be all zeros until Date col added
+  const pvCounts = buildDaily(pvRows, 'date', 'Status');
+  // Direct uses 'Date' and 'Status'
+  const dvCounts = buildDaily(dvRows, 'Date', 'Status');
+
+  const todayISO = toISO(today);
+  const svToday = svCounts[todayISO]||0;
+  const pvToday = pvCounts[todayISO]||0;
+  const dvToday = dvCounts[todayISO]||0;
+
+  const svHasData = Object.keys(svCounts).length > 0;
+  const pvHasData = Object.keys(pvCounts).length > 0;
+  const dvHasData = Object.keys(dvCounts).length > 0;
+
+  // Update KPI tiles
+  const el_svt = document.getElementById('daily-sv-today');
+  const el_pvt = document.getElementById('daily-pv-today');
+  const el_dvt = document.getElementById('daily-dv-today');
+  const el_svs = document.getElementById('daily-sv-today-sub');
+  const el_pvs = document.getElementById('daily-pv-today-sub');
+  const el_dvs = document.getElementById('daily-dv-today-sub');
+  const el_note= document.getElementById('daily-date-note');
+  const el_chip= document.getElementById('daily-mode-chip');
+  const el_range=document.getElementById('daily-date-range');
+
+  if(el_svt) el_svt.textContent = svHasData ? svToday : '—';
+  if(el_pvt) el_pvt.textContent = pvHasData ? pvToday : '—';
+  if(el_dvt) el_dvt.textContent = dvToday;
+  if(el_svs) el_svs.textContent = svHasData ? 'calls connected' : 'add Date column to sheet';
+  if(el_pvs) el_pvs.textContent = pvHasData ? 'calls connected' : 'add Date column to sheet';
+  if(el_dvs) el_dvs.textContent = 'calls connected';
+
+  const allHaveData = svHasData && pvHasData;
+  if(el_note) el_note.hidden = allHaveData;
+  if(el_chip){
+    if(allHaveData){ el_chip.textContent='Live'; el_chip.style.cssText='background:var(--green-l);color:var(--green);font-size:10px'; }
+    else if(dvHasData){ el_chip.textContent='Partial data'; el_chip.style.cssText='background:var(--orange-l);color:var(--orange);font-size:10px'; }
+  }
+
+  // Date range label
+  const allDays = [...Object.keys(dvCounts),...Object.keys(svCounts),...Object.keys(pvCounts)].sort();
+  if(el_range && allDays.length){
+    const fmt=s=>{ const[y,m,d]=s.split('-'); return d+'/'+m; };
+    el_range.textContent = fmt(allDays[0])+' – '+fmt(allDays[allDays.length-1]);
+  }
+
+  // Build chart data arrays
+  const svData = days.map(d=>svCounts[d]||0);
+  const pvData = days.map(d=>pvCounts[d]||0);
+  const dvData = days.map(d=>dvCounts[d]||0);
+
+  const todayIdx = days.indexOf(todayISO);
+
+  const canvas = document.getElementById('ch-daily-calls');
+  if(!canvas) return;
+  if(_dailyChart){ _dailyChart.destroy(); _dailyChart=null; }
+  _dailyChart = new Chart(canvas.getContext('2d'),{
+    type:'bar',
+    data:{
+      labels,
+      datasets:[
+        {label:'Shivansh', data:svData, backgroundColor:'rgba(79,110,247,.75)', borderRadius:3, borderSkipped:false},
+        {label:'Priya',    data:pvData, backgroundColor:'rgba(124,58,237,.75)', borderRadius:3, borderSkipped:false},
+        {label:'Direct',   data:dvData, backgroundColor:'rgba(22,163,74,.6)',   borderRadius:3, borderSkipped:false},
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{position:'top',labels:{font:{size:11},boxWidth:10,padding:12}},
+        tooltip:{callbacks:{
+          title:t=>{ const i=t[0].dataIndex; return labels[i]+' '+days[i].slice(0,4)+(i===todayIdx?' (Today)':''); },
+          label:t=>` ${t.dataset.label}: ${t.parsed.y} calls`
+        }}
+      },
+      scales:{
+        x:{stacked:false, grid:{display:false}, ticks:{font:{size:10}, maxTicksLimit:10, color:'var(--text3)'}},
+        y:{beginAtZero:true, ticks:{stepSize:1, font:{size:10}, color:'var(--text3)'}, grid:{color:'var(--border)'}}
+      }
+    }
+  });
+
+  // Highlight today column with a subtle overlay via plugin
+  if(todayIdx>=0){
+    _dailyChart.options.plugins.annotation = undefined; // no annotation plugin, use a simpler approach
+    // Draw a vertical line at today using afterDraw
+    _dailyChart.options.plugins.todayLine = true;
+    Chart.register({
+      id:'todayHighlight',
+      afterDraw(chart){
+        if(!chart.options.plugins.todayLine) return;
+        const idx=days.indexOf(todayISO);
+        if(idx<0) return;
+        const meta=chart.getDatasetMeta(0);
+        if(!meta.data[idx]) return;
+        const x=meta.data[idx].x;
+        const {top,bottom}=chart.chartArea;
+        const ctx2=chart.ctx;
+        ctx2.save();
+        ctx2.fillStyle='rgba(79,110,247,.06)';
+        const w=meta.data[idx].width||12;
+        ctx2.fillRect(x-w*1.8,top,w*3.6,bottom-top);
+        ctx2.restore();
+      }
+    });
+    _dailyChart.update('none');
+  }
+}
+
+// ── INCENTIVE TRACKER ──
+function renderIncentiveTracker(onbData){
+  // Determine current month (YYYY-MM format)
+  const now = new Date();
+  const curY = now.getFullYear();
+  const curM = now.getMonth(); // 0-indexed
+
+  // Update month label
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const el_ml = document.getElementById('inc-month-label');
+  if(el_ml) el_ml.textContent = months[curM]+' '+curY;
+
+  // Parse a loose date string into a Date (same helper as trend charts)
+  function parseLooseDate(s){
+    if(!s||s==='—'||String(s).trim()==='') return null;
+    s=String(s).trim();
+    const iso=s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(iso) return new Date(+iso[1],+iso[2]-1,+iso[3]);
+    const slashFmt=s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
+    if(slashFmt){
+      let[,a,b,yr]=slashFmt; yr=+yr; if(yr<100) yr+=2000;
+      // dd-mm-yyyy (Indian format preferred)
+      return new Date(yr,+b-1,+a);
+    }
+    return null;
+  }
+
+  function isCurrentMonth(dateStr){
+    const d=parseLooseDate(dateStr);
+    if(!d) return false;
+    return d.getFullYear()===curY && d.getMonth()===curM;
+  }
+
+  const reps = [
+    {key:'sv', name:'Shivansh', color:'var(--blue)'},
+    {key:'pv', name:'Priya',    color:'var(--purple)'},
+  ];
+
+  reps.forEach(rep => {
+    const {key, name} = rep;
+
+    // ── DEMO COUNT: from onboarding rows attributed to this rep, demo date in current month ──
+    const repRows = (onbData||[]).filter(r => {
+      const person = (r.outreachPerson||r['outreach person']||'').trim().toLowerCase();
+      return person === name.toLowerCase() || person.startsWith(name.toLowerCase());
+    });
+    const demoRows = repRows.filter(r => isCurrentMonth(r.demoDate||r['demo date']||''));
+    const demoCount = demoRows.length;
+    const demoPct = Math.min(Math.round(demoCount/100*100),100);
+    const demoLeft = Math.max(100-demoCount,0);
+    const demoUnlocked = demoCount >= 100;
+
+    const el_dc  = document.getElementById(key+'-demo-count');
+    const el_dp  = document.getElementById(key+'-demo-pct');
+    const el_db  = document.getElementById(key+'-demo-bar');
+    const el_dl  = document.getElementById(key+'-demo-left');
+    const el_dr  = document.getElementById(key+'-demo-reward');
+    const el_drv = document.getElementById(key+'-demo-reward-val');
+
+    if(el_dc)  el_dc.textContent  = demoCount;
+    if(el_dp)  el_dp.textContent  = demoPct+'%';
+    if(el_db)  el_db.style.width  = demoPct+'%';
+    if(el_dl)  el_dl.textContent  = demoUnlocked ? '🎉 Target reached! ₹5,000 unlocked' : demoLeft+' demos to unlock ₹5,000';
+    if(el_dr){
+      el_dr.classList.toggle('locked', !demoUnlocked);
+      if(el_drv) el_drv.textContent = demoUnlocked ? '₹5,000 earned 🎉' : '₹0 earned';
+      const el_drl = el_dr.querySelector('.inc-reward-label');
+      if(el_drl) el_drl.textContent = demoUnlocked ? '🏆 Demo Incentive' : '🔒 Demo Incentive';
+    }
+
+    // ── PAID CONVERSIONS: from onboarding rows attributed to this rep, with Plan filled, demo date in current month ──
+    const convRows = repRows.filter(r => {
+      const plan = (r.plan||'').trim();
+      return plan && plan !== '—' && isCurrentMonth(r.demoDate||r['demo date']||'');
+    });
+    const convCount = convRows.length;
+    let totalAmt = 0;
+    convRows.forEach(r => {
+      const raw = (r.amount||'').replace(/[₹,\s]/g,'');
+      const n = parseFloat(raw);
+      if(!isNaN(n)) totalAmt += n;
+    });
+    const incAmt = Math.round(totalAmt * 0.1);
+
+    const el_cc  = document.getElementById(key+'-conv-count');
+    const el_ca  = document.getElementById(key+'-conv-amt');
+    const el_cl  = document.getElementById(key+'-conv-list');
+
+    if(el_cc) el_cc.textContent = convCount;
+    if(el_ca) el_ca.textContent = '₹'+incAmt.toLocaleString('en-IN');
+    if(el_cl){
+      if(convRows.length){
+        el_cl.innerHTML = convRows.map(r=>{
+          const raw=(r.amount||'').replace(/[₹,\s]/g,'');
+          const n=parseFloat(raw);
+          const tenPct=isNaN(n)?'—':'₹'+Math.round(n*0.1).toLocaleString('en-IN');
+          return `<div class="inc-conv-item">
+            <span class="inc-conv-name">${r.name||'—'}</span>
+            <span class="inc-conv-plan">${r.plan||'—'}</span>
+            <span class="inc-conv-amt">${tenPct}</span>
+          </div>`;
+        }).join('');
+      } else {
+        el_cl.innerHTML='<div class="inc-empty">No paid conversions recorded yet</div>';
+      }
+    }
+  });
+}
 
 function parseLiveOnb(rows){
   return rows.filter(r=>r['client name']||r['name']).map(r=>{
