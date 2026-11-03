@@ -1,57 +1,5 @@
 [
   {
-    "company_id": "1625",
-    "brand_name": "Bergmart",
-    "username": "ADITYA AGARWAL",
-    "phone_number": "9919104324",
-    "email_id": "official.bergmart@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1626",
-    "brand_name": "Shree samarth machinery ",
-    "username": "Poonam Yogesh Dadre",
-    "phone_number": "8262944373",
-    "email_id": "shrisamarthmachinery@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1627",
-    "brand_name": "Meera Traders",
-    "username": "Anju Chaudhary",
-    "phone_number": "9927021110",
-    "email_id": "kapil.casual@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1628",
-    "brand_name": "Dinesh Chandra Enterprises Private Limited ",
-    "username": "Prashant Kumar Varma",
-    "phone_number": "8171812859",
-    "email_id": "dineshchandraenterprises@gmail.com",
-    "Status": "STATUS",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1629",
     "brand_name": "sarkit.cc",
     "username": "sarkit.cc",
@@ -221,32 +169,6 @@
     "": ""
   },
   {
-    "company_id": "1642",
-    "brand_name": "ABC",
-    "username": "Savan R Vaghasiya",
-    "phone_number": "9662191591",
-    "email_id": "srvaghasiya31@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1643",
-    "brand_name": "Riva creations",
-    "username": "Riddhi Jain",
-    "phone_number": "9897149275",
-    "email_id": "riddhi1399@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "seller said i will let you know connect again on monday ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1644",
     "brand_name": "Auri Jewels",
     "username": "Priyanka Sukheja",
@@ -266,45 +188,6 @@
     "phone_number": "9309545194",
     "email_id": "saienterprises401102@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1646",
-    "brand_name": "My garden",
-    "username": "HARSH SAINI",
-    "phone_number": "7740841238",
-    "email_id": "harsh7014456338@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1647",
-    "brand_name": "Ramya",
-    "username": "Aniket Pathak",
-    "phone_number": "8305183748",
-    "email_id": "aniket7225@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1648",
-    "brand_name": "Golden sage",
-    "username": "Anuja Jqin",
-    "phone_number": "9910132906",
-    "email_id": "Anuja.speedo@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -344,71 +227,6 @@
     "phone_number": "7652875613",
     "email_id": "shivrtrtt@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1652",
-    "brand_name": "Alina racks ",
-    "username": "Aadi Kesari",
-    "phone_number": "8957765525",
-    "email_id": "aadikesari809@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "call me later ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1653",
-    "brand_name": "AERIX",
-    "username": "Yash Raj",
-    "phone_number": "9259034025",
-    "email_id": "knitin12058@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1654",
-    "brand_name": "Taarsh jewels & more",
-    "username": "Tabassum R",
-    "phone_number": "8951851500",
-    "email_id": "tabassum20032410@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1655",
-    "brand_name": "Kitchen pure foods",
-    "username": "Vihaan Parashar",
-    "phone_number": "8447212049",
-    "email_id": "parasharvihaan219@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1656",
-    "brand_name": "Lazybun ",
-    "username": "ICGE915 Harshraj More",
-    "phone_number": "9324087376",
-    "email_id": "rajharsh0401@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -468,32 +286,6 @@
     "": ""
   },
   {
-    "company_id": "1661",
-    "brand_name": "Renus mehendi",
-    "username": "Renu Kamble",
-    "phone_number": "7517083128",
-    "email_id": "balajikamble1012@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1662",
-    "brand_name": "Biotic Nature Products",
-    "username": "Satyendra Nalamwar",
-    "phone_number": "9067820478",
-    "email_id": "bioticnaturals@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1663",
     "brand_name": "Tracking ID AWB: - SF3396148932KR  ORDER ID - 652755325",
     "username": "Aryan Tembhare",
@@ -527,19 +319,6 @@
     "email_id": "aimamul479@gmail.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1666",
-    "brand_name": "Solaire Beauty",
-    "username": "Ishika Khurana",
-    "phone_number": "7888709411",
-    "email_id": "ishikakhurana@solairebeauty.in",
-    "Status": "not connected ",
-    "Demo Date ": "call me later",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -585,45 +364,6 @@
     "": ""
   },
   {
-    "company_id": "1670",
-    "brand_name": "Nippon Paint",
-    "username": "Nippon Paint",
-    "phone_number": "9810403351",
-    "email_id": "fxmanavnarula@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1671",
-    "brand_name": "Daisy and dew",
-    "username": "Bilkish Akhtari",
-    "phone_number": "9015484604",
-    "email_id": "bilkishakhtari901548@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "1672",
-    "brand_name": "yashodhara Herbal",
-    "username": "karan garde",
-    "phone_number": "8999825788",
-    "email_id": "Yashodharaherbal@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "1673",
     "brand_name": "O P Enterprises ",
     "username": "Neeraj Kumar",
@@ -660,19 +400,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1676",
-    "brand_name": "MAXVIBE NUTRITION NARWANA",
-    "username": "SAHIL KHATKAR",
-    "phone_number": "9050007481",
-    "email_id": "maxvibenutritionnarwana@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -910,19 +637,6 @@
     "": ""
   },
   {
-    "company_id": "1695",
-    "brand_name": "Orion transport ",
-    "username": "Karan Jadhav",
-    "phone_number": "7745038554",
-    "email_id": "karanjadhav7013@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1696",
     "brand_name": "Arya",
     "username": "Aviral Srivastava",
@@ -1011,19 +725,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1703",
-    "brand_name": "Hoppybun ",
-    "username": "Ananya kandar",
-    "phone_number": "8017129789",
-    "email_id": "ananyapatra20@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -1144,38 +845,12 @@
     "": ""
   },
   {
-    "company_id": "1713",
-    "brand_name": "Abhuushan(Wear Your Pride)",
-    "username": "Bhavana khati",
-    "phone_number": "9822328128",
-    "email_id": "Aabhushanbybhavana@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1714",
     "brand_name": "The vault",
     "username": "Gourang Soni",
     "phone_number": "7878088318",
     "email_id": "vs3343512@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1715",
-    "brand_name": "Rewelle wellness ",
-    "username": "Rutvika Patel",
-    "phone_number": "6354114038",
-    "email_id": "rutvikapatel1112@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -1222,19 +897,6 @@
     "": ""
   },
   {
-    "company_id": "1720",
-    "brand_name": "Luxeva",
-    "username": "Ajay patel",
-    "phone_number": "9140334631",
-    "email_id": "ajaypatel8623@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "connect in evening again ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "1721",
     "brand_name": "Sagapam Enterprises",
     "username": "kavita Devi Sagapam",
@@ -1254,19 +916,6 @@
     "phone_number": "7988641175",
     "email_id": "rohitguptajf@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1723",
-    "brand_name": "Melting Delights ",
-    "username": "Madhavi DUDEKULA",
-    "phone_number": "8008704141",
-    "email_id": "madhavi.dudekula@gmail.com",
-    "Status": "picked but hanged call",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -1482,19 +1131,6 @@
     "": ""
   },
   {
-    "company_id": "1741",
-    "brand_name": "Hamper house",
-    "username": "Chandan Kumar Singh",
-    "phone_number": "9122439887",
-    "email_id": "chandansingh94312@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1742",
     "brand_name": "Shri Sainath Packaging",
     "username": "Aniket Sharma",
@@ -1540,19 +1176,6 @@
     "phone_number": "7600082956",
     "email_id": "sc5683369@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1746",
-    "brand_name": "Hampervali",
-    "username": "anshul chawal",
-    "phone_number": "7986197582",
-    "email_id": "chawlanshul1661@gmail.com",
-    "Status": "Working",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -1631,19 +1254,6 @@
     "phone_number": "9705243450",
     "email_id": "siddiqxd@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1753",
-    "brand_name": "Thread & Heritage",
-    "username": "Anumeha Saxena",
-    "phone_number": "6376649769",
-    "email_id": "hr.anumeha05@gmail.com",
-    "Status": "No Pickup",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -1742,19 +1352,6 @@
     "": ""
   },
   {
-    "company_id": "1761",
-    "brand_name": "Mark petro products pvt. Ltd",
-    "username": "Prashant Dutt",
-    "phone_number": "9253467632",
-    "email_id": "sharmaprashantdutt@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1762",
     "brand_name": "Urmi patel",
     "username": "Urmi Patel",
@@ -1820,45 +1417,6 @@
     "": ""
   },
   {
-    "company_id": "1767",
-    "brand_name": "Wheels Culture",
-    "username": "Rishabh Goyal",
-    "phone_number": "9719621555",
-    "email_id": "support@wheelsculture.com",
-    "Status": "connect again ",
-    "Demo Date ": "not using shipmaxx but interested with marketing seller pro connect again ",
-    "Response": "",
-    "Shipmaxx issue": "Raised",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "1768",
-    "brand_name": "Jugaadcrew",
-    "username": "Garima Pandey",
-    "phone_number": "9208330770",
-    "email_id": "pandeygarima022@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "1769",
-    "brand_name": "Sukrut spices ",
-    "username": "JINESH FOFARIYA",
-    "phone_number": "6355241497",
-    "email_id": "jineshfofariya@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "offline bussines want to expand in future follow up ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "1770",
     "brand_name": "Ceramics Wheel",
     "username": "Ceramics Wheel",
@@ -1898,32 +1456,6 @@
     "": ""
   },
   {
-    "company_id": "1773",
-    "brand_name": "Saadgi by sumita",
-    "username": "sumita dang",
-    "phone_number": "7678331690",
-    "email_id": "Saadgibysumita@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1774",
-    "brand_name": "Saadgi by sumita",
-    "username": "Sumita dang",
-    "phone_number": "9999552151",
-    "email_id": "sumitadang23@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1775",
     "brand_name": "Nexies Tech solutions",
     "username": "Tarun Kumar",
@@ -1943,19 +1475,6 @@
     "phone_number": "9315957849",
     "email_id": "Rishi.raheja567@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "1777",
-    "brand_name": "Lakshri Jewels",
-    "username": "Akansha Tripathi",
-    "phone_number": "9879101861",
-    "email_id": "akansha.yogesh@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -2054,38 +1573,12 @@
     "": ""
   },
   {
-    "company_id": "1785",
-    "brand_name": "INSA FRAGRANCE",
-    "username": "INSA FRAGRANCE",
-    "phone_number": "9560769837",
-    "email_id": "insafragrance@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "Raised",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "1786",
     "brand_name": "CELLTECH GADGETS ",
     "username": "VISHNU M S",
     "phone_number": "8129315480",
     "email_id": "vishnucelltech555@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2813",
-    "brand_name": "AS Enteprises",
-    "username": "Sanjeev Rohilla",
-    "phone_number": "",
-    "email_id": "rohilla.sanjeev31@gmail.com",
-    "Status": "Follow Up ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -2249,32 +1742,6 @@
     "": ""
   },
   {
-    "company_id": "2831",
-    "brand_name": "Deeta Clothing",
-    "username": "Divya Chouhan",
-    "phone_number": "",
-    "email_id": "deetaclothing@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2832",
-    "brand_name": "Fightex",
-    "username": "Anup Bhardwaj",
-    "phone_number": "",
-    "email_id": "anupbhardwaj581@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "no need rn ill connect in future",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2833",
     "brand_name": "Coral Slub",
     "username": "Garima Agrawal",
@@ -2282,19 +1749,6 @@
     "email_id": "garima@coralslub.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2834",
-    "brand_name": "Creative Decor",
-    "username": "Sachin Dhiman",
-    "phone_number": "",
-    "email_id": "creativedecorofficial@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "WRONG NUMBER",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -2359,32 +1813,6 @@
     "phone_number": "",
     "email_id": "powofa7103@naobk.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2840",
-    "brand_name": "Ittarstore",
-    "username": "Arihant ",
-    "phone_number": "",
-    "email_id": "arihant.172@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2841",
-    "brand_name": "Cloffi",
-    "username": "Poornima ",
-    "phone_number": "",
-    "email_id": "clofii321@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -2626,32 +2054,6 @@
     "": ""
   },
   {
-    "company_id": "2860",
-    "brand_name": "Little Garden",
-    "username": "Hari Kumar",
-    "phone_number": "",
-    "email_id": "littlegardencandles@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2861",
-    "brand_name": "The Parcel Masters",
-    "username": "Dhriaan K",
-    "phone_number": "",
-    "email_id": "dhriaankanji24102009@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2862",
     "brand_name": "Baijnath Das",
     "username": "Baijnath Das",
@@ -2808,19 +2210,6 @@
     "": ""
   },
   {
-    "company_id": "2874",
-    "brand_name": "Vishal leather",
-    "username": "sanjana bhandula",
-    "phone_number": "",
-    "email_id": "sanjanabhandula24@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2875",
     "brand_name": "CD EXPRESS",
     "username": "CHELLADURAI ",
@@ -2847,38 +2236,12 @@
     "": ""
   },
   {
-    "company_id": "2877",
-    "brand_name": "bagnique",
-    "username": "yash goutam",
-    "phone_number": "",
-    "email_id": "yashgautamdel@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2878",
     "brand_name": "Diskart",
     "username": "Shailesh ",
     "phone_number": "",
     "email_id": "Infodiskart@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2880",
-    "brand_name": "BUSY READY2SHIPS LOGISTICS LLP",
-    "username": "Krishn Kumar Gupta",
-    "phone_number": "",
-    "email_id": "k.krishnagupta@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -2925,19 +2288,6 @@
     "": ""
   },
   {
-    "company_id": "2884",
-    "brand_name": "The Choice of Jangki",
-    "username": "Jyotipriya Gogoi",
-    "phone_number": "",
-    "email_id": "jangkijyotipriyagogoi@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2885",
     "brand_name": "Eettillam- Post natal care",
     "username": "Sruthi P",
@@ -2970,19 +2320,6 @@
     "phone_number": "",
     "email_id": "abhishek.corporate12@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2888",
-    "brand_name": "orangemantra",
-    "username": "Aakash Mishra",
-    "phone_number": "",
-    "email_id": "mishra.aakash@orangemantra.in",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -3224,32 +2561,6 @@
     "": ""
   },
   {
-    "company_id": "2907",
-    "brand_name": "ORBIT IMPEX",
-    "username": "PRIYANSHU GUPTA",
-    "phone_number": "",
-    "email_id": "Priyanshu.guptasln@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2908",
-    "brand_name": "prakritik paint",
-    "username": "jitendra jitendra",
-    "phone_number": "",
-    "email_id": "jitendra.kamdhenunaturalpaints@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2909",
     "brand_name": "Rs enterprise",
     "username": "SABIR MONDAL",
@@ -3269,19 +2580,6 @@
     "phone_number": "",
     "email_id": "harshbaghel234@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2911",
-    "brand_name": "A.H. FOOD PRODUCTS",
-    "username": "Aashish Kumar",
-    "phone_number": "",
-    "email_id": "kumarashish79917@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -3315,19 +2613,6 @@
     "": ""
   },
   {
-    "company_id": "2914",
-    "brand_name": "Picasa Decor",
-    "username": "Manoj Khurana",
-    "phone_number": "",
-    "email_id": "manoj@picasadecor.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2915",
     "brand_name": "Sohan Textile",
     "username": "Sandip Keraney",
@@ -3354,19 +2639,6 @@
     "": ""
   },
   {
-    "company_id": "2917",
-    "brand_name": "M&J nutrition",
-    "username": "MOHIND V M",
-    "phone_number": "",
-    "email_id": "mandjnutrition@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2918",
     "brand_name": "E commerce",
     "username": "Bhavesh Mevada",
@@ -3377,32 +2649,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2919",
-    "brand_name": "Silaro Herbs",
-    "username": "Pitar Sangma",
-    "phone_number": "",
-    "email_id": "jaatsikamotivation@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2920",
-    "brand_name": "Urban Basics",
-    "username": "Manish Sawlani",
-    "phone_number": "",
-    "email_id": "Manish.sawalani03@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -3445,19 +2691,6 @@
     "": ""
   },
   {
-    "company_id": "2924",
-    "brand_name": "Forge Luxe",
-    "username": "Prapti Das Patnaik",
-    "phone_number": "",
-    "email_id": "underratedballer69@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "wrong no",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2926",
     "brand_name": "Mahavir Enterprise",
     "username": "Bijoy kumar dey",
@@ -3478,19 +2711,6 @@
     "email_id": "info@ewasterecyclehub.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2929",
-    "brand_name": "TIGER MARRON PVT. LTD.",
-    "username": "VICKY RAJPUT",
-    "phone_number": "",
-    "email_id": "support@tigermarron.com",
-    "Status": "Rejected",
-    "Demo Date ": "Already has a marketing agency performing really well",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -3562,19 +2782,6 @@
     "": ""
   },
   {
-    "company_id": "2936",
-    "brand_name": "Holdette Bags",
-    "username": "Sahil Bhandula",
-    "phone_number": "",
-    "email_id": "Sahilbhandula1995@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2937",
     "brand_name": "toymagzilla",
     "username": "Brijkumar Hirpara",
@@ -3611,19 +2818,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2940",
-    "brand_name": "VSTRALOK",
-    "username": "Nitesh Gaur",
-    "phone_number": "",
-    "email_id": "Vstralokofficial@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -3744,19 +2938,6 @@
     "": ""
   },
   {
-    "company_id": "2950",
-    "brand_name": "Sugandhim",
-    "username": "Ekta Harlalka",
-    "phone_number": "",
-    "email_id": "support@sugandhim.in",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2951",
     "brand_name": "Mr_Sen sen enterprises",
     "username": "GOURAV SEN",
@@ -3783,19 +2964,6 @@
     "": ""
   },
   {
-    "company_id": "2953",
-    "brand_name": "VYAS AYURVEDA PVT LTD",
-    "username": "AMARAT LAL",
-    "phone_number": "",
-    "email_id": "VYASAYURVED2018@GMAIL.COM",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2954",
     "brand_name": "Pro-services",
     "username": "Prosenjit halder",
@@ -3806,32 +2974,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2955",
-    "brand_name": "Book Bharat",
-    "username": "Uttam Sikder",
-    "phone_number": "",
-    "email_id": "djuttams@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2956",
-    "brand_name": "Wisdom Fragrances",
-    "username": "Sheetal Desai",
-    "phone_number": "",
-    "email_id": "customerservice@wisdombysd.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -3861,19 +3003,6 @@
     "": ""
   },
   {
-    "company_id": "2959",
-    "brand_name": "Nourishing Delights",
-    "username": "Nanda Pote",
-    "phone_number": "",
-    "email_id": "info@nourishingdelights.in",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2961",
     "brand_name": "S R interprises",
     "username": "Rajesh Kumar",
@@ -3900,19 +3029,6 @@
     "": ""
   },
   {
-    "company_id": "2963",
-    "brand_name": "STICKER N STREETS",
-    "username": "JEET VERMA",
-    "phone_number": "",
-    "email_id": "stickernstreets@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2964",
     "brand_name": "Sugar.fit",
     "username": "Akshay kumar D",
@@ -3923,32 +3039,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2965",
-    "brand_name": "Penta Orthodontics",
-    "username": "Yeldho Babu",
-    "phone_number": "",
-    "email_id": "sales@pentaorthodontics.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2966",
-    "brand_name": "AdhaKen",
-    "username": "SADANANDAN PA",
-    "phone_number": "",
-    "email_id": "goaathu@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -3978,38 +3068,12 @@
     "": ""
   },
   {
-    "company_id": "2970",
-    "brand_name": "Agri Care Natural Foods and Services Pvt Ltd",
-    "username": "Nirmal Kumar Chaudhary",
-    "phone_number": "",
-    "email_id": "contact@acnfoods.in",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "2971",
     "brand_name": "ParcelUp",
     "username": "Aksh Gupta",
     "phone_number": "",
     "email_id": "akshgupta.official@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2972",
-    "brand_name": "Vmax Ayurveda",
-    "username": "Ravkeda JakirHusen",
-    "phone_number": "",
-    "email_id": "wmyonline129@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -4056,19 +3120,6 @@
     "": ""
   },
   {
-    "company_id": "2977",
-    "brand_name": "Vaasavi Imitation jewelry",
-    "username": "Goverdhan Daroji",
-    "phone_number": "",
-    "email_id": "Goverdhan.d66@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2978",
     "brand_name": "Ssh enterprises",
     "username": "Shivam sharma",
@@ -4095,45 +3146,6 @@
     "": ""
   },
   {
-    "company_id": "2980",
-    "brand_name": "StealOdeal",
-    "username": "sachin sharma",
-    "phone_number": "",
-    "email_id": "sachinstealodeal@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2981",
-    "brand_name": "Sadhnaa",
-    "username": "Utkarsh Makwana",
-    "phone_number": "",
-    "email_id": "sadhnaaspiritual@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2982",
-    "brand_name": "ADCO CREATIONS",
-    "username": "Mohd JAVED",
-    "phone_number": "",
-    "email_id": "montbold.dectox@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2983",
     "brand_name": "WEBUGGLE",
     "username": "Abhinandan Mohanty",
@@ -4144,32 +3156,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2984",
-    "brand_name": "Kylerzet",
-    "username": "Aman kumar",
-    "phone_number": "",
-    "email_id": "kylerzet@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "2985",
-    "brand_name": "football store",
-    "username": "suhair punnakkal",
-    "phone_number": "",
-    "email_id": "suhairjuji.7@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -4225,19 +3211,6 @@
     "": ""
   },
   {
-    "company_id": "2993",
-    "brand_name": "Baebeauty",
-    "username": "Shweta ",
-    "phone_number": "",
-    "email_id": "Shwetaarora100419@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2994",
     "brand_name": "Asli shahad",
     "username": "Dilshad ",
@@ -4251,19 +3224,6 @@
     "": ""
   },
   {
-    "company_id": "2995",
-    "brand_name": "Bae beauty",
-    "username": "Shweta Arora",
-    "phone_number": "",
-    "email_id": "Shwetarora100419@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "2996",
     "brand_name": "Shweta",
     "username": "Shweta Verma",
@@ -4274,19 +3234,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "2998",
-    "brand_name": "souneeds",
-    "username": "souneeds ",
-    "phone_number": "",
-    "email_id": "souneeds@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -4459,19 +3406,6 @@
     "": ""
   },
   {
-    "company_id": "3013",
-    "brand_name": "Keshav Masala",
-    "username": "Nitin Patel",
-    "phone_number": "",
-    "email_id": "keshavmasala@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3014",
     "brand_name": "AIDNIX SOFTWARE PRIVATE LIMITED",
     "username": "Surendra Meena",
@@ -4576,19 +3510,6 @@
     "": ""
   },
   {
-    "company_id": "3022",
-    "brand_name": "KESHAV KRISHI KENDRA",
-    "username": "RAVINDRA KUMAR",
-    "phone_number": "",
-    "email_id": "support@keshavkrishikendra.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3023",
     "brand_name": "something",
     "username": "Vijay ",
@@ -4621,32 +3542,6 @@
     "phone_number": "",
     "email_id": "instantordertechnology8076@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3026",
-    "brand_name": "Femus Pharma",
-    "username": "ANUPAM ",
-    "phone_number": "",
-    "email_id": "femuspharma@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3027",
-    "brand_name": "Ramoa Logistics",
-    "username": "Ram ",
-    "phone_number": "",
-    "email_id": "ram.kumar876@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -4758,19 +3653,6 @@
     "": ""
   },
   {
-    "company_id": "3037",
-    "brand_name": "BroSis Herbal",
-    "username": "Noor Uddin",
-    "phone_number": "",
-    "email_id": "noor1madurai@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3038",
     "brand_name": "rangriti",
     "username": "Neeraj Kumar",
@@ -4790,19 +3672,6 @@
     "phone_number": "",
     "email_id": "info@agraeta.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3040",
-    "brand_name": "Riddhi Siddhi Pets Shop",
-    "username": "Rakesh G Patil",
-    "phone_number": "",
-    "email_id": "rakeshpatil.854@gmail.com",
-    "Status": "picked but hanged call",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -4940,32 +3809,6 @@
     "": ""
   },
   {
-    "company_id": "3052",
-    "brand_name": "jaipur kurtis",
-    "username": "SANJAY NAGAR",
-    "phone_number": "",
-    "email_id": "thejaipurkurtiss@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3054",
-    "brand_name": "Pratima Pre-Mix",
-    "username": "Pratima PreMix",
-    "phone_number": "",
-    "email_id": "hello@pratimapremix.in",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3055",
     "brand_name": "Shoppingekart",
     "username": "Dilip Baraiya",
@@ -5031,19 +3874,6 @@
     "": ""
   },
   {
-    "company_id": "3060",
-    "brand_name": "Star Bangles",
-    "username": "Adil Maniar",
-    "phone_number": "",
-    "email_id": "info@starbangles.com",
-    "Status": "Rejected",
-    "Demo Date ": "no need rn but  asked for deatails",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3061",
     "brand_name": "Asarastore.com",
     "username": "Kherunben asharafbha chudesara",
@@ -5067,32 +3897,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3063",
-    "brand_name": "Bigreams International",
-    "username": "Akhil Gupta",
-    "phone_number": "",
-    "email_id": "bigreams28@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3064",
-    "brand_name": "Helicx",
-    "username": "Vijay Asodariya",
-    "phone_number": "",
-    "email_id": "helicx111@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -5122,19 +3926,6 @@
     "": ""
   },
   {
-    "company_id": "3067",
-    "brand_name": "FOTOCART",
-    "username": "Maha Veer",
-    "phone_number": "",
-    "email_id": "fotocart17@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3068",
     "brand_name": "SOWPEACE ONLINE RETAIL (OPC) PRIVATE LIMITED",
     "username": "SOWPEACE ONLINE RETAIL OPC PV",
@@ -5145,19 +3936,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3069",
-    "brand_name": "QUICKDEALS",
-    "username": "MD NAYEEM",
-    "phone_number": "",
-    "email_id": "mdnayeemcivil@yahoo.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -5226,19 +4004,6 @@
     "": ""
   },
   {
-    "company_id": "3076",
-    "brand_name": "Happiness Gift Shop",
-    "username": "Chintan Mukeshkumar Jagetiya",
-    "phone_number": "",
-    "email_id": "happinessbardoli@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3077",
     "brand_name": "kartmuch",
     "username": "yogesh singh",
@@ -5265,19 +4030,6 @@
     "": ""
   },
   {
-    "company_id": "3079",
-    "brand_name": "Maati",
-    "username": "Ankit Kumar",
-    "phone_number": "",
-    "email_id": "ankitji344@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "(call on sat)",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3081",
     "brand_name": "Changekart",
     "username": "Priyansh Choudhary",
@@ -5301,19 +4053,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3083",
-    "brand_name": "red fox apparels",
-    "username": "motamin khan",
-    "phone_number": "",
-    "email_id": "decora.decorator@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -5382,19 +4121,6 @@
     "": ""
   },
   {
-    "company_id": "3090",
-    "brand_name": "phonixiamart",
-    "username": "Vaibhav Pandey",
-    "phone_number": "",
-    "email_id": "vibhu1913@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3091",
     "brand_name": "Nav Digital",
     "username": "Nisha ",
@@ -5421,45 +4147,6 @@
     "": ""
   },
   {
-    "company_id": "3093",
-    "brand_name": "GRYAPE",
-    "username": "Yogesh pawar",
-    "phone_number": "",
-    "email_id": "Yogeshpawar@gryape.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "call later today",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3094",
-    "brand_name": "The Crafting Zone",
-    "username": "Mujammil Hussain",
-    "phone_number": "",
-    "email_id": "thecraftingzonee@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3095",
-    "brand_name": "Fragrance palace",
-    "username": "Umer Rahees",
-    "phone_number": "",
-    "email_id": "umerrahees1@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3096",
     "brand_name": "Uttamrobotics",
     "username": "Uttam Patel",
@@ -5470,19 +4157,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3098",
-    "brand_name": "Sneha fashions",
-    "username": "Shubham Chalana",
-    "phone_number": "",
-    "email_id": "chalana90@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -5561,32 +4235,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3106",
-    "brand_name": "Bheema Ayurveda",
-    "username": "Kabir Yr",
-    "phone_number": "",
-    "email_id": "technicalhi92@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3107",
-    "brand_name": "Yarn gallery",
-    "username": "Aashiyana ",
-    "phone_number": "",
-    "email_id": "rezwanpathan361@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -5928,19 +4576,6 @@
     "": ""
   },
   {
-    "company_id": "3134",
-    "brand_name": "OMKAR SHOE mart",
-    "username": "SURESH KHAMKAR",
-    "phone_number": "",
-    "email_id": "sureshkhamkar99@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3135",
     "brand_name": "PRIYA FASHION",
     "username": "Sangeeta Meher",
@@ -5980,38 +4615,12 @@
     "": ""
   },
   {
-    "company_id": "3138",
-    "brand_name": "Trendzz",
-    "username": "Sid ",
-    "phone_number": "",
-    "email_id": "arthsam923@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3139",
     "brand_name": "Express",
     "username": "Rohit ",
     "phone_number": "",
     "email_id": "Saharanrohit1234@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3140",
-    "brand_name": "Dimple crumbs",
-    "username": "Moni ashok",
-    "phone_number": "",
-    "email_id": "Monikaa2030@gmail.com",
-    "Status": "picked but hanged call",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -6305,19 +4914,6 @@
     "": ""
   },
   {
-    "company_id": "3164",
-    "brand_name": "Crafters Cart",
-    "username": "Crafters Cart",
-    "phone_number": "",
-    "email_id": "crafterscart@outlook.in",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3165",
     "brand_name": "hasan",
     "username": "hasan raja",
@@ -6393,19 +4989,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3171",
-    "brand_name": "JAVI ECOCARE",
-    "username": "Tirth barot",
-    "phone_number": "",
-    "email_id": "Tirth@javiecocare.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -6510,19 +5093,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3181",
-    "brand_name": "Radhe premium watch",
-    "username": "Darshan ",
-    "phone_number": "",
-    "email_id": "Iamdarshan21@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -6779,19 +5349,6 @@
     "phone_number": "",
     "email_id": "fm7173900@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3203",
-    "brand_name": "Haunterx",
-    "username": "Dharshan haridas",
-    "phone_number": "",
-    "email_id": "dharshan8078@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -7111,19 +5668,6 @@
     "": ""
   },
   {
-    "company_id": "3228",
-    "brand_name": "SOFT SOULS",
-    "username": "Basheer ",
-    "phone_number": "",
-    "email_id": "basheerseo59@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3229",
     "brand_name": "S r g",
     "username": "Bharat Mishra",
@@ -7371,19 +5915,6 @@
     "": ""
   },
   {
-    "company_id": "3248",
-    "brand_name": "Priya Fashion New",
-    "username": "JOGENDRA MEHER",
-    "phone_number": "",
-    "email_id": "priyafashion513513@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3249",
     "brand_name": "ARTU INFOTECH",
     "username": "DEEPAK KUMAR",
@@ -7394,19 +5925,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3250",
-    "brand_name": "Kilobeaters",
-    "username": "Suyash ",
-    "phone_number": "",
-    "email_id": "suyash@kilobeaters.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -7446,19 +5964,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3254",
-    "brand_name": "J K BANGEL AND MANIHARI",
-    "username": "Mohammad Islam Nabi",
-    "phone_number": "",
-    "email_id": "mohd.islam58@yahoo.in",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -7670,19 +6175,6 @@
     "": ""
   },
   {
-    "company_id": "3271",
-    "brand_name": "SHIVAANSH HANDICRAFT",
-    "username": "NEHA BHATIA",
-    "phone_number": "",
-    "email_id": "shivaanshhandicraft@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3272",
     "brand_name": "Sayan kalan nearby dehlon",
     "username": "Sikander singh",
@@ -7722,32 +6214,6 @@
     "": ""
   },
   {
-    "company_id": "3275",
-    "brand_name": "Rainbow kids fashion",
-    "username": "Nanda ",
-    "phone_number": "",
-    "email_id": "nanda4055@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3276",
-    "brand_name": "Malk Jewells",
-    "username": "Sidra khan",
-    "phone_number": "",
-    "email_id": "malkjewels@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "wrong no",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3277",
     "brand_name": "Shipeazy",
     "username": "T.saha ",
@@ -7774,19 +6240,6 @@
     "": ""
   },
   {
-    "company_id": "3279",
-    "brand_name": "Radharani cosmetics",
-    "username": "Prince Mandloi",
-    "phone_number": "",
-    "email_id": "princemondloi2002@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3280",
     "brand_name": "KR Codex",
     "username": "Manoj Kumar",
@@ -7806,19 +6259,6 @@
     "phone_number": "",
     "email_id": "vishal.kumar@baskethunt.in",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3282",
-    "brand_name": "Dua me yaad rakhna",
-    "username": "divyanshu chouhan",
-    "phone_number": "",
-    "email_id": "divyanshusinghchouhan19@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -7940,19 +6380,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3292",
-    "brand_name": "Shoe Arena",
-    "username": "Shoe Arena",
-    "phone_number": "",
-    "email_id": "Shoearena77@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -8320,19 +6747,6 @@
     "": ""
   },
   {
-    "company_id": "3321",
-    "brand_name": "PatangDori.cim",
-    "username": "viraj saste",
-    "phone_number": "",
-    "email_id": "virajsaste7725@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3322",
     "brand_name": "https://www.instagram.com/channel/AbYZhhnGz7U1bZE8/?igsh=b2xiNjZmcTV4cG00",
     "username": "Ranjay Basumatary",
@@ -8593,19 +7007,6 @@
     "": ""
   },
   {
-    "company_id": "3342",
-    "brand_name": "Mom's Helathy Scoop",
-    "username": "Damini Singh",
-    "phone_number": "",
-    "email_id": "asis.sahota@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3344",
     "brand_name": "Sent with heart",
     "username": "Bhoomika lalwani",
@@ -8632,19 +7033,6 @@
     "": ""
   },
   {
-    "company_id": "3346",
-    "brand_name": "ARTZ",
-    "username": "NULL",
-    "phone_number": "",
-    "email_id": "Lalitartz@gmsil.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3347",
     "brand_name": "Rk company",
     "username": "Yogesh Kohli",
@@ -8664,19 +7052,6 @@
     "phone_number": "",
     "email_id": "anilanil2259@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3349",
-    "brand_name": "Chawal.in",
-    "username": "Annay ",
-    "phone_number": "",
-    "email_id": "gmannay@gmail.com",
-    "Status": "connect again ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -8918,19 +7293,6 @@
     "": ""
   },
   {
-    "company_id": "3368",
-    "brand_name": "Arora supari bhandar",
-    "username": "Gaurav Arora",
-    "phone_number": "",
-    "email_id": "ga404465@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3369",
     "brand_name": "Daya Daya Fakir private limited",
     "username": "Daya Daya",
@@ -9132,19 +7494,6 @@
     "phone_number": "",
     "email_id": "artandcreativitybysimranjaat01@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3385",
-    "brand_name": "Sonaveda",
-    "username": "Krishna karn",
-    "phone_number": "",
-    "email_id": "k00478@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -9841,19 +8190,6 @@
     "": ""
   },
   {
-    "company_id": "3441",
-    "brand_name": "Almond treasures",
-    "username": "Dhairya verma",
-    "phone_number": "",
-    "email_id": "dhairyaverma.dv@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3442",
     "brand_name": "Vinayak enterprise",
     "username": "Vinay ",
@@ -9903,19 +8239,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3446",
-    "brand_name": "Praan shakti Prakritik Aushdhi",
-    "username": "Deepak Kumar",
-    "phone_number": "",
-    "email_id": "praanshakti157@gmail.Com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -10068,19 +8391,6 @@
     "phone_number": "",
     "email_id": "contact@greengirgit.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3461",
-    "brand_name": "Premyum dryfruits",
-    "username": "Lucky Parmar",
-    "phone_number": "",
-    "email_id": "whysoserious0667@gmail.com",
-    "Status": "Demo Scheduled",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -10374,19 +8684,6 @@
     "": ""
   },
   {
-    "company_id": "3484",
-    "brand_name": "Creative.com",
-    "username": "Jency ",
-    "phone_number": "",
-    "email_id": "Jencympatel1@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3485",
     "brand_name": "Aidotics elder care private limited",
     "username": "Sneha Pahadiya",
@@ -10504,19 +8801,6 @@
     "": ""
   },
   {
-    "company_id": "3495",
-    "brand_name": "Shreepati Ayurveda",
-    "username": "Tarun Halder",
-    "phone_number": "",
-    "email_id": "shreepatiayurveda@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "22-10 call after 2 pm",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3496",
     "brand_name": "Shreebalaji",
     "username": "Tarak Halder",
@@ -10553,19 +8837,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3499",
-    "brand_name": "Dreamy paws",
-    "username": "Yogesh kumar",
-    "phone_number": "",
-    "email_id": "Yogeshkhatri532@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -10738,32 +9009,6 @@
     "": ""
   },
   {
-    "company_id": "3515",
-    "brand_name": "Nature Dews Essentials",
-    "username": "Anushka Singhi",
-    "phone_number": "",
-    "email_id": "naturedews01@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3516",
-    "brand_name": "Little Knots Canvas ",
-    "username": "Aayat ",
-    "phone_number": "",
-    "email_id": "bhataayat0104@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3517",
     "brand_name": "Manoj Negi",
     "username": "admin ",
@@ -10839,19 +9084,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3523",
-    "brand_name": "Dhatri Desi Product",
-    "username": "Rudresha K V K N V",
-    "phone_number": "",
-    "email_id": "rudresh1993kv@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -11102,19 +9334,6 @@
     "": ""
   },
   {
-    "company_id": "3547",
-    "brand_name": "Sriman Enterprise",
-    "username": "Gaurav Saini",
-    "phone_number": "",
-    "email_id": "snagrush@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3548",
     "brand_name": "Kolkata",
     "username": "Sourav Das",
@@ -11290,19 +9509,6 @@
     "phone_number": "",
     "email_id": "das.sourav2002@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3562",
-    "brand_name": "Rk",
-    "username": "Kkr ",
-    "phone_number": "",
-    "email_id": "kashiarajesh2@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -11817,19 +10023,6 @@
     "": ""
   },
   {
-    "company_id": "3607",
-    "brand_name": "Vanexo",
-    "username": "Shahnawaz Anwar",
-    "phone_number": "",
-    "email_id": "shahnawazanwar8873@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3608",
     "brand_name": "sunita traders",
     "username": "asheesh pratap singh",
@@ -12064,19 +10257,6 @@
     "": ""
   },
   {
-    "company_id": "3627",
-    "brand_name": "AVD JEWELS",
-    "username": "Abhi jeet",
-    "phone_number": "",
-    "email_id": "av.das11@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3628",
     "brand_name": "Sumit sangvikar",
     "username": "Sumit sangvikar",
@@ -12134,7 +10314,7 @@
     "username": "Imran khan",
     "phone_number": "",
     "email_id": "Kimran7999@gmail.com",
-    "Status": "",
+    "Status": "send on whatsapp ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -13122,11 +11302,11 @@
     "username": "Jaipuri_Pahnawa ",
     "phone_number": "",
     "email_id": "jaipuripahnawa@gmail.com",
-    "Status": "",
+    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
-    "Outreach person": "",
+    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -13179,19 +11359,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3718",
-    "brand_name": "Chims and Charms",
-    "username": "Farheen Hossain",
-    "phone_number": "",
-    "email_id": "chimsandcharms@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -15314,19 +13481,6 @@
     "": ""
   },
   {
-    "company_id": "3883",
-    "brand_name": "Sheela coffees",
-    "username": "Yash Sinh",
-    "phone_number": "",
-    "email_id": "Sheelacoffees4@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3884",
     "brand_name": "ALAWADHI COURIER",
     "username": "prashant alawadhi",
@@ -15337,58 +13491,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3885",
-    "brand_name": "Kataria Herbal Remedies",
-    "username": "Kartik Kataria",
-    "phone_number": "",
-    "email_id": "kartikkataria10051@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3886",
-    "brand_name": "Swimwearindia",
-    "username": "Devidas Kukreja",
-    "phone_number": "",
-    "email_id": "swimwearindiashop@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3887",
-    "brand_name": "Resin Hub",
-    "username": "Tarik Choudhary",
-    "phone_number": "",
-    "email_id": "tarikchoudhary007@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "call later",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3888",
-    "brand_name": "GOPAL AYURVED BHABAN",
-    "username": "ARUP GOSWAMI",
-    "phone_number": "",
-    "email_id": "jhumagoswami471@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -15415,19 +13517,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3891",
-    "brand_name": "GOOD DEALS",
-    "username": "KAMLA ",
-    "phone_number": "",
-    "email_id": "gooddealscourior@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -15496,32 +13585,6 @@
     "": ""
   },
   {
-    "company_id": "3897",
-    "brand_name": "thecrochetmori",
-    "username": "aaira ",
-    "phone_number": "",
-    "email_id": "aaira.aanis13@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3898",
-    "brand_name": "Dawakhana",
-    "username": "Mohd Ameen",
-    "phone_number": "",
-    "email_id": "mohdameen1707@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "call later",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3899",
     "brand_name": "Sitea trade",
     "username": "Sanjeeb Balmiki",
@@ -15532,19 +13595,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3900",
-    "brand_name": "Mr Ayurveda",
-    "username": "Saliya Ravi",
-    "phone_number": "",
-    "email_id": "saliyaravi007@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -15756,19 +13806,6 @@
     "": ""
   },
   {
-    "company_id": "3917",
-    "brand_name": "Fashion Fuel",
-    "username": "Kanhaiya SAhu",
-    "phone_number": "",
-    "email_id": "kanhaiyasahu363@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3918",
     "brand_name": "Rtc",
     "username": "Poonam Rani",
@@ -15873,19 +13910,6 @@
     "": ""
   },
   {
-    "company_id": "3926",
-    "brand_name": "Savariya electronics",
-    "username": "manjeet pal",
-    "phone_number": "",
-    "email_id": "palmanjeet306@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "call later",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3927",
     "brand_name": "BABA ENTERPRISES",
     "username": "AMIT KUMAR",
@@ -15899,19 +13923,6 @@
     "": ""
   },
   {
-    "company_id": "3928",
-    "brand_name": "PeekAGram",
-    "username": "Areeca Sanjay Massey",
-    "phone_number": "",
-    "email_id": "peekagram@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "3929",
     "brand_name": "Tennex Impex",
     "username": "Aditi Maheshwari",
@@ -15922,19 +13933,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3930",
-    "brand_name": "Rohit Kumar",
-    "username": "Rohit Kumar",
-    "phone_number": "",
-    "email_id": "rohit675187@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -15961,19 +13959,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3933",
-    "brand_name": "Periofree sanitary pad",
-    "username": "Swapnil ",
-    "phone_number": "",
-    "email_id": "swapnil76312@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -16146,90 +14131,12 @@
     "": ""
   },
   {
-    "company_id": "3947",
-    "brand_name": "Saifi Handicrafts",
-    "username": "Sohil Saifi",
-    "phone_number": "",
-    "email_id": "adibacollection200@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "3948",
-    "brand_name": "Ship",
-    "username": "Nimisha Raghuwanshi",
-    "phone_number": "",
-    "email_id": "Nimisharaghuwanshi1@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3949",
-    "brand_name": "GANGA COURIER SERVICE",
-    "username": "ANUP KUMAR JALAN",
-    "phone_number": "",
-    "email_id": "gangacourierservice1@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3950",
-    "brand_name": "Alpesh",
-    "username": "અલપેશ પૃજાપતી",
-    "phone_number": "",
-    "email_id": "alapesaprjapati4376@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3951",
-    "brand_name": "VIBHA ENTERPRISES",
-    "username": "Rajbeer Singh",
-    "phone_number": "",
-    "email_id": "vibhaenterprises28@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3952",
     "brand_name": "Rudhra core",
     "username": "Seshu ",
     "phone_number": "",
     "email_id": "seshukonchada128@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3953",
-    "brand_name": "M T PRODUCTION HOUSE",
-    "username": "Shreyansh Dugar",
-    "phone_number": "",
-    "email_id": "shreyanshmtph@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -16354,19 +14261,6 @@
     "": ""
   },
   {
-    "company_id": "3963",
-    "brand_name": "Varshav",
-    "username": "Varshav Wanjari",
-    "phone_number": "",
-    "email_id": "varshavwanjari6@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "3964",
     "brand_name": "Ms",
     "username": "One Side Gamer",
@@ -16406,19 +14300,6 @@
     "": ""
   },
   {
-    "company_id": "3967",
-    "brand_name": "Ravi",
-    "username": "Ravi ",
-    "phone_number": "",
-    "email_id": "mravishankar903@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "3968",
     "brand_name": "Navik1",
     "username": "vivek latwal",
@@ -16442,19 +14323,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "3970",
-    "brand_name": "Hampervali",
-    "username": "Anshul Chawla",
-    "phone_number": "",
-    "email_id": "chawlaanshul704@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -17017,32 +14885,6 @@
     "": ""
   },
   {
-    "company_id": "4899",
-    "brand_name": "INNYA",
-    "username": "Dhruv Shah",
-    "phone_number": "8200935631",
-    "email_id": "innya2026@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "4900",
-    "brand_name": "subropixer infotech ",
-    "username": "subrojit chatterjee",
-    "phone_number": "9691642244",
-    "email_id": "subro770@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "4901",
     "brand_name": "vasuky.in",
     "username": "ATHIRA A M",
@@ -17095,19 +14937,6 @@
     "": ""
   },
   {
-    "company_id": "4905",
-    "brand_name": "RawNectary Pvt Ltd",
-    "username": "Hanan Farooq Mir",
-    "phone_number": "9718102184",
-    "email_id": "info@rawnectary.com",
-    "Status": "Rejected",
-    "Demo Date ": "Seller said that he is working with an agency and doesn't want to switch",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "4906",
     "brand_name": "SO GIRLY",
     "username": "Jaya Banik",
@@ -17131,19 +14960,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4908",
-    "brand_name": "Kiash By Sakshi",
-    "username": "Sakshi bali",
-    "phone_number": "8233138581",
-    "email_id": "verma.shikha741@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -17196,32 +15012,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4914",
-    "brand_name": "VIKASH",
-    "username": "VIKASH Lohar",
-    "phone_number": "8949216006",
-    "email_id": "Vikashlohar179@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4915",
-    "brand_name": "threadsandtheory",
-    "username": "Aayush Yadav",
-    "phone_number": "7021080797",
-    "email_id": "aayu.sh7021@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -17326,19 +15116,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4924",
-    "brand_name": "Alankar Aabhushan ",
-    "username": "Alankar Aabhushan",
-    "phone_number": "8923365615",
-    "email_id": "alankar09853@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -17712,32 +15489,6 @@
     "phone_number": "8953079389",
     "email_id": "nk7384571@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4954",
-    "brand_name": "Prince colour shop ",
-    "username": "Princekuamar9718 Prince",
-    "phone_number": "9718422818",
-    "email_id": "princeprincekuamar18@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "4955",
-    "brand_name": "Job ",
-    "username": "Yogesh Sharma",
-    "phone_number": "7973911775",
-    "email_id": "ys466091@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -18213,32 +15964,6 @@
     "": ""
   },
   {
-    "company_id": "4992",
-    "brand_name": "Atharva",
-    "username": "Milan Virani",
-    "phone_number": "6359258523",
-    "email_id": "viranimilan12@yahoo.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "4993",
-    "brand_name": "Shaktiveda Ayurveda",
-    "username": "MONU KUMAR",
-    "phone_number": "9315738703",
-    "email_id": "mskp1618072@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "4994",
     "brand_name": "TheGiftVault ",
     "username": "Rumy khan",
@@ -18278,77 +16003,12 @@
     "": ""
   },
   {
-    "company_id": "4997",
-    "brand_name": "VEDAAMRIT",
-    "username": "ARUN BURNWAL",
-    "phone_number": "9153054122",
-    "email_id": "arunburnwal001@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "4998",
-    "brand_name": "Barsana pure ghee",
-    "username": "Deep agrawal",
-    "phone_number": "7567560708",
-    "email_id": "barsanapureghee@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "4999",
-    "brand_name": "-",
-    "username": "Pallavi P",
-    "phone_number": "8669615048",
-    "email_id": "pulse3823@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5000",
-    "brand_name": "DailyBeans pvt ltd",
-    "username": "Prasanth Vishnubhatla",
-    "phone_number": "9962777238",
-    "email_id": "admin@mydailybean.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5001",
     "brand_name": "Durva creations ",
     "username": "Vaishali Pawaskar",
     "phone_number": "9819609607",
     "email_id": "vaishalipawaskar07@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "5002",
-    "brand_name": "Recoil Supplements",
-    "username": "Suraj Gupta",
-    "phone_number": "9996918499",
-    "email_id": "suraj091998@gmail.com",
-    "Status": "connect again ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -18414,19 +16074,6 @@
     "phone_number": "6362137211",
     "email_id": "yarnav368@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5008",
-    "brand_name": "Aventra",
-    "username": "Mohammed Usman",
-    "phone_number": "8000508031",
-    "email_id": "usmanjatuv@gmail.com",
-    "Status": "connect again ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -18538,19 +16185,6 @@
     "": ""
   },
   {
-    "company_id": "5017",
-    "brand_name": "Laxmi books ",
-    "username": "Aman Dubey",
-    "phone_number": "8425957553",
-    "email_id": "dubeyaman4039@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5018",
     "brand_name": "Sastha Fish Farm ",
     "username": "Sastha Fish Farm",
@@ -18652,19 +16286,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5026",
-    "brand_name": "Aditya pharma",
-    "username": "Gyanaranjan Nanda",
-    "phone_number": "6370996700",
-    "email_id": "gyanaranjannanda1999@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "call later ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -18967,32 +16588,6 @@
     "": ""
   },
   {
-    "company_id": "5050",
-    "brand_name": "VELORA",
-    "username": "Shaikh ayan",
-    "phone_number": "8652119530",
-    "email_id": "Shaikhayan18998@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5051",
-    "brand_name": "Taazameatonline",
-    "username": "Srihari rao",
-    "phone_number": "7330665650",
-    "email_id": "taazameatonline1@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5052",
     "brand_name": "Anaya boutique ",
     "username": "Aayush Kushwaha",
@@ -19003,19 +16598,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5053",
-    "brand_name": "cozyloopsx",
-    "username": "sonakshi gupta",
-    "phone_number": "9163997848",
-    "email_id": "cozyloopsx@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -19149,19 +16731,6 @@
     "": ""
   },
   {
-    "company_id": "5064",
-    "brand_name": "Ship2dor",
-    "username": "Devendra kumar sen",
-    "phone_number": "9680907108",
-    "email_id": "devendrarathor666@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5065",
     "brand_name": "Resinartbyshusan",
     "username": "Shubhani Chaurasia",
@@ -19188,19 +16757,6 @@
     "": ""
   },
   {
-    "company_id": "5069",
-    "brand_name": "Ok",
-    "username": "Mohammad Owais",
-    "phone_number": "8975831335",
-    "email_id": "mohammadowais.khan2006@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5070",
     "brand_name": "RF WHOLESALE ",
     "username": "Avi rajput",
@@ -19220,19 +16776,6 @@
     "phone_number": "8589950307",
     "email_id": "ajmalaji6969@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5072",
-    "brand_name": "Z metals ",
-    "username": "Mohd zaid",
-    "phone_number": "9654914553",
-    "email_id": "m22068479@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -19272,19 +16815,6 @@
     "phone_number": "8097980932",
     "email_id": "dharmveerjaat212@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5076",
-    "brand_name": "nivicollections",
-    "username": "Nivi Collections",
-    "phone_number": "9393979892",
-    "email_id": "adminnivicollections@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -19513,19 +17043,6 @@
     "": ""
   },
   {
-    "company_id": "5094",
-    "brand_name": "tiny book basket",
-    "username": "Sharmi Harsha",
-    "phone_number": "9842766955",
-    "email_id": "sharmiharsha85@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5095",
     "brand_name": "KRISHIV ENTERPRISES ",
     "username": "Jevin Khambhaliya",
@@ -19747,19 +17264,6 @@
     "": ""
   },
   {
-    "company_id": "5112",
-    "brand_name": "Madhuri Construction ",
-    "username": "Tamoghna Paul",
-    "phone_number": "8420452831",
-    "email_id": "tamoghnapaul61@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5113",
     "brand_name": "zevorelle",
     "username": "Srushti Lavangare",
@@ -19825,19 +17329,6 @@
     "": ""
   },
   {
-    "company_id": "5118",
-    "brand_name": "Craftivygifts ",
-    "username": "Nikita Bansal",
-    "phone_number": "7009302562",
-    "email_id": "nikita14017@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5119",
     "brand_name": "Zeno",
     "username": "Devraj gore",
@@ -19890,51 +17381,12 @@
     "": ""
   },
   {
-    "company_id": "5123",
-    "brand_name": "OMG 3D CRAFT STUDIO ",
-    "username": "Om Ghongade",
-    "phone_number": "8767239972",
-    "email_id": "ghongadem11@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5124",
-    "brand_name": "DREAM BILLIONS",
-    "username": "AKBAR SHAIKH",
-    "phone_number": "8928401229",
-    "email_id": "warescoparis@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5125",
     "brand_name": "Arpan",
     "username": "Anish Agarkar",
     "phone_number": "8421229083",
     "email_id": "andy.agarkar7373@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5126",
-    "brand_name": "Trendy Style",
-    "username": "Vinay Kumar",
-    "phone_number": "9211017038",
-    "email_id": "Trendystyle132@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -19955,64 +17407,12 @@
     "": ""
   },
   {
-    "company_id": "5128",
-    "brand_name": "kiyaro.site",
-    "username": "nikhil sahu",
-    "phone_number": "9259540920",
-    "email_id": "kiyaro.site@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5129",
-    "brand_name": "Person use",
-    "username": "Manoj Chouhan",
-    "phone_number": "6264549021",
-    "email_id": "manojc2746@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5130",
     "brand_name": "Cravetales",
     "username": "Neeru Dandona",
     "phone_number": "9760204875",
     "email_id": "welcome.cravetales6@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5131",
-    "brand_name": "Glomora",
-    "username": "Anjali Gautam",
-    "phone_number": "7296801217",
-    "email_id": "anjaligautamm29@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5132",
-    "brand_name": "Sharma Packaging",
-    "username": "packaging solutions",
-    "phone_number": "9910620166",
-    "email_id": "packagingsolutions36@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -20059,38 +17459,12 @@
     "": ""
   },
   {
-    "company_id": "5136",
-    "brand_name": "Sypra",
-    "username": "Sri Manikanta",
-    "phone_number": "9059744584",
-    "email_id": "srimanikanta0117@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5137",
     "brand_name": "Socksee",
     "username": "Raina Baghrecha",
     "phone_number": "7000179951",
     "email_id": "baghrecharaina@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5138",
-    "brand_name": "Vedaihi Infotech ",
-    "username": "Indrajeet Kumar",
-    "phone_number": "9060231116",
-    "email_id": "kumarindrajeet16@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -20254,19 +17628,6 @@
     "": ""
   },
   {
-    "company_id": "5151",
-    "brand_name": "creatyvot",
-    "username": "Muhammed kc",
-    "phone_number": "9526288116",
-    "email_id": "cogineoindia@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5152",
     "brand_name": "Shree Aditya Ayurveda",
     "username": "Arjun Goyal",
@@ -20290,19 +17651,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5154",
-    "brand_name": "SleepGuru",
-    "username": "Vaibhav Rathi",
-    "phone_number": "7067857024",
-    "email_id": "vaibhavrathi140@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -20332,38 +17680,12 @@
     "": ""
   },
   {
-    "company_id": "5157",
-    "brand_name": "Kala pahervesh",
-    "username": "Nairuti Thakar",
-    "phone_number": "9558102877",
-    "email_id": "dhimahichauhan80@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5158",
     "brand_name": "Ponsalo",
     "username": "Pooja suratiya",
     "phone_number": "8368639292",
     "email_id": "nsuratiya54@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5159",
-    "brand_name": "Sk cour",
-    "username": "Akash Kunar",
-    "phone_number": "8799703762",
-    "email_id": "akashkunar529@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -20381,32 +17703,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5161",
-    "brand_name": "Thrift with veil",
-    "username": "Anandi Chatterjee",
-    "phone_number": "7439591995",
-    "email_id": "lemonsandtangarines@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "5162",
-    "brand_name": "The prist nutri co ",
-    "username": "Deepu Gujjar",
-    "phone_number": "8168202511",
-    "email_id": "deepugujjar9050@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -20514,19 +17810,6 @@
     "": ""
   },
   {
-    "company_id": "5171",
-    "brand_name": "Chashmish",
-    "username": "Mohit Somai",
-    "phone_number": "8368561204",
-    "email_id": "emailuschashmish@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5172",
     "brand_name": "Rihanecom",
     "username": "Rihan R",
@@ -20611,19 +17894,6 @@
     "phone_number": "6351029923",
     "email_id": "avenzox.org@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5182",
-    "brand_name": "Noor fragrances",
-    "username": "Ahmed Shaikh",
-    "phone_number": "8433685443",
-    "email_id": "ahmedhusain609@gmail.com",
-    "Status": "No Pickup",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -20774,58 +18044,6 @@
     "": ""
   },
   {
-    "company_id": "5195",
-    "brand_name": "Divine Karigari",
-    "username": "Kumari Lavee",
-    "phone_number": "7408704779",
-    "email_id": "divinekarigari@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5196",
-    "brand_name": "Diva Jewellery ",
-    "username": "ARYAN SHUKLA",
-    "phone_number": "8356801899",
-    "email_id": "aryansantoshshukla123@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5197",
-    "brand_name": "Rudrashakthi",
-    "username": "Vikas Ts",
-    "phone_number": "7406224633",
-    "email_id": "Shailendraseetharam@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5198",
-    "brand_name": "dawnclothing.in",
-    "username": "Akshat Bothra",
-    "phone_number": "7726012275",
-    "email_id": "akshatbothra123@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "demo on saturday connect again ",
-    "Response": "",
-    "Shipmaxx issue": "Raised",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5199",
     "brand_name": "kamal enterprises ",
     "username": "kamal choudhary",
@@ -20904,51 +18122,12 @@
     "": ""
   },
   {
-    "company_id": "5208",
-    "brand_name": "Cosmetologie",
-    "username": "AS Group",
-    "phone_number": "8750259561",
-    "email_id": "info@as-group.co.in",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5209",
-    "brand_name": "Miracle trading",
-    "username": "Sahil Kumar",
-    "phone_number": "9971736025",
-    "email_id": "tradingsmiracle@gmail.com",
-    "Status": "not needed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5210",
     "brand_name": "UnikBazar",
     "username": "unik bazar",
     "phone_number": "7739730013",
     "email_id": "unikbazar77@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5212",
-    "brand_name": "Twistysbysamiksha ",
-    "username": "Samiksha jain",
-    "phone_number": "8320241237",
-    "email_id": "manoj.jain.vapi@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -21086,19 +18265,6 @@
     "": ""
   },
   {
-    "company_id": "5223",
-    "brand_name": "Nutri Uniq ",
-    "username": "Gomathy sivakumar",
-    "phone_number": "7904668747",
-    "email_id": "nutriuniq@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5224",
     "brand_name": "Pehanava studio ",
     "username": "Sufiyan shaikh",
@@ -21131,19 +18297,6 @@
     "phone_number": "8169979587",
     "email_id": "shaikhbalig@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5227",
-    "brand_name": "Aurella jewels ",
-    "username": "umna khan",
-    "phone_number": "9411227590",
-    "email_id": "umnakhan.1122@gmail.com",
-    "Status": "Rejected",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -22152,19 +19305,6 @@
     "": ""
   },
   {
-    "company_id": "5309",
-    "brand_name": "Halftone Cosmetics",
-    "username": "Hardik Kotadiya",
-    "phone_number": "8264245419",
-    "email_id": "hardikkotadiya9090@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "no more in bussines",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5310",
     "brand_name": "Ayush ",
     "username": "Ayush Shivhare",
@@ -22256,19 +19396,6 @@
     "": ""
   },
   {
-    "company_id": "5317",
-    "brand_name": "Dazzlelayerabymansi",
-    "username": "Mansi bajaj",
-    "phone_number": "8240386170",
-    "email_id": "Mansibajaj2528@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5318",
     "brand_name": "HAMARA PUBLICATIONS (OPC) PVT LTD",
     "username": "HAMARA PRASAD",
@@ -22331,19 +19458,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5323",
-    "brand_name": "saanjh fragrances",
-    "username": "veena kale",
-    "phone_number": "9404509444",
-    "email_id": "veenakale02@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -22438,32 +19552,6 @@
     "": ""
   },
   {
-    "company_id": "5331",
-    "brand_name": "Perfumeology.in",
-    "username": "Karanlulla Lulla",
-    "phone_number": "9712002008",
-    "email_id": "klulla74@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5332",
-    "brand_name": "Desi Mithaas",
-    "username": "Rajrup Saha",
-    "phone_number": "6289475259",
-    "email_id": "nemkerz@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5333",
     "brand_name": "Arttic Vibe",
     "username": "Sutrishna Sardar",
@@ -22487,19 +19575,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5335",
-    "brand_name": "Le Cocoon",
-    "username": "Le Cocoon",
-    "phone_number": "7090407063",
-    "email_id": "lecocoon100525@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -22620,19 +19695,6 @@
     "": ""
   },
   {
-    "company_id": "5345",
-    "brand_name": "Crochet by muskan",
-    "username": "Muskan Chauhan",
-    "phone_number": "6395396060",
-    "email_id": "chauhanmuskan0014@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5346",
     "brand_name": "Nature nest ",
     "username": "Poonam Jhamb",
@@ -22724,19 +19786,6 @@
     "": ""
   },
   {
-    "company_id": "5354",
-    "brand_name": "Pearl nd pine ",
-    "username": "Harjas kaur",
-    "phone_number": "8115690532",
-    "email_id": "Kharjas03@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5355",
     "brand_name": "Dreamvastra ",
     "username": "Sapna Sharma",
@@ -22747,58 +19796,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5356",
-    "brand_name": "Magic loops",
-    "username": "Megha Kumari",
-    "phone_number": "7294136648",
-    "email_id": "meghashahi3003@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5357",
-    "brand_name": "Bless My Car",
-    "username": "Rahul Kumar Meena",
-    "phone_number": "9899889430",
-    "email_id": "blessmycar7@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5358",
-    "brand_name": "SK Trends",
-    "username": "Amaya Trends",
-    "phone_number": "9810020124",
-    "email_id": "trends.amaya@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "due to sipmaxx mixed experince not interested to switch working with an agency",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5359",
-    "brand_name": "udaan",
-    "username": "r kumar",
-    "phone_number": "7906972467",
-    "email_id": "rk.mathura@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -22838,19 +19835,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5363",
-    "brand_name": "The open ribbon",
-    "username": "riya kataria",
-    "phone_number": "9109493427",
-    "email_id": "riyakataria2612@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -23101,19 +20085,6 @@
     "": ""
   },
   {
-    "company_id": "5383",
-    "brand_name": "AB SPORTS ZONE ",
-    "username": "Bandari Manoj Kumar",
-    "phone_number": "8500847826",
-    "email_id": "absportshzone2026@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5384",
     "brand_name": "Shree meldi ma enterprise ",
     "username": "Deepak Makwana",
@@ -23124,19 +20095,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5385",
-    "brand_name": "RV Foods",
-    "username": "Vinu Varkey",
-    "phone_number": "9995022268",
-    "email_id": "houseofvarkeys@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "ask for details",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -23163,19 +20121,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5388",
-    "brand_name": "durge maa krishi sewa kendra",
-    "username": "Ayush Kishor (Ayush)",
-    "phone_number": "8630874544",
-    "email_id": "ayushkishor28@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -23241,19 +20186,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5394",
-    "brand_name": "Sipnserve",
-    "username": "Ariba Khan",
-    "phone_number": "7007946559",
-    "email_id": "aribakhan6479@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "bar services",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -23329,19 +20261,6 @@
     "email_id": "rankhambesuhas@gmail.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5401",
-    "brand_name": "Sapphire mobile phones and Accessories pvt ltd",
-    "username": "Akhill Agarwal",
-    "phone_number": "7039507120",
-    "email_id": "sapphire_accessories@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "not working currently",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -23530,19 +20449,6 @@
     "": ""
   },
   {
-    "company_id": "5416",
-    "brand_name": "Mivora ",
-    "username": "pankaj chauhan",
-    "phone_number": "8595585610",
-    "email_id": "pankaj32634427@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5417",
     "brand_name": "Velmure ",
     "username": "Manish Kohli",
@@ -23673,19 +20579,6 @@
     "": ""
   },
   {
-    "company_id": "5432",
-    "brand_name": "Anpa ayurveda ",
-    "username": "prabhoodayal mr",
-    "phone_number": "9058567569",
-    "email_id": "prabhoodayal139@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5433",
     "brand_name": "Handycraft",
     "username": "Prasad Sonawane",
@@ -23722,32 +20615,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5438",
-    "brand_name": "MiRa Creations",
-    "username": "MiRa Creations",
-    "phone_number": "8878135608",
-    "email_id": "miracreationsbpl@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5439",
-    "brand_name": "P.c.chains ",
-    "username": "sudhir sharma",
-    "phone_number": "7060705456",
-    "email_id": "sudhirsharma477@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -23822,32 +20689,6 @@
     "phone_number": "8879332067",
     "email_id": "aashnasfashioncreation05@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5446",
-    "brand_name": "Protein source ",
-    "username": "Ishanpreet singh",
-    "phone_number": "6295274545",
-    "email_id": "anmolsingh4490@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "5447",
-    "brand_name": "Modestyinyou ",
-    "username": "Mohammad Abu bakar",
-    "phone_number": "8191014101",
-    "email_id": "abubakarmohd7575@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -24151,19 +20992,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5471",
-    "brand_name": "Diksha organic",
-    "username": "Takshit Choudhary",
-    "phone_number": "8383966685",
-    "email_id": "takshitchou255@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -24765,19 +21593,6 @@
     "": ""
   },
   {
-    "company_id": "5518",
-    "brand_name": "Creativelog.in",
-    "username": "Paras Gupta",
-    "phone_number": "7983219534",
-    "email_id": "PARASGUPTA980833@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5519",
     "brand_name": "Cheriexloop",
     "username": "Anjali Barot",
@@ -24801,19 +21616,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5521",
-    "brand_name": "DD Fragrances ",
-    "username": "Akshay Rathore",
-    "phone_number": "9720675586",
-    "email_id": "praveenrathore7878@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -24853,19 +21655,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5525",
-    "brand_name": "RMPD FUTURE SOLAR PRIVATE LIMITED",
-    "username": "Nishant chauhan",
-    "phone_number": "7681942614",
-    "email_id": "info@futurkart.in",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -24921,32 +21710,6 @@
     "": ""
   },
   {
-    "company_id": "5531",
-    "brand_name": "Shine cosmetics and beauty ",
-    "username": "Tanveer Ahmad",
-    "phone_number": "7006001995",
-    "email_id": "tanveerahmad774422@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "5533",
-    "brand_name": "Medisky Surgicals",
-    "username": "Medisky Surgicals",
-    "phone_number": "8525855558",
-    "email_id": "mediskysurgicals@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5534",
     "brand_name": "Priyanshi editing house",
     "username": "priyanshu Gupta",
@@ -24960,19 +21723,6 @@
     "": ""
   },
   {
-    "company_id": "5535",
-    "brand_name": "Lakha swad",
-    "username": "Saurabh kumar",
-    "phone_number": "9259840626",
-    "email_id": "nclsaurabhlaakha@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5536",
     "brand_name": "sddc cargo Pvt ltd ",
     "username": "vinayak jain",
@@ -24983,32 +21733,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5537",
-    "brand_name": "Hiya's.nails.co ",
-    "username": "Hiya Rathore",
-    "phone_number": "9171587063",
-    "email_id": "Hiyasglamstudio@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
-    "company_id": "5539",
-    "brand_name": "Best Thrift For You",
-    "username": "Rashmi Solanki",
-    "phone_number": "6396910670",
-    "email_id": "rashuthakur328@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
     "": ""
   },
   {
@@ -25090,32 +21814,6 @@
     "": ""
   },
   {
-    "company_id": "5546",
-    "brand_name": "Seven Roots",
-    "username": "Kavita T",
-    "phone_number": "9137484872",
-    "email_id": "sevenroots007@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5547",
-    "brand_name": "Astrik Labz",
-    "username": "Arun Sharma",
-    "phone_number": "9029130001",
-    "email_id": "astriklabz@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "rescdule",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5548",
     "brand_name": "RJJ Digitals",
     "username": "Jagdish Rajan",
@@ -25168,32 +21866,6 @@
     "": ""
   },
   {
-    "company_id": "5552",
-    "brand_name": "Jia’s Creatives",
-    "username": "Aditi Kamble",
-    "phone_number": "9082013325",
-    "email_id": "jiascreatives@gmail.com",
-    "Status": "Deal Closed",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5553",
-    "brand_name": "Cocoa Delightz ",
-    "username": "Shraddha Omkar Patil",
-    "phone_number": "8169927806",
-    "email_id": "shaarvi12345@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Priya",
-    "": ""
-  },
-  {
     "company_id": "5554",
     "brand_name": "Perfect Computer Agencies",
     "username": "Arvind Kumar",
@@ -25204,19 +21876,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5555",
-    "brand_name": "Livora ",
-    "username": "Sajda perween",
-    "phone_number": "8298110470",
-    "email_id": "sajdaperween62057@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "ll",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -25321,19 +21980,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5567",
-    "brand_name": "Ship prime",
-    "username": "Rahul Sareen",
-    "phone_number": "8644864470",
-    "email_id": "sareenr32@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -25649,19 +22295,6 @@
     "": ""
   },
   {
-    "company_id": "5592",
-    "brand_name": "Kohinoor Attar & Perfumes",
-    "username": "Abdul Matin",
-    "phone_number": "9975763757",
-    "email_id": "abdulmatin2222@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5593",
     "brand_name": "Ujjwal",
     "username": "Ujjwal pal",
@@ -25708,19 +22341,6 @@
     "email_id": "bardeskarsharon@gmail.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5597",
-    "brand_name": "vt cosmetics",
-    "username": "vt cosmetics",
-    "phone_number": "6262338841",
-    "email_id": "vtcosmetics626@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "marketing not needed",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -25896,19 +22516,6 @@
     "": ""
   },
   {
-    "company_id": "5613",
-    "brand_name": "Grabbio",
-    "username": "Tharun P Nair",
-    "phone_number": "9778495067",
-    "email_id": "grabbio.online@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5614",
     "brand_name": "Choudhary Garments ",
     "username": "Zubair Choudhary",
@@ -25955,19 +22562,6 @@
     "email_id": "sandeshtamatta3@gmail.com",
     "Status": "",
     "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5618",
-    "brand_name": "As Print gallery ",
-    "username": "As Print Gallery",
-    "phone_number": "9911678386",
-    "email_id": "asprintgallery742@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "printing press",
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
@@ -26091,19 +22685,6 @@
     "": ""
   },
   {
-    "company_id": "5628",
-    "brand_name": "Freshupskin",
-    "username": "Uday Chandra Jha",
-    "phone_number": "6377943914",
-    "email_id": "skinfreshup@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5629",
     "brand_name": "Ozomix trends shopee",
     "username": "G Vijaya Ramesh",
@@ -26195,19 +22776,6 @@
     "": ""
   },
   {
-    "company_id": "5636",
-    "brand_name": "Inara agate ",
-    "username": "Parvaaz Shaikh",
-    "phone_number": "7046185882",
-    "email_id": "parvaazshaikh18@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5637",
     "brand_name": "goldmines",
     "username": "md soheib",
@@ -26257,19 +22825,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5641",
-    "brand_name": "SUNDARAA SUTRA",
-    "username": "ANJALI PATEL",
-    "phone_number": "8160355729",
-    "email_id": "sundaraasutra@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -26416,19 +22971,6 @@
     "": ""
   },
   {
-    "company_id": "5653",
-    "brand_name": "Amazon delivery service point",
-    "username": "Sanatha Ramu",
-    "phone_number": "6304860057",
-    "email_id": "sanatharamu@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5654",
     "brand_name": "Attari product ",
     "username": "Aas Mohammad",
@@ -26439,19 +22981,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5655",
-    "brand_name": "Gemoriaa",
-    "username": "Jayesh Sharma",
-    "phone_number": "8114471107",
-    "email_id": "js1472003@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -26526,19 +23055,6 @@
     "phone_number": "7678491679",
     "email_id": "contact@solaxenergy.in",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5662",
-    "brand_name": "Dream goals pvt ltd ",
-    "username": "Sandeep Verma",
-    "phone_number": "9050700417",
-    "email_id": "mdvardaanhospital@gmail.com",
-    "Status": "not needed",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -26650,19 +23166,6 @@
     "": ""
   },
   {
-    "company_id": "5671",
-    "brand_name": "Suede and Soul",
-    "username": "Suede and Soul",
-    "phone_number": "9315396667",
-    "email_id": "suedeandsoulgifting@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "Order pickup/delivery issue. She is pissed of",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5672",
     "brand_name": "Varnam",
     "username": "K.Namratha Reddy",
@@ -26708,19 +23211,6 @@
     "phone_number": "8840534620",
     "email_id": "satyamkatiyar567@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5676",
-    "brand_name": "Chocolateek",
-    "username": "Ashish Gupta",
-    "phone_number": "7678378008",
-    "email_id": "ashishgupta31121998@gmail.com",
-    "Status": "No Pickup",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -26845,51 +23335,12 @@
     "": ""
   },
   {
-    "company_id": "5686",
-    "brand_name": "Swadaamrit",
-    "username": "Sachin Naithani",
-    "phone_number": "9999473616",
-    "email_id": "snaithani28@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5687",
     "brand_name": "Tonse market",
     "username": "Adil Tonse",
     "phone_number": "9535741530",
     "email_id": "adiltonse05@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5688",
-    "brand_name": "The Crafty store",
-    "username": "Jayshri Pawar",
-    "phone_number": "8956001134",
-    "email_id": "pawarjayshri1134@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5689",
-    "brand_name": "Atulya Ira Jewels ",
-    "username": "Atul Khirodkar",
-    "phone_number": "9370566087",
-    "email_id": "atulkhirodkar77@gmail.com",
-    "Status": "Follow Up ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -26962,19 +23413,6 @@
     "": ""
   },
   {
-    "company_id": "5695",
-    "brand_name": "Tiny art planet",
-    "username": "Reema Thorat",
-    "phone_number": "7875060774",
-    "email_id": "Tinyartmart2@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5696",
     "brand_name": "IB style co ",
     "username": "Ibrahim Biswas",
@@ -26994,19 +23432,6 @@
     "phone_number": "7908907894",
     "email_id": "bishalpal43@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5698",
-    "brand_name": "Vaku Luxos",
-    "username": "Akash Yadav",
-    "phone_number": "7701804785",
-    "email_id": "akashyadavrdx1@gmail.com",
-    "Status": "not needed",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -27066,19 +23491,6 @@
     "": ""
   },
   {
-    "company_id": "5703",
-    "brand_name": "Air boost",
-    "username": "Air Boost Tecnology",
-    "phone_number": "9499595950",
-    "email_id": "airboostcompressor@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5704",
     "brand_name": "Djaman",
     "username": "Aman Margaj",
@@ -27115,19 +23527,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5707",
-    "brand_name": "Aura & Essence IXE ",
-    "username": "Mohammad Shanaf",
-    "phone_number": "9900201627",
-    "email_id": "auraandessenceixe2026@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -27170,19 +23569,6 @@
     "": ""
   },
   {
-    "company_id": "5711",
-    "brand_name": "Zoya beauty couture ",
-    "username": "Zoya Kondkar",
-    "phone_number": "8010385534",
-    "email_id": "kondkarzoya202311295@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5712",
     "brand_name": "m.s cloths ",
     "username": "Mohd Shizan",
@@ -27209,38 +23595,12 @@
     "": ""
   },
   {
-    "company_id": "5714",
-    "brand_name": "GUNGUN ENTERPRISES ",
-    "username": "Shitij garg",
-    "phone_number": "9560980497",
-    "email_id": "gungunenterprisesofficial@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5715",
     "brand_name": "Manish Sharma ",
     "username": "Manish Sharma",
     "phone_number": "9528284011",
     "email_id": "igmavi8650@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5716",
-    "brand_name": "Giftseystore ",
-    "username": "Pragya Dhakad",
-    "phone_number": "9653257993",
-    "email_id": "pragyadhakad04@gmail.com",
-    "Status": "not connected ",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -27280,19 +23640,6 @@
     "phone_number": "7427098594",
     "email_id": "jogenderyougi012345@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5720",
-    "brand_name": "edelivery",
-    "username": "SHAKIL KHAN",
-    "phone_number": "9376950260",
-    "email_id": "edelivery.in@gamail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -27349,19 +23696,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5725",
-    "brand_name": "Chaya Creations ",
-    "username": "Lavanya DV",
-    "phone_number": "6362565802",
-    "email_id": "chayacreations26@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -27482,51 +23816,12 @@
     "": ""
   },
   {
-    "company_id": "5735",
-    "brand_name": "Alorini Candles ",
-    "username": "Rajnandini Mondal",
-    "phone_number": "8972795514",
-    "email_id": "nm0451544@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5736",
     "brand_name": "Indiapaysolution",
     "username": "kaiyum khan",
     "phone_number": "7007818084",
     "email_id": "indiapaysolution@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5737",
-    "brand_name": "Craftedcharms ",
-    "username": "Shravani Sawant",
-    "phone_number": "9137257234",
-    "email_id": "sawantshravani015@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5738",
-    "brand_name": "Shiv Linga ",
-    "username": "Pavitra bharti",
-    "phone_number": "9650343763",
-    "email_id": "info.shivlinga@gmail.com",
-    "Status": "Deal Closed",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -27557,19 +23852,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5741",
-    "brand_name": "Meraj perfumes ",
-    "username": "Sohail Meraj",
-    "phone_number": "9520687995",
-    "email_id": "sohailmeraj266@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -27729,19 +24011,6 @@
     "": ""
   },
   {
-    "company_id": "5754",
-    "brand_name": "Pure Hands ",
-    "username": "Naga Sai",
-    "phone_number": "8451003345",
-    "email_id": "nagasai1306@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5755",
     "brand_name": "MRS Fashion",
     "username": "Subhash Verma",
@@ -27778,19 +24047,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5758",
-    "brand_name": "PN GOLD AND FORMING JEWELLERRS",
-    "username": "Supriti Sarkar",
-    "phone_number": "8669955155",
-    "email_id": "pngoldandformingjewellerrs@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -28015,19 +24271,6 @@
     "": ""
   },
   {
-    "company_id": "5776",
-    "brand_name": "Sylk and Bare",
-    "username": "Dipak Chhetri",
-    "phone_number": "8927726046",
-    "email_id": "workwithmorf@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5777",
     "brand_name": "Mou ",
     "username": "Mou Haldar",
@@ -28038,19 +24281,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5778",
-    "brand_name": "truston",
-    "username": "Munna kumar",
-    "phone_number": "7903937123",
-    "email_id": "munnakr1899@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -28086,19 +24316,6 @@
     "phone_number": "9621951639",
     "email_id": "shivamsharmas2008@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5782",
-    "brand_name": "sawariya gems and rudrakash",
-    "username": "Sawariya gems",
-    "phone_number": "7056999963",
-    "email_id": "saawariyagems@gmail.com",
-    "Status": "Demo Scheduled",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -28158,51 +24375,12 @@
     "": ""
   },
   {
-    "company_id": "5787",
-    "brand_name": "Lumnaray Candles ",
-    "username": "Saikat Pal",
-    "phone_number": "7001723905",
-    "email_id": "lumnaraycandles@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5788",
-    "brand_name": "Western world ",
-    "username": "ABhishek Chauhan",
-    "phone_number": "8826318536",
-    "email_id": "prachiwesternworld@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5789",
     "brand_name": "mfn",
     "username": "najuka nakte",
     "phone_number": "8879838801",
     "email_id": "mfn3023e@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5790",
-    "brand_name": "CREATIVE GARMENTS PRIVATE LIMITED",
-    "username": "Akhilesh Maurya",
-    "phone_number": "9619596354",
-    "email_id": "care@vastrado.com",
-    "Status": "not needed",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -28246,19 +24424,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5794",
-    "brand_name": "Delhi fashion store ",
-    "username": "Ishika gupta",
-    "phone_number": "7755822727",
-    "email_id": "ig9218234@gmail.com",
-    "Status": "connect again ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -28314,19 +24479,6 @@
     "": ""
   },
   {
-    "company_id": "5799",
-    "brand_name": "Raisebeauty",
-    "username": "Ravindra Vanjare",
-    "phone_number": "9967665244",
-    "email_id": "ravindra.vanjare@biguineindia.co.in",
-    "Status": "connect again ",
-    "Demo Date ": "connect in future",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5800",
     "brand_name": "zenovers.",
     "username": "Krish Pethad",
@@ -28359,19 +24511,6 @@
     "phone_number": "9140559180",
     "email_id": "agrawalradhika0507@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5803",
-    "brand_name": "Xyz",
-    "username": "Arjun Gupta",
-    "phone_number": "9911177639",
-    "email_id": "arjundelhi0@gmail.com",
-    "Status": "Deprioritised",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -28509,32 +24648,6 @@
     "": ""
   },
   {
-    "company_id": "5814",
-    "brand_name": "Coitonic",
-    "username": "Mr Saksham",
-    "phone_number": "8957884762",
-    "email_id": "mrsaksham76@gmail.com",
-    "Status": "picked but hanged call",
-    "Demo Date ": "call again no marketing partner",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5815",
-    "brand_name": "Affan perfumes",
-    "username": "Zayan khan",
-    "phone_number": "9630075985",
-    "email_id": "zayankhanonly4@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "share details on whatsapp and take follow up ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
     "company_id": "5816",
     "brand_name": "Ghar magic soap ",
     "username": "Ritam Manna",
@@ -28545,331 +24658,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5817",
-    "brand_name": "shiproket",
-    "username": "Mohan Saran",
-    "phone_number": "9660658158",
-    "email_id": "mohansaranrlp77@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5818",
-    "brand_name": "Sagar Srivastava ",
-    "username": "Siddharth Srivastava",
-    "phone_number": "7983554634",
-    "email_id": "siddharthsrivastava5534@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5819",
-    "brand_name": "TCIL ",
-    "username": "TULSI YADAV",
-    "phone_number": "7408165394",
-    "email_id": "tkyadav520@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5820",
-    "brand_name": "Flexcases.in",
-    "username": "Ankit Gurjar",
-    "phone_number": "9602229468",
-    "email_id": "ag2938959@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5821",
-    "brand_name": "Shivsneh sarees",
-    "username": "Archana Shinde",
-    "phone_number": "7798056477",
-    "email_id": "shivanishinde220@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5822",
-    "brand_name": "New Deepak Jewellers ",
-    "username": "Rahul Soni",
-    "phone_number": "8619798414",
-    "email_id": "rahul0001soni@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5823",
-    "brand_name": "Shshbaz ",
-    "username": "Syed Shahbaz",
-    "phone_number": "7993148735",
-    "email_id": "shahbazsyed094@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5824",
-    "brand_name": "Satyam product",
-    "username": "Satyam Tiwari",
-    "phone_number": "9122897659",
-    "email_id": "lallikumari8674532@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5825",
-    "brand_name": "Aroma enterprises",
-    "username": "Sudhanshu Dwivedi",
-    "phone_number": "9235128811",
-    "email_id": "dwivedisudhanshu005@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "shhared data on whatsapp will consider it if like",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5826",
-    "brand_name": "Karthik ",
-    "username": "NULL",
-    "phone_number": "8618506492",
-    "email_id": "kkarthikbhajantri8@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5828",
-    "brand_name": "RRB company ",
-    "username": "Rohit Bainade",
-    "phone_number": "9175529026",
-    "email_id": "bainaderohit03@gmail.com",
-    "Status": "No Pickup",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5830",
-    "brand_name": "Na",
-    "username": "Aniket dutta",
-    "phone_number": "9083132313",
-    "email_id": "duttaaniket492@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5831",
-    "brand_name": "ALL INDIA PARCEL BOOKING",
-    "username": "PRASHANT NA",
-    "phone_number": "9919550145",
-    "email_id": "GJPGOODS@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5834",
-    "brand_name": "RATNA DISTRIBUTORS",
-    "username": "Nikhil jain",
-    "phone_number": "8949758532",
-    "email_id": "jain.nikhil105@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5835",
-    "brand_name": "NABA&CO.",
-    "username": "NASIR KHAN",
-    "phone_number": "9217223777",
-    "email_id": "TEAM@nabaco.in",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5836",
-    "brand_name": "sidhdharth info.tech",
-    "username": "sidhdharth dhorajiya",
-    "phone_number": "8128359867",
-    "email_id": "dhorajiya8128@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5837",
-    "brand_name": "Ayurvani Ayurveda ",
-    "username": "Vivek tomar",
-    "phone_number": "8527193254",
-    "email_id": "ayurvaniayurveda@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5839",
-    "brand_name": "Ramesh   paswan ",
-    "username": "Sapna kumri",
-    "phone_number": "9334008012",
-    "email_id": "rk9334008012@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5840",
-    "brand_name": "Kraveo",
-    "username": "Arpit Agarwal",
-    "phone_number": "9140499326",
-    "email_id": "arpitmanas28@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5841",
-    "brand_name": "Ns learning point Private Limited",
-    "username": "NS Learning Point",
-    "phone_number": "8800415410",
-    "email_id": "nslpoint@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5842",
-    "brand_name": "TGG LEARNING SOLUTIONS PRIVATE LIMITED",
-    "username": "Pintu Sharma",
-    "phone_number": "9354942793",
-    "email_id": "fintgglearning@gmail.com",
-    "Status": "not connected ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5843",
-    "brand_name": "Easy shopy ",
-    "username": "Muhammed erfan n",
-    "phone_number": "9567406709",
-    "email_id": "irfannarikkodan@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": " working call back call summary says he dont do marketing just have a site ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5844",
-    "brand_name": "Urgent: Unauthorized & Damaged Package Received (Amount: ₹1,199)",
-    "username": "Arnab Koley",
-    "phone_number": "8436214528",
-    "email_id": "koleyarnab80@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5845",
-    "brand_name": "bittu906653@gmail.com",
-    "username": "Bitu Bhai",
-    "phone_number": "8823906683",
-    "email_id": "bittu906653@gmail.com",
-    "Status": "no busniess",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5846",
-    "brand_name": "Mahalakshmi enterprises ",
-    "username": "MAHALAKSHMI ENTERPRISES",
-    "phone_number": "9916772263",
-    "email_id": "mahalakshmienterprises.012026@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -28996,32 +24784,6 @@
     "phone_number": "8109323340",
     "email_id": "akshatstudio4@gmail.com",
     "Status": "",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5857",
-    "brand_name": "Soultouch",
-    "username": "Manish M",
-    "phone_number": "8287520473",
-    "email_id": "manish@soultouchstore.com",
-    "Status": "Rejected",
-    "Demo Date ": "no need ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5858",
-    "brand_name": "Tropichome ",
-    "username": "Arnav Sharma",
-    "phone_number": "8937000037",
-    "email_id": "Arnavsharma740407@gmail.com",
-    "Status": "Deal Closed",
     "Demo Date ": "",
     "Response": "",
     "Shipmaxx issue": "",
@@ -29185,45 +24947,6 @@
     "": ""
   },
   {
-    "company_id": "5871",
-    "brand_name": "Arika Jewels ",
-    "username": "Varsha Rastogi",
-    "phone_number": "9811992438",
-    "email_id": "arikajewels@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "no need rn ill connect in future",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5872",
-    "brand_name": "BrandVexus",
-    "username": "ashas armar",
-    "phone_number": "9902274477",
-    "email_id": "brandvexus@gmail.com",
-    "Status": "Rejected",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5873",
-    "brand_name": "Korean Glow",
-    "username": "Tamsil Gawai",
-    "phone_number": "9900436288",
-    "email_id": "tamsilgawai@gmail.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5874",
     "brand_name": "Md Printing Hub",
     "username": "Md Ajaharuddin Ansari",
@@ -29260,19 +24983,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5877",
-    "brand_name": "Shree Mahadev trading ",
-    "username": "Kishore Patel",
-    "phone_number": "8610470590",
-    "email_id": "kishorepatelp46@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -29341,19 +25051,6 @@
     "": ""
   },
   {
-    "company_id": "5883",
-    "brand_name": "Fragnansia ",
-    "username": "Chauhan Mohit",
-    "phone_number": "7863809174",
-    "email_id": "fragransiaperfume@gmail.com",
-    "Status": "Follow Up ",
-    "Demo Date ": "follow up call back in some time ",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5884",
     "brand_name": "layers of emotions",
     "username": "Dibya Ranjan Sahu",
@@ -29377,19 +25074,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5886",
-    "brand_name": "Infra International",
-    "username": "Zabi Malik",
-    "phone_number": "6393055535",
-    "email_id": "uk3337425@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   },
   {
@@ -29432,19 +25116,6 @@
     "": ""
   },
   {
-    "company_id": "5890",
-    "brand_name": "Chicc always ",
-    "username": "VISHWAS Harijan",
-    "phone_number": "9821932494",
-    "email_id": "vishwasharijan928@gmail.com",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
     "company_id": "5891",
     "brand_name": "TIRUPATI ENTERPRISES ",
     "username": "ASHISH JAIN",
@@ -29468,45 +25139,6 @@
     "Response": "",
     "Shipmaxx issue": "",
     "Outreach person": "",
-    "": ""
-  },
-  {
-    "company_id": "5893",
-    "brand_name": "Naitri Innovations Pvt Limited ",
-    "username": "Bhushan Gurav",
-    "phone_number": "6264901510",
-    "email_id": "bhushan@naitri.ai",
-    "Status": "Deprioritised",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5894",
-    "brand_name": "Momo",
-    "username": "Aastha Acharekar",
-    "phone_number": "8080954981",
-    "email_id": "acharekaraastha921@gmail.com",
-    "Status": "send on whatsapp ",
-    "Demo Date ": "",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
-    "": ""
-  },
-  {
-    "company_id": "5895",
-    "brand_name": "Kitchen Pure Foods ",
-    "username": "Suman Rani",
-    "phone_number": "7827760052",
-    "email_id": "info@kitchenpurefoods.com",
-    "Status": "Demo Scheduled",
-    "Demo Date ": "demo at 4demo schd",
-    "Response": "",
-    "Shipmaxx issue": "",
-    "Outreach person": "Shivansh",
     "": ""
   }
 ]
